@@ -1,0 +1,364 @@
+%-------------------------------------------------------------------
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------------
+\documentclass[10pt]{article}
+\newcommand{\ispubliccv}{no}
+
+\usepackage{array, xcolor, stackengine}
+\usepackage[
+    paper=letterpaper,
+    margin=2cm,             % 1 cm margins
+    ]{geometry}
+
+\usepackage{titlesec}
+\usepackage[titles]{tocloft}
+\usepackage[colorlinks]{hyperref}
+\usepackage{xifthen}
+
+% Shrink spacing around section headings
+\titleformat{\section}{}{}{0pt}{\Large\bfseries\textit}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\newcommand\shadowfy[1]{\expandafter\shadowfypars#1\par\relax\relax}
+\long\def\shadowfypars#1\par#2\relax{%
+  \ifx#1\relax\else
+    \shadowfywords#1 \relax\relax%
+  \fi%
+  \ifx\relax#2\else\par\shadowfypars#2\relax\fi%
+}
+\def\shadowfywords#1 #2\relax{%
+  \ifx#1\relax\else
+    \shadowfyletters#1\relax\relax%
+  \fi%
+  \ifx\relax#2\else\ \shadowfywords#2\relax\fi%
+}
+\def\shadowfyletters#1#2\relax{%
+  \shadow{#1}%
+  \ifx\relax#2\else\shadowfyletters#2\relax\fi}
+
+\newlength\shadowHoffset
+\newlength\shadowVoffset
+\def\primarycolor{black}%
+\def\secondarycolor{black!30}%
+\setlength\shadowHoffset{2pt}
+\setlength\shadowVoffset{-2pt}
+
+\def\shadow#1{\kern\shadowHoffset%
+  \raisebox{\shadowVoffset}{%
+  \stackinset{c}{-\shadowHoffset}{c}{-\shadowVoffset}%
+  {\textcolor{\primarycolor}{#1}}{\textcolor{\secondarycolor}{#1}}}%
+  \kern-\shadowHoffset}
+
+
+\newcommand{\Logo}{
+\hspace*{-\parindent}%
+\begin{minipage}[b]{0.65\textwidth}
+\begin{flushleft}
+    \Huge{\textit{\shadowfy{Hadi Lashkari-Ghouchani}}}\\
+    \Large{\textbf{{Curriculum Vitae}}}
+\end{flushleft}
+\end{minipage}%
+\begin{minipage}[b]{0.40\textwidth}
+    \small{
+    \begin{tabular}{l p{4.5cm}}
+        \textbf{Phone1:}& CREDENTIAL_PHONE_NUMBER_1\\
+        \textbf{Phone2:}& CREDENTIAL_PHONE_NUMBER_2\\
+        \textbf{Email:}& \href{CREDENTIAL_MAILTO}{CREDENTIAL_EMAIL}
+        \ifthenelse{\equal{\ispubliccv}{no}}{\\
+	    \textbf{Address:}& CREDENTIAL_ADDRESS}{}%
+    \end{tabular}\\
+    }
+\end{minipage}
+\vspace{1cm}
+}
+
+\newcommand\HRule{\hspace*{.8cm}\line(1,0){410}\\}
+
+\newenvironment{Record}[1]
+{
+    \vspace{-0.35cm}
+    \section*{#1}
+        \vspace{-0.1cm}
+        \begin{tabular}
+}
+{
+        \end{tabular}\\
+        \HRule
+}
+
+\newcommand{\FootNote}[2]{\let\thefootnote\relax\footnote{\textbf{\textit{Curriculum Vitae}} of \textsc{Hadi Lashkari-Ghouchani}\qquad\today.\qquad Page #1 of #2}}
+\pagenumbering{gobble}
+
+% Table specifics
+\definecolor{Gray}{gray}{0.85}
+\newcommand\VRule{\color{Gray}\vrule width 0.5pt}
+
+\begin{document}
+\Logo
+%-------------------------------------------------------------------
+% EXTRA INFO
+%-------------------------------------------------------------------
+
+\ifthenelse{\equal{\ispubliccv}{no}}{%
+    \begin{tabular}{l l!{\VRule}l l}
+        \textbf{Gender:}&Male&\textbf{Date of birth:}&21st September 1984\\
+        \textbf{Citizenship:}&Iran&\textbf{Marital status:}&Single\\
+    \end{tabular}\\
+    \HRule
+}{}%
+
+%-------------------------------------------------------------------
+% POSITIONING STATEMENT
+%-------------------------------------------------------------------
+
+\begin{Record}{Positioning Statement}{l}
+Quick learner, talented programmer and curious physicist.
+\end{Record}
+
+%-------------------------------------------------------------------
+% EDUCATION
+%-------------------------------------------------------------------
+
+\newcommand{\Education}[9]{
+\textsc{#1}&#2&#3&#6&#7\\
+\hspace{160pt}GPA:& #8&#9&#4&#5\\ %Based on http://www.educationusairan.org/edu-professionals/grading}
+}
+
+\begin{Record}{Education}{l c l l l}
+    \Education{Sharif University Of Technology}{M.Sc.}{Physics}{Sep.}{2007}{Feb.}{2010}{A}{(17.08/20=85.4\%)}
+    \Education{Payame-Noor University of Mashad}{B.Sc.}{Physics(Applied Solid state)}{Sep.}{2002}{Jul.}{2007}{B}{(15.09/20=75.4\%)}
+\end{Record}
+
+%-------------------------------------------------------------------
+% COMPUTER SKILL
+%-------------------------------------------------------------------
+
+\newcommand{\ComputerSkill}[6]{
+    \textbf{\textsl{#1}} &\texttt{#2}\\
+    \ifthenelse{\isempty{#3}}
+    {}{&\texttt{#3}\\}%
+    \ifthenelse{\isempty{#4}}
+    {}{&\texttt{#4}\\}%
+    \ifthenelse{\isempty{#5}}
+    {}{&\texttt{#5}\\}%
+    \ifthenelse{\isempty{#6}}
+    {}{&\texttt{#6}\\}%
+}
+
+\begin{Record}{Computer Skill}{l l}
+    \ComputerSkill{Programming}
+        {Java, Android, J2SE, Python, Bash, C/C++, C\#}
+        {MySQL, PostgreSQL, PHP, YII}
+        {HTML5/CSS3, javascript, jQuery, NodeJS, XML, Ajax, JSON}
+        {Familiar with Fortran, Perl}{}%
+    \ComputerSkill{OS}{Linux(Ubuntu, Debian, OpenSUSE), Windows}{}{}{}{}%
+    \ComputerSkill{Special Software}
+        {\LaTeX, Mathematica, Sage, Ofbiz}
+        {LibreOffice(Writer, Calc, Draw, Impress)}
+        {Microsoft Office(Word, Excel, Power point, Publisher)}
+        {Git, Subversion svn, Mercurial hg}
+        {Familiar with Mathlab, Euler, Maxima}%
+\end{Record}
+
+%-------------------------------------------------------------------
+% LANGUAGE
+%-------------------------------------------------------------------
+
+\newcommand{\Language}[2]{
+    \textbf{\textsl{#1}}&\textit{#2}\\
+}
+\begin{Record}{Language}{l l}
+    \Language{English}
+        {iBT:81 (Reading:21, Listening:21, Speaking: 18, Writing:21)}%
+    \Language{Farsi}{Mother Tongue}%
+\end{Record}
+
+%-------------------------------------------------------------------
+% SPECIAL HONER
+%-------------------------------------------------------------------
+\newcommand{\SpecialHonor}[3]{
+    \textsl{ #1}&#2\\
+    &#3\\
+}
+\begin{Record}{Special Honor}{l l}
+    \SpecialHonor{\textbf{44th} rank}
+        {Among more than \textbf{five thousand} participants in the \textbf{Nationwide Graduate}}
+        {\textbf{Entrance Exam} in Physics and Nanophysics branch at Spring 2007.}%
+    \SpecialHonor{First rank}
+        {Among all students of Physics group of Payame-Noor University}
+        {(50 students).}%
+\end{Record}
+
+
+%-------------------------------------------------------------------
+% FOOTNOTE
+%-------------------------------------------------------------------
+
+\FootNote{1}{3}
+
+%-------------------------------------------------------------------
+% Research
+%-------------------------------------------------------------------
+
+\newcommand{\Research}[7]{
+    \multicolumn{2}{l}{\textbf{\textsl{ #1:}}}\\
+    \quad#2&\textit{#3}\\
+    \ifthenelse{\isempty{#4}}
+    {&\textit{#5}\\}
+    {&#4: \textit{#5}\\}
+    \ifthenelse{\isempty{#6}}
+    {&\textit{#7}\\}
+    {&#6: \textit{#7}\\}%
+}
+
+\begin{Record}{Research}{l l}
+    \Research{Publication}
+        {Spring 2014}
+        {Energy-momentum conservation and Lipkin’s zilch \href{http://arxiv.org/abs/1408.2802}{arXiv:1408.2802}}
+        {Cooperating with}
+        {\href{http://physics.bu.edu/people/show/halizade}{Dr. Hossein Alizadeh}, graduate student at Boston University}
+        {}{}%
+    \Research{Independent Research}
+        {Fall 2013}
+        {Electromagnetic's chirality, Metamaterials, Transformation optics}
+        {Cooperating with}
+        {\href{http://physics.bu.edu/people/show/halizade}{Dr. Hossein Alizadeh}, graduate student at Boston University}
+        {}{}%
+    \Research{M.Sc thesis}
+        {Fall 2010}
+        {``\textbf{Holographic Superconductivity and Rotating Black Hole}''}
+        {Supervisor}
+        {Dr. Shahrokh Parvizi}
+        {}{}%
+    \Research{B.Sc projects}
+        {}
+        {Problem solving and simulating with Mathematica.}
+        {}
+        {Finding eigenvalue of Schrodinger equation with shooting method and etc}
+        {Supervisor}
+        {Dr. Jamil Ariai}%
+
+\end{Record}
+
+%-------------------------------------------------------------------
+% WORK EXPERIENCE
+%-------------------------------------------------------------------
+
+\newcommand{\WorkExperience}[7]{
+    \multicolumn{3}{l}{\textbf{\textsl{ #1}}}\\
+    \quad#2&%
+        \ifthenelse{\equal{#3}{Teacher}}
+            {%
+                \textit{Responsibility:} #3\\
+                &\textit{Courses Taught:} #4}
+            {}%
+        \ifthenelse{\equal{#3}{Open Source}}
+            {%
+                #3\\
+                &\textit{Implemented by:} #4. \textit{Source:} #5\\
+                &\textit{Implemented by:} #6. \textit{Source:} #7}
+            {}%
+        \ifthenelse{\equal{#3}{Programmer}}
+            {%
+                \textit{Responsibility:} #3\\
+                &\textit{Languages:} \texttt{#4}\\
+                &\textit{Project:} #5\\
+                &\textit{Project:} #6
+            }
+            {}%
+            \\
+}
+
+\begin{Record}{Work Experience}{l l l}
+    \WorkExperience{\href{http://sohasys.ir}{Soha Company}}
+        {Spring 2015}
+        {Programmer}
+        {Java, Android, Sql Server, JSON}
+        {Controlling and saving traffic of employees}
+        {Developing a messenger}
+        {}%
+    \WorkExperience{Persian Calendar}
+        {Fall 2014}
+        {Open Source}
+        {Python2}
+        {\href{http://en.wikibooks.org/wiki/Persian_Calendar}{en.wikibooks.org}}
+        {Javascript}
+        {\href{http://github.com/hadilq/persianCalendar}{github}}
+    \WorkExperience{Payame-Noor University}
+        {Fall 2014}
+        {Teacher}
+        {Mathematical Physics}
+        {}{}{}%
+    \WorkExperience{Sadjad University}
+        {Fall 2012 to Spring 2014}
+        {Teacher}
+        {General Physics I \& II}
+        {}{}{}%
+    \WorkExperience{Payame-Noor University}
+        {Fall 2012 to Spring 2014}
+        {Teacher}
+        {Application of Computers in Physics}
+        {}{}{}%
+    \WorkExperience{Payame-Noor University}
+        {Spring 2012 to Spring 2013}
+        {Teacher}
+        {Waves}
+        {}{}{}%
+    \WorkExperience{Payame-Noor University}
+        {Spring 2012}
+        {Teacher}
+        {Classical Mechanics}
+        {}{}{}%
+\end{Record}
+
+
+%-------------------------------------------------------------------
+% FOOTNOTE
+%-------------------------------------------------------------------
+
+\FootNote{2}{3}
+
+%-------------------------------------------------------------------
+% REFERENCE
+%-------------------------------------------------------------------
+
+\newcommand{\Reference}[5]{
+    \multicolumn{2}{l}{\textbf{\textsl{ #1}}}\\
+    \quad#2&\textit{#3}\\
+    &\textit{#4}\\
+    &\textit{#5}\\
+}
+
+\ifthenelse{\equal{\ispubliccv}{no}}{%
+    \begin{Record}{Reference}{l l}
+        \Reference{Dr. Shahrokh Parvizi}
+            {\href{CREDENTIAL_PARVIZI_MAILTO}{CREDENTIAL_PARVIZI_EMAIL}}
+            {Assistant Professor}
+            {Department of Physics, Tarbiat-Modares University}
+            {Tehran, Iran}%
+        \Reference{Dr. Jamil Ariai}
+            {\href{CREDENTIAL_ARIAI_MAILTO}{CREDENTIAL_ARIAI_EMAIL}}
+            {Professor}
+            {Department of Physics, Payame-Noor University}
+            {Mashhad, Iran}%
+        \Reference{Dr. M. R. Benam}
+            {\href{CREDENTIAL_BENAM_MAILTO}{CREDENTIAL_BENAM_EMAIL}}
+            {Associate Professor}
+            {Department of Physics, Payame-Noor University}
+            {Mashhad, Iran}%
+    \end{Record}
+    
+%-------------------------------------------------------------------
+% FOOTNOTE
+%-------------------------------------------------------------------
+
+    \FootNote{3}{3}
+}{%
+    \begin{Record}{Reference}{l}
+        Upon your request\\
+    \end{Record}
+
+}%
+\end{document}
+
+
