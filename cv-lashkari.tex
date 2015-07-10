@@ -10,7 +10,7 @@
     margin=2cm,             % 1 cm margins
     ]{geometry}
 
-\usepackage{titlesec}
+\usepackage{titlesec, fontspec}
 \usepackage[titles]{tocloft}
 \usepackage[colorlinks]{hyperref}
 \usepackage{xifthen}
@@ -21,8 +21,11 @@
     \newcommand{\maxpages}{2}
 }%
 
+\definecolor{MSLightBlue}{rgb}{.31,.506,.741}
+\newfontfamily\sectionfont[Color=MSLightBlue]{URW Bookman L}
+
 % Shrink spacing around section headings
-\titleformat{\section}{}{}{0pt}{\Large\bfseries\textit}
+\titleformat{\section}{}{}{0pt}{\large\itshape\sectionfont}
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
 \newcommand\shadowfy[1]{\expandafter\shadowfypars#1\par\relax\relax}
