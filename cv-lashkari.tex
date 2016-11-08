@@ -18,7 +18,7 @@
 \ifthenelse{\equal{\ispubliccv}{no}}{%
     \newcommand{\maxpages}{3}
 }{%
-    \newcommand{\maxpages}{2}
+    \newcommand{\maxpages}{3}
 }%
 
 \definecolor{MSLightBlue}{rgb}{.31,.506,.741}
@@ -205,50 +205,6 @@ Quick learner, talented programmer and curious physicist.
 \FootNote{1}
 
 %-------------------------------------------------------------------
-% Research
-%-------------------------------------------------------------------
-
-\newcommand{\Research}[7]{
-    \multicolumn{2}{l}{\textbf{\textsl{ #1:}}}\\
-    \quad#2&\textit{#3}\\
-    \ifthenelse{\isempty{#4}}
-    {&\textit{#5}\\}
-    {&#4: \textit{#5}\\}
-    \ifthenelse{\isempty{#6}}
-    {&\textit{#7}\\}
-    {&#6: \textit{#7}\\}%
-}
-
-\begin{Record}{Research}{l l}
-    \Research{Publication}
-        {Spring 2014}
-        {Energy-momentum conservation and Lipkin’s zilch \href{http://arxiv.org/abs/1408.2802}{arXiv:1408.2802}}
-        {Cooperating with}
-        {\href{http://physics.bu.edu/people/show/halizade}{Dr. Hossein Alizadeh}, graduate student at Boston University}
-        {}{}%
-    \Research{Independent Research}
-        {Fall 2013}
-        {Electromagnetic's chirality, Metamaterials, Transformation optics}
-        {Cooperating with}
-        {\href{http://physics.bu.edu/people/show/halizade}{Dr. Hossein Alizadeh}, graduate student at Boston University}
-        {}{}%
-    \Research{M.Sc thesis}
-        {Fall 2010}
-        {``\textbf{Holographic Superconductivity and Rotating Black Hole}''}
-        {Supervisor}
-        {Dr. Shahrokh Parvizi}
-        {}{}%
-    \Research{B.Sc projects}
-        {}
-        {Problem solving and simulating with Mathematica.}
-        {}
-        {Finding eigenvalue of Schrodinger equation with shooting method and etc}
-        {Supervisor}
-        {Dr. Jamil Ariai}%
-
-\end{Record}
-
-%-------------------------------------------------------------------
 % WORK EXPERIENCE
 %-------------------------------------------------------------------
 
@@ -291,7 +247,7 @@ Quick learner, talented programmer and curious physicist.
         {Python2}
         {\href{http://en.wikibooks.org/wiki/Persian_Calendar}{en.wikibooks.org}}
         {Javascript}
-        {\href{http://github.com/hadilq/persianCalendar}{github}}
+        {\href{http://github.com/hadilq/persianCalendar}{github.com}}
     \WorkExperience{Payame-Noor University}
         {Fall 2014}
         {Teacher}
@@ -319,6 +275,55 @@ Quick learner, talented programmer and curious physicist.
         {}{}{}%
 \end{Record}
 
+%-------------------------------------------------------------------
+% Research
+%-------------------------------------------------------------------
+
+\newcommand{\Research}[7]{
+    \multicolumn{2}{l}{\textbf{\textsl{ #1:}}}\\
+    \quad#2&\textit{#3}\\
+    \ifthenelse{\isempty{#4}}
+    {&\textit{#5}\\}
+    {&#4: \textit{#5}\\}
+    \ifthenelse{\isempty{#6}}
+    {&\textit{#7}\\}
+    {&#6: \textit{#7}\\}%
+}
+
+\begin{Record}{Research}{l p{11cm}}
+    \Research{Publication}
+        {Spring 2015}
+        {Conservation of Optical Chirality in Superconductors as a measure for 5 dimensional Electromagnetism \href{http://arxiv.org/abs/1507.03517}{arXiv:1507.03517}}
+        {Cooperating with}
+        {\href{http://physics.bu.edu/people/show/halizade}{Dr. Hossein Alizadeh}, graduate student at Boston University}
+        {}{}%
+    \Research{Publication}
+        {Spring 2014}
+        {Energy-momentum conservation and Lipkin’s zilch \href{http://arxiv.org/abs/1408.2802}{arXiv:1408.2802}}
+        {Cooperating with}
+        {\href{http://physics.bu.edu/people/show/halizade}{Dr. Hossein Alizadeh}, graduate student at Boston University}
+        {}{}%
+    \Research{Independent Research}
+        {Fall 2013}
+        {Electromagnetic's chirality, Metamaterials, Transformation optics}
+        {Cooperating with}
+        {\href{http://physics.bu.edu/people/show/halizade}{Dr. Hossein Alizadeh}, graduate student at Boston University}
+        {}{}%
+    \Research{M.Sc thesis}
+        {Fall 2010}
+        {``\textbf{Holographic Superconductivity and Rotating Black Hole}''}
+        {Supervisor}
+        {Dr. Shahrokh Parvizi}
+        {}{}%
+    \Research{B.Sc projects}
+        {}
+        {Problem solving and simulating with Mathematica.}
+        {}
+        {Finding eigenvalue of Schrodinger equation with shooting method and etc}
+        {Supervisor}
+        {Dr. Jamil Ariai}%
+
+\end{Record}
 
 %-------------------------------------------------------------------
 % FOOTNOTE
@@ -356,17 +361,19 @@ Quick learner, talented programmer and curious physicist.
             {Mashhad, Iran}%
     \end{Record}
     
-%-------------------------------------------------------------------
-% FOOTNOTE
-%-------------------------------------------------------------------
-
-    \FootNote{3}
 }{%
     \begin{Record}{Reference}{l}
         Upon your request\\
     \end{Record}
 
 }%
+
+%-------------------------------------------------------------------
+% FOOTNOTE
+%-------------------------------------------------------------------
+
+\FootNote{3}
+
 \end{document}
 
 
