@@ -124,7 +124,7 @@
 %-------------------------------------------------------------------
 \vspace{-0.4cm}
 \begin{Record}{Positioning Statement}{l}
-Quick learner, talented programmer and curious mathematician.
+Quick learner, passionate developer and curious mathematician.
 \end{Record}
 
 %-------------------------------------------------------------------
@@ -147,55 +147,62 @@ Quick learner, talented programmer and curious mathematician.
 
 \newcommand{\ComputerSkill}[6]{
     \multicolumn{2}{l}{\textbf{\textsl{ #1}}}\\
-    %\qquad%
-    \ifthenelse{\isempty{#2}}
-    {}{&\texttt{#2}\\}%
-    \ifthenelse{\isempty{#3}}
-    {}{&\texttt{#3}\\}%
-    \ifthenelse{\isempty{#4}}
-    {}{&\texttt{#4}\\}%
-    \ifthenelse{\isempty{#5}}
-    {}{&\texttt{#5}\\}%
-    \ifthenelse{\isempty{#6}}
-    {}{&\texttt{#6}\\}%
+    \qquad\qquad\qquad\qquad%
+    \ifthenelse{\isempty{#2}}{}
+    {%
+        &\texttt{#2}\\
+    }%
+    \ifthenelse{\isempty{#3}}{}
+    {%
+        &\texttt{#3}\\
+    }%
+    \ifthenelse{\isempty{#4}}{}
+    {%
+        &\texttt{#4}\\
+    }%
+    \ifthenelse{\isempty{#5}}{}
+    {%
+        &\texttt{#5}\\
+    }%
+    \ifthenelse{\isempty{#6}}{}
+    {%
+        &\texttt{#6}\\
+    }%
+    \vspace{-0.4cm}\\
 }
 
 \begin{Record}{Computer Skill}{l l}
     \ComputerSkill{Android Library}
-        {Dagger 2, Butter Knife, OrmLite, Time4A}
-        {RxAndroid, EventBus}
-        {Volley, Retrofit, OkHttp}
-        {One Signal, Tour Guide}
-        {Android SDK and working with Android NDK}%
+        {Dagger 2, Butter Knife, OrmLite, Time4A, RxAndroid, EventBus}
+        {Volley, Retrofit, OkHttp, One Signal, Tour Guide}
+        {Android SDK and working with Android NDK}{}{}%
     \ComputerSkill{Android Test Library}
         {Mockito Framework, Espresso}{}{}{}{}%
-    \ComputerSkill{Build Tool}
-        {Gradle, Ant, Make}{}{}{}{}%
-    \ComputerSkill{Version control}
-        {Git, Subversion, Mercurial}{}{}{}{}%
-    \ComputerSkill{OS}
-        {Linux(Ubuntu, Debian, OpenSUSE), Android, Os X, Windows}{}{}{}{}%
+    \ComputerSkill{Tool}
+        {Gradle, Ant, Make}{Git, Subversion, Mercurial, Confluence, Jira}{}{}{}%
+    \ComputerSkill{Operating System}
+        {Linux(Ubuntu, Debian, Fedora), Android, Os X, Windows}{}{}{}{}%
     \ComputerSkill{Software Design Pattern}
-        {\textit{Creational patterns}: Abstract factory, Builder,}
-        {\qquad Factory method, Singleton}
-        {\textit{Structural patterns}: Adapter, Decorator, Module}
-        {\textit{Concurrency patterns}: Active Object, Join, Lock, Reactor}
-        {\qquad Messaging design pattern, Thread pool}%
-    \ComputerSkill{Languages}
+        {\textit{Creational patterns}: Builder, Factory method, Singleton, etc.}
+        {\textit{Structural patterns}: Adapter, Decorator, Module, etc.}
+        {\textit{Concurrency patterns}: Join, Lock, Messaging design pattern, etc.}{}{}%
+    \ComputerSkill{Language}
         {Java 8, Python, Groovy, Bash, C/C++, C\#}
         {Familiar with Fortran, Perl}{}{}{}%
     \ComputerSkill{Special Software}
         {\LaTeX, Mathematica, Sage, Ofbiz}
-        {LibreOffice(Writer, Calc, Draw, Impress)}
-        {Microsoft Office(Word, Excel, Power point, Publisher)}
-        {Familiar with Mathlab, Euler, Maxima}{}%
-    \ComputerSkill{Web Programming}
-        {PHP, YII}
+        {Familiar with Mathlab, Euler, Maxima}{}{}{}%
+    \ComputerSkill{Back-End Development}
+        {PHP, YII, MySQL, PostgreSQL, MsSql}
         {HTML5/CSS3, Javascript, jQuery, NodeJS, XML, Ajax, JSON}
         {Familiar with Spring Framework, Protobuf, Jetty}{}{}%
-    \ComputerSkill{Sql}
-        {MySQL, PostgreSQL, MsSql}{}{}{}{}%
 \end{Record}
+
+%-------------------------------------------------------------------
+% FOOTNOTE
+%-------------------------------------------------------------------
+
+\FootNote{1}
 
 %-------------------------------------------------------------------
 % LANGUAGE
@@ -226,13 +233,6 @@ Quick learner, talented programmer and curious mathematician.
         {(50 students).}%
 \end{Record}
 
-
-%-------------------------------------------------------------------
-% FOOTNOTE
-%-------------------------------------------------------------------
-
-\FootNote{1}
-
 %-------------------------------------------------------------------
 % WORK EXPERIENCE
 %-------------------------------------------------------------------
@@ -241,7 +241,7 @@ Quick learner, talented programmer and curious mathematician.
 \newcommand{\WorkExperience}[9]{
     \multicolumn{3}{l}{\textbf{\textsl{ #1}}}\\
     \quad#2&%
-        \ifthenelse{\equal{#4}{Teacher}}
+        \ifthenelse{\equal{#4}{Lecturer}}
             {%
                 \textit{Responsibility:} #4\\
                 \quad#3&\textit{Courses Taught:} #5}
@@ -300,19 +300,19 @@ Quick learner, talented programmer and curious mathematician.
         {Senior Android Developer}
         {Implementation of push notification, help page, }
         {search page, inbox, handling intents, sending analytics' events}
-        {and many other parts of \href{http://myket.ir}{Myket} application.}
-        {Improvement in \texttt{Gradle} configurations of \href{http://myket.ir}{Myket} application,}
+        {and many other parts of \href{http://myket.ir}{Myket} with a  \texttt{scrum-based} planning.}
+        {Improvement in \texttt{Gradle} configurations of \href{http://myket.ir}{Myket},}
         {such as handling some tasks by defining Groovy functions.}%
-    \WorkExperienceHasinOne{Improvement in \texttt{Maven} configurations of \href{http://myket.ir}{Myket} application}
-        {to handle downloading of dependencies in locale \texttt{JFrog} server.}
-        {Improvement in \texttt{Jenkins} configurations of \href{http://myket.ir}{Myket} application}
-        {to handle running of tests on the source.}
+    \WorkExperienceHasinOne{Improvement in \texttt{Maven} configurations of \href{http://myket.ir}{Myket}}
+        {to handle downloading of dependencies from locale \texttt{JFrog} server.}
+        {Improvement in \texttt{Jenkins} configurations of \href{http://myket.ir}{Myket}}
+        {to handle running of tests on the source code.}
         {Starting test driven development in \href{http://myket.ir}{Myket} team.}
         {Irancell parental control application.}
         {Its client side entirely implemented by me.}
-        {It includes two app for parent as controller and child as launcher}
-        {It uses Dgger 2, OrmLite, Time4A, EventBus, Volley}%
-    \WorkExperienceHasinTwo{and One Signal libraries.}%
+        {It includes two apps for parent as controller and child as launcher}
+        {It uses Dgger 2, OrmLite asynchronously, Time4A, EventBus,}%
+    \WorkExperienceHasinTwo{Volley and One-Signal libraries.}%
     \WorkExperience{\href{http://sohasys.ir}{Soha Company}}
         {\textit{From} spring 2015}
         {\textit{To} summer 2015}
@@ -330,30 +330,30 @@ Quick learner, talented programmer and curious mathematician.
         {\href{http://github.com/hadilq/persianCalendar}{github.com}}{}%
     \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
         {Fall 2014}{}
-        {Teacher}
+        {Lecturer}
         {Mathematical Physics}
         {}{}{}{}%
     \WorkExperience{\href{http://www.sadjad.ac.ir/MainEn.aspx}{Sadjad University}}
         {\textit{From} fall 2012}
         {\textit{To} spring 2014}
-        {Teacher}
+        {Lecturer}
         {General Physics I \& II}
         {}{}{}{}%
     \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
         {\textit{From} fall 2012}
         {\textit{To} spring 2014}
-        {Teacher}
+        {Lecturer}
         {Application of Computers in Physics}
         {}{}{}{}%
     \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
         {\textit{From} spring 2012}
         {\textit{To} spring 2013}
-        {Teacher}
+        {Lecturer}
         {Waves}
         {}{}{}{}%
     \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
         {Spring 2012}{}
-        {Teacher}
+        {Lecturer}
         {Classical Mechanics}
         {}{}{}{}%
 \end{Record}
@@ -384,19 +384,19 @@ Quick learner, talented programmer and curious mathematician.
         {Spring 2015}
         {Conservation of Optical Chirality in Superconductors as a measure for 5 dimensional Electromagnetism \href{http://arxiv.org/abs/1507.03517}{arXiv:1507.03517}}
         {Cooperating with}
-        {\href{http://physics.bu.edu/people/show/halizade}{Dr. Hossein Alizadeh}, graduate student at Boston University}
+        {\href{http://physics.bu.edu/people/show/halizade}{Hossein Alizadeh}, graduate student at Boston University}
         {}{}%
     \Research{Publication}
         {Spring 2014}
         {Energy-momentum conservation and Lipkin’s zilch \href{http://arxiv.org/abs/1408.2802}{arXiv:1408.2802}}
         {Cooperating with}
-        {\href{http://physics.bu.edu/people/show/halizade}{Dr. Hossein Alizadeh}, graduate student at Boston University}
+        {\href{http://physics.bu.edu/people/show/halizade}{Hossein Alizadeh}, graduate student at Boston University}
         {}{}%
     \Research{Independent Research}
         {Fall 2013}
         {Electromagnetic's chirality, Metamaterials, Transformation optics}
         {Cooperating with}
-        {\href{http://physics.bu.edu/people/show/halizade}{Dr. Hossein Alizadeh}, graduate student at Boston University}
+        {\href{http://physics.bu.edu/people/show/halizade}{Hossein Alizadeh}, graduate student at Boston University}
         {}{}%
     \Research{M.Sc thesis}
         {Fall 2010}
