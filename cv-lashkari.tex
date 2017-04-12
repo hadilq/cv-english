@@ -205,35 +205,6 @@ Quick learner, passionate developer and curious mathematician.
 \FootNote{1}
 
 %-------------------------------------------------------------------
-% LANGUAGE
-%-------------------------------------------------------------------
-
-\newcommand{\Language}[2]{
-    \textbf{\textsl{#1}}&\textit{#2}\\
-}
-\begin{Record}{Language}{l l}
-    \Language{English}
-        {iBT:89 (Reading:24, Listening:27, Speaking: 19, Writing:19)}%
-    \Language{Farsi}{Mother Tongue}%
-\end{Record}
-
-%-------------------------------------------------------------------
-% SPECIAL HONER
-%-------------------------------------------------------------------
-\newcommand{\SpecialHonor}[3]{
-    \textsl{ #1}&#2\\
-    &#3\\
-}
-\begin{Record}{Special Honor}{l l}
-    \SpecialHonor{\textbf{44th} rank}
-        {Among more than \textbf{five thousand} participants in the \textbf{Nationwide Graduate}}
-        {\textbf{Entrance Exam} in Physics and Nanophysics branch at Spring 2007.}%
-    \SpecialHonor{First rank}
-        {Among all students of Physics group of Payame-Noor University}
-        {(50 students).}%
-\end{Record}
-
-%-------------------------------------------------------------------
 % WORK EXPERIENCE
 %-------------------------------------------------------------------
 
@@ -273,6 +244,14 @@ Quick learner, passionate developer and curious mathematician.
                 &       \quad\quad #9
             }
             {}%
+        \ifthenelse{\equal{#1}{Hobby Taste}}
+            {%
+                #4\\
+                &#5\\
+                &#6\\
+                &\textit{Source:} #7\\
+            }
+            {}%
             \\
 }
 
@@ -294,6 +273,13 @@ Quick learner, passionate developer and curious mathematician.
 
 
 \begin{Record}{Work Experience}{l l l}
+    \WorkExperience{Hobby Taste}
+        {Winter 2017}{}
+        {Just a hobby android project}
+        {This project is meant to give you the ability to pick a place on map}
+        {and let you upload pictures of that place, so others can comment on that.}
+        {\href{https://github.com/hadilq/HobbyTaste}{github.com}}
+        {}{}%
     \WorkExperience{\href{http://hasintech.com}{Hasin Technology}}
         {\textit{From} fall 2015}
         {\textit{To} present}
@@ -306,7 +292,7 @@ Quick learner, passionate developer and curious mathematician.
     \WorkExperienceHasinOne{Improvement in \texttt{Maven} configurations of \href{http://myket.ir}{Myket}}
         {to handle downloading of dependencies from locale \texttt{JFrog} server.}
         {Improvement in \texttt{Jenkins} configurations of \href{http://myket.ir}{Myket}}
-        {to handle running of tests on the source code.}
+        {to handle continuous integration.}
         {Starting test driven development in \href{http://myket.ir}{Myket} team.}
         {Irancell parental control application.}
         {Its client side entirely implemented by me.}
@@ -326,8 +312,8 @@ Quick learner, passionate developer and curious mathematician.
         {Open Source}
         {Python 2}
         {\href{http://en.wikibooks.org/wiki/Persian_Calendar}{en.wikibooks.org}}
-        {Javascript}
-        {\href{http://github.com/hadilq/persianCalendar}{github.com}}{}%
+        {Java}
+        {\href{https://github.com/hadilq/java-persian-calendar}{github.com}}{}%
     \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
         {Fall 2014}{}
         {Lecturer}
@@ -363,6 +349,35 @@ Quick learner, passionate developer and curious mathematician.
 %-------------------------------------------------------------------
 
 \FootNote{2}
+
+%-------------------------------------------------------------------
+% SPECIAL HONER
+%-------------------------------------------------------------------
+\newcommand{\SpecialHonor}[3]{
+    \textsl{ #1}&#2\\
+    &#3\\
+}
+\begin{Record}{Special Honor}{l l}
+    \SpecialHonor{\textbf{44th} rank}
+        {Among more than \textbf{five thousand} participants in the \textbf{Nationwide Graduate}}
+        {\textbf{Entrance Exam} in Physics and Nanophysics branch at Spring 2007.}%
+    \SpecialHonor{First rank}
+        {Among all students of Physics group of Payame-Noor University}
+        {(50 students).}%
+\end{Record}
+
+%-------------------------------------------------------------------
+% LANGUAGE
+%-------------------------------------------------------------------
+
+\newcommand{\Language}[2]{
+    \textbf{\textsl{#1}}&\textit{#2}\\
+}
+\begin{Record}{Language}{l l}
+    \Language{English}
+        {iBT:89 (Reading:24, Listening:27, Speaking: 19, Writing:19)}%
+    \Language{Farsi}{Mother Tongue}%
+\end{Record}
 
 %-------------------------------------------------------------------
 % Research
