@@ -173,29 +173,31 @@ Quick learner, passionate developer and curious mathematician.
 
 \begin{Record}{Computer Skill}{l l}
     \ComputerSkill{Android Library}
-        {Dagger 2, Butter Knife, OrmLite, Time4A, RxAndroid, EventBus}
-        {Volley, Retrofit, OkHttp, One Signal, Tour Guide}
+        {Dagger, Butter Knife, OrmLite, Time4A, RxAndroid, RxJava}
+        {Volley, Retrofit, OkHttp, One Signal, EventBus}
         {Android SDK and working with Android NDK}{}{}%
     \ComputerSkill{Android Test Library}
         {Mockito Framework, Espresso}{}{}{}{}%
     \ComputerSkill{Tool}
         {Gradle, Ant, Make}{Git, Subversion, Mercurial, Confluence, Jira}{}{}{}%
     \ComputerSkill{Operating System}
-        {Linux(Ubuntu, Debian, Fedora), Android, Os X, Windows}{}{}{}{}%
+        {Linux(Ubuntu, Debian, Fedora), Android, Os X}{}{}{}{}%
+    \ComputerSkill{Operating System tools}
+        {Linux: Zsh, grep, sed, netstat, ps, screen, etc.}
+        {Android: adb, android, emulator, etc.}{}{}{}%
     \ComputerSkill{Software Design Pattern}
         {\textit{Creational patterns}: Builder, Factory method, Singleton, etc.}
         {\textit{Structural patterns}: Adapter, Decorator, Module, etc.}
         {\textit{Concurrency patterns}: Join, Lock, Messaging design pattern, etc.}{}{}%
+    \ComputerSkill{Development tools}
+        {Atlassian Jira, Confluence, Gitlab, Jenkins, JFrog, etc.}{}{}{}{}%
     \ComputerSkill{Language}
-        {Java 8, Python, Groovy, Bash, C/C++, C\#}
-        {Familiar with Fortran, Perl}{}{}{}%
-    \ComputerSkill{Special Software}
-        {\LaTeX, Mathematica, Sage, Ofbiz}
-        {Familiar with Mathlab, Euler, Maxima}{}{}{}%
+        {Java, Python, Groovy, Shell scrip, Javascript, etc.}
+        {}{}{}{}%
     \ComputerSkill{Back-End Development}
-        {PHP, YII, MySQL, PostgreSQL, MsSql}
-        {HTML5/CSS3, Javascript, jQuery, NodeJS, XML, Ajax, JSON}
-        {Familiar with Spring Framework, Protobuf, Jetty}{}{}%
+        {PostgreSQL, MySQL, MsSql, JPA}
+        {Spring Framework, Protobuf}
+        {}{}{}%
 \end{Record}
 
 %-------------------------------------------------------------------
@@ -244,12 +246,14 @@ Quick learner, passionate developer and curious mathematician.
                 &       \quad\quad #9
             }
             {}%
-        \ifthenelse{\equal{#1}{Hobby Taste}}
+        \ifthenelse{\equal{#1}{Free Map}}
             {%
                 #4\\
                 &#5\\
                 &#6\\
-                &\textit{Source:} #7\\
+                &#7\\
+                &#8\\
+                &#9\\
             }
             {}%
             \\
@@ -273,13 +277,14 @@ Quick learner, passionate developer and curious mathematician.
 
 
 \begin{Record}{Work Experience}{l l l}
-    \WorkExperience{Hobby Taste}
-        {Winter 2017}{}
+    \WorkExperience{Free Map}
+        {Winter 2016}{}
         {Just a hobby android project}
-        {This project is meant to give you the ability to pick a place on map}
-        {and let you upload pictures of that place, so others can comment on that.}
-        {\href{https://github.com/hadilq/HobbyTaste}{github.com}}
-        {}{}%
+        {This project is the proof of concept for its new way of making accounts }
+        {and also its way of handling offline mode.}
+        {It contains an Android client side beside a Spring server side}
+        {It uses Dagger, OrmLite, RxAndroid, Google Map, Retrofit, JPA, etc.}
+        {\href{https://github.com/hadilq/HobbyTaste}{Github}, \href{https://play.google.com/store/apps/details?id=ir.asparsa.hobbytaste}{Google Play}}%
     \WorkExperience{\href{http://hasintech.com}{Hasin Technology}}
         {\textit{From} fall 2015}
         {\textit{To} present}
@@ -297,7 +302,7 @@ Quick learner, passionate developer and curious mathematician.
         {Irancell parental control application.}
         {Its client side entirely implemented by me.}
         {It includes two apps for parent as controller and child as launcher}
-        {It uses Dgger 2, OrmLite asynchronously, Time4A, EventBus,}%
+        {It uses Dgger, OrmLite asynchronously, Time4A, EventBus,}%
     \WorkExperienceHasinTwo{Volley and One-Signal libraries.}%
     \WorkExperience{\href{http://sohasys.ir}{Soha Company}}
         {\textit{From} spring 2015}
@@ -314,34 +319,6 @@ Quick learner, passionate developer and curious mathematician.
         {\href{http://en.wikibooks.org/wiki/Persian_Calendar}{en.wikibooks.org}}
         {Java}
         {\href{https://github.com/hadilq/java-persian-calendar}{github.com}}{}%
-    \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
-        {Fall 2014}{}
-        {Lecturer}
-        {Mathematical Physics}
-        {}{}{}{}%
-    \WorkExperience{\href{http://www.sadjad.ac.ir/MainEn.aspx}{Sadjad University}}
-        {\textit{From} fall 2012}
-        {\textit{To} spring 2014}
-        {Lecturer}
-        {General Physics I \& II}
-        {}{}{}{}%
-    \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
-        {\textit{From} fall 2012}
-        {\textit{To} spring 2014}
-        {Lecturer}
-        {Application of Computers in Physics}
-        {}{}{}{}%
-    \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
-        {\textit{From} spring 2012}
-        {\textit{To} spring 2013}
-        {Lecturer}
-        {Waves}
-        {}{}{}{}%
-    \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
-        {Spring 2012}{}
-        {Lecturer}
-        {Classical Mechanics}
-        {}{}{}{}%
 \end{Record}
 
 %-------------------------------------------------------------------
@@ -460,9 +437,9 @@ Quick learner, passionate developer and curious mathematician.
     \end{Record}
     
 }{%
-    \begin{Record}{Reference}{l}
-        Upon your request\\
-    \end{Record}
+%    \begin{Record}{Reference}{l}
+%        Upon your request\\
+%    \end{Record}
 
 }%
 
