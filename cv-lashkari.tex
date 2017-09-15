@@ -111,6 +111,7 @@
 % Table specifics
 \definecolor{Gray}{gray}{0.85}
 \newcommand\VRule{\color{Gray}\vrule width 0.5pt}
+\newcommand\detailsStyle{\scriptsize\texttt}
 
 \begin{document}
 \Logo
@@ -157,23 +158,23 @@
     \qquad\qquad\qquad\qquad%
     \ifthenelse{\isempty{#2}}{}
     {%
-        &\scriptsize\texttt{#2}\\
+        &\detailsStyle{#2}\\
     }%
     \ifthenelse{\isempty{#3}}{}
     {%
-        &\scriptsize\texttt{#3}\\
+        &\detailsStyle{#3}\\
     }%
     \ifthenelse{\isempty{#4}}{}
     {%
-        &\scriptsize\texttt{#4}\\
+        &\detailsStyle{#4}\\
     }%
     \ifthenelse{\isempty{#5}}{}
     {%
-        &\scriptsize\texttt{#5}\\
+        &\detailsStyle{#5}\\
     }%
     \ifthenelse{\isempty{#6}}{}
     {%
-        &\scriptsize\texttt{#6}\\
+        &\detailsStyle{#6}\\
     }%
     \vspace{-0.4cm}\\
 }
@@ -225,58 +226,76 @@
     \quad#2&%
         \ifthenelse{\equal{#4}{Lecturer}}
             {%
-                \scriptsize\textit{Responsibility:} #4\\
-                \quad#3&\scriptsize\textit{Courses Taught:} #5}
+                \scriptsize\textit{Responsibility:} \detailsStyle{#4}\\
+                \quad#3&\scriptsize\textit{Courses Taught:} \detailsStyle{#5}}
             {}%
         \ifthenelse{\equal{#4}{Open Source}}
             {%
-                #4\\
+                \detailsStyle{#4}\\
                 \quad#3
-                &\scriptsize\textit{Implemented by:} #5. \scriptsize\textit{Source:} #6\\
-                &\scriptsize\textit{Implemented by:} #7. \scriptsize\textit{Source:} #8}
+                &\scriptsize\textit{Implemented by:} \detailsStyle{#5.} \scriptsize\textit{Source:} \detailsStyle{#6}\\
+                &\scriptsize\textit{Implemented by:} \detailsStyle{#7.} \scriptsize\textit{Source:} \detailsStyle{#8}}
             {}%
         \ifthenelse{\equal{#4}{Programmer}}
             {%
-                \scriptsize\textit{Responsibility:} #4\\
+                \scriptsize\textit{Responsibility:} \detailsStyle{#4}\\
                 \quad#3
                 &\scriptsize\textit{Languages:} \texttt{#5}\\
-                &\scriptsize\textit{Project:} #6\\
-                &\scriptsize\textit{Project:} #7
+                &\scriptsize\textit{Project:} \detailsStyle{#6}\\
+                &\scriptsize\textit{Project:} \detailsStyle{#7}
             }
             {}%
         \ifthenelse{\equal{#4}{Senior Android Developer}}
             {%
-                \scriptsize\textit{Responsibility:} #4\\
+                \scriptsize\textit{Responsibility:} \detailsStyle{#4}\\
                 \quad#3
-                &\scriptsize\textit{Project:} #5\\
-                &       \quad\quad #6\\
-                &       \quad\quad #7\\
-                &\scriptsize\textit{Project:} #8\\
-                &       \quad\quad #9
+                &\scriptsize\textit{Project:} \detailsStyle{#5}\\
+                &       \quad\quad \detailsStyle{#6}\\
+                &       \quad\quad \detailsStyle{#7}\\
+                &\scriptsize\textit{Project:} \detailsStyle{#8}\\
+                &       \quad\quad \detailsStyle{#9}
             }
             {}%
         \ifthenelse{\equal{#1}{Free Map}}
             {%
-                #4\\
-                &#5\\
-                &#6\\
-                &#7\\
-                &#8\\
-                &#9\\
+                \detailsStyle{#4}\\
+                &\detailsStyle{#5}\\
+                &\detailsStyle{#6}\\
+                &\detailsStyle{#7}\\
+                &\detailsStyle{#8}\\
+                &\detailsStyle{#9}
+            }
+            {}%
+        \ifthenelse{\equal{#1}{Note Taking}}
+            {%
+                \detailsStyle{#4}\\
+                &\detailsStyle{#5}\\
+                &\detailsStyle{#6}\\
+                &\detailsStyle{#7}\\
+                &\detailsStyle{#8}\\
+                &\detailsStyle{#9}
             }
             {}%
             \\
 }
 
 \newcommand{\WorkExperienceHasinOne}[5]{
-                &\scriptsize\textit{Project:} #1\\
-                &       \quad\quad #2\\
-                &\scriptsize\textit{Project:} #3\\
-                &       \quad\quad #4\\
-                &\scriptsize\textit{Project:} #5\\
+                &\scriptsize\textit{Project:} \detailsStyle{#1}\\
+                &       \quad\quad \detailsStyle{#2}\\
+                &\scriptsize\textit{Project:} \detailsStyle{#3}\\
+                &       \quad\quad \detailsStyle{#4}\\
+                &\scriptsize\textit{Project:} \detailsStyle{#5}\\
 }
 
 \begin{Record}{Work Experience}{l l l}
+    \WorkExperience{Note Taking}
+        {Summer 2017}{}
+        {To save and remember your notes. Anyone can organize their notes in}
+        {a free and simple way with this app.}
+        {It supports unlimited tree structure to organize notes in directories.}
+        {You can change the style of your note, such as bold, etc.}
+        {It uses Dagger, OrmLite, RxAndroid, etc.}
+        {Currently, It's in alpha release of Google Play. \href{https://gitlab.com/hadilq/NoteTaking}{Gitlab}}%
     \WorkExperience{Free Map}
         {Winter 2016}{}
         {Just a hobby android project}
