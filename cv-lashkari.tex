@@ -181,8 +181,8 @@
 
 \begin{Record}{Computer Skill}{l l}
     \ComputerSkill{Android Library}
-        {Dagger 2, Butter Knife, OrmLite, Time4A, RxAndroid, RxJava, Google map, firebase}
-        {Volley, Retrofit, OkHttp, One Signal, EventBus}
+        {Live Data, Veiw Model, Dagger 2, RxAndroid, RxJava, Butter Knife, OrmLite, Time4A}
+        {Google map, Firebase, Volley, Retrofit, OkHttp, One Signal, EventBus}
         {Familiar with ARToolkit and jni development}{}{}%
     \ComputerSkill{Android Test Library}
         {Mockito Framework, Espresso Framework}{}{}{}{}%
@@ -191,14 +191,14 @@
         {Android SDK and its command line, Android NDK}{}{}{}%
     \ComputerSkill{Operating System}
         {Linux(Ubuntu, Debian, Fedora), Android, Os X}{}{}{}{}%
-    \ComputerSkill{Operating System tools}
+    \ComputerSkill{Operating System tool}
         {Linux \& Os X: Bash, Zsh, grep, sed, netstat, ps, screen, etc.}
         {Android: adb, android, emulator, sdkmanager, etc.}{}{}{}%
-    \ComputerSkill{Development tools}
+    \ComputerSkill{Development tool}
         {Atlassian Jira, Atlassian Confluence, Gitlab, Jenkins, JFrog, etc.}
         {}{}{}{}%
     \ComputerSkill{Language}
-        {Java 7, 8, Python 2, 3, Groovy, Bash, Javascript, C/C++, C\#, etc.}
+        {Java 7, 8, Python 2, 3, Groovy, Javascript, Rust, C/C++, C\#, etc.}
         {}{}{}{}%
     \ComputerSkill{Special Software}
         {\LaTeX, Mathematica, Sage, Ofbiz}
@@ -227,14 +227,19 @@
         \ifthenelse{\equal{#4}{Lecturer}}
             {%
                 \scriptsize\textit{Responsibility:} \detailsStyle{#4}\\
-                \quad#3&\scriptsize\textit{Courses Taught:} \detailsStyle{#5}}
+                \quad#3&\scriptsize\textit{Courses Taught:} \detailsStyle{#5}\\
+                &\scriptsize\textit{Courses Taught:} \detailsStyle{#6}\\
+                &\scriptsize\textit{Courses Taught:} \detailsStyle{#7}\\
+                &\scriptsize\textit{Courses Taught:} \detailsStyle{#8}
+            }
             {}%
         \ifthenelse{\equal{#4}{Open Source}}
             {%
                 \detailsStyle{#4}\\
                 \quad#3
                 &\scriptsize\textit{Implemented by:} \detailsStyle{#5.} \scriptsize\textit{Source:} \detailsStyle{#6}\\
-                &\scriptsize\textit{Implemented by:} \detailsStyle{#7.} \scriptsize\textit{Source:} \detailsStyle{#8}}
+                &\scriptsize\textit{Implemented by:} \detailsStyle{#7.} \scriptsize\textit{Source:} \detailsStyle{#8}
+            }
             {}%
         \ifthenelse{\equal{#4}{Programmer}}
             {%
@@ -276,6 +281,13 @@
                 &\detailsStyle{#9}
             }
             {}%
+        \ifthenelse{\equal{#1}{TV Maze Sample}}
+            {%
+                \detailsStyle{#4}\\
+                &\detailsStyle{#5}\\
+                &\detailsStyle{#6}
+            }
+            {}%
             \\
 }
 
@@ -288,6 +300,12 @@
 }
 
 \begin{Record}{Work Experience}{l l l}
+    \WorkExperience{TV Maze Sample}
+        {Fall 2017}{}
+        {A sample Android app for TVmaze API}
+        {It uses Dagger, RxAndroid, LiveData, ViewModel, etc.}
+        {\href{https://github.com/hadilq/TvMazeSample}{Github}}%
+        {}{}{}%
     \WorkExperience{Note Taking}
         {Summer 2017}{}
         {To save and remember your notes. Anyone can organize their notes in}
@@ -295,7 +313,7 @@
         {It supports unlimited tree structure to organize notes in directories.}
         {You can change the style of your note, such as bold, etc.}
         {It uses Dagger, OrmLite, RxAndroid, etc.}
-        {Currently, It's in alpha release of Google Play. \href{https://gitlab.com/hadilq/NoteTaking}{Gitlab}}%
+        {\href{https://gitlab.com/hadilq/NoteTaking}{Gitlab}, \href{https://play.google.com/store/apps/details?id=com.gitlab.notetaking}{Google Play}}%
     \WorkExperience{Free Map}
         {Winter 2016}{}
         {Just a hobby android project}
@@ -334,33 +352,14 @@
         {Java}
         {\href{https://github.com/hadilq/java-persian-calendar}{github.com}}{}%
     \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
-        {Fall 2014}{}
+        {\scriptsize\textit{From} spring 2012}
+        {\scriptsize\textit{To} fall 2014}
         {Lecturer}
         {Mathematical Physics}
-        {}{}{}{}%
-    \WorkExperience{\href{http://www.sadjad.ac.ir/MainEn.aspx}{Sadjad University}}
-        {\scriptsize\textit{From} fall 2012}
-        {\scriptsize\textit{To} spring 2014}
-        {Lecturer}
-        {General Physics I \& II}
-        {}{}{}{}%
-    \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
-        {\scriptsize\textit{From} fall 2012}
-        {\scriptsize\textit{To} spring 2014}
-        {Lecturer}
-        {Application of Computers in Physics}
-        {}{}{}{}%
-    \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
-        {\scriptsize\textit{From} spring 2012}
-        {\scriptsize\textit{To} spring 2013}
-        {Lecturer}
-        {Waves}
-        {}{}{}{}%
-    \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
-        {Spring 2012}{}
-        {Lecturer}
         {Classical Mechanics}
-        {}{}{}{}%
+        {Application of Computers in Physics}
+        {Waves}
+        {}%
 \end{Record}
 
 %-------------------------------------------------------------------
