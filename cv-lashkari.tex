@@ -27,13 +27,14 @@
 
 \definecolor{MSLightBlue}{rgb}{.31,.506,.741}
 \newfontfamily\sectionfont[SizeFeatures={Size=12}, Color=MSLightBlue]{Apple Chancery}
-\newfontfamily\bignamefont[SizeFeatures={Size=28}]{Apple Chancery}
+\newfontfamily\subsectionfont[SizeFeatures={Size=10}]{Copperplate}
+\newfontfamily\subsubsectionfont[SizeFeatures={Size=7}]{Courier New}
+\newfontfamily\bignamefont[SizeFeatures={Size=28}]{Snell Roundhand}
 \newfontfamily\impactfont[SizeFeatures={Size=10}]{Snell Roundhand}
 \newfontfamily\snellfont[SizeFeatures={Size=18}]{Snell Roundhand}
 \newfontfamily\smallsnellfont[SizeFeatures={Size=10}]{Snell Roundhand}
 \newfontfamily\copperplatefont[SizeFeatures={Size=10}]{Copperplate}
-\newfontfamily\courierfont[SizeFeatures={Size=7}]{Courier}
-\setmainfont[SizeFeatures={Size=8}]{Courier}
+\newfontfamily\courierfont[SizeFeatures={Size=7}]{Courier New}
 
 % Shrink spacing around section headings
 \titleformat{\section}{}{}{0pt}{\large\itshape\sectionfont}
@@ -82,7 +83,8 @@
     \small{
     \begin{tabular}{l p{4.5cm}}
         \impactfont\textbf{Phone:}& CREDENTIAL_PHONE_NUMBER:\\
-        \impactfont\textbf{Email:}& \href{CREDENTIAL_MAILTO}{CREDENTIAL_EMAIL}
+        \impactfont\textbf{Email:}& \href{CREDENTIAL_MAILTO}{CREDENTIAL_EMAIL}\\
+        \impactfont\textbf{Linkedin.com:}& \href{https://www.linkedin.com/in/hadi-lashkari-ghouchani-97864934/}{Hadi Lashkari Ghouchani}
         \ifthenelse{\equal{\ispubliccv}{no}}{\\
 	    \impactfont\textbf{Address:}& CREDENTIAL_ADDRESS}{}%
     \end{tabular}\\
@@ -105,13 +107,15 @@
         \HRule
 }
 
-\newcommand{\FootNote}[1]{\let\thefootnote\relax\footnote{\smallsnellfont{\textbf{\textit{Curriculum Vitae}}} of \textsc{Hadi Lashkari-Ghouchani}\qquad\today.\qquad Page #1 of \maxpages}}
+\newcommand{\FootNote}[1]{\let\thefootnote\relax\footnote{\smallsnellfont{\textbf{\textit{Curriculum Vitae of}}} \textsc{Hadi Lashkari-Ghouchani}\qquad\today.\qquad Page #1 of \maxpages}}
 \pagenumbering{gobble}
 
 % Table specifics
 \definecolor{Gray}{gray}{0.85}
 \newcommand\VRule{\color{Gray}\vrule width 0.5pt}
-\newcommand\detailsStyle{\scriptsize\texttt}
+\newcommand\subsectionstyle{\textbf\textsl\subsectionfont}
+\newcommand\subsectiondetailstyle{\scriptsize\textit\subsubsectionfont}
+\newcommand\subsubsectionstyle{\scriptsize\texttt\subsubsectionfont}
 
 \begin{document}
 \Logo
@@ -128,11 +132,77 @@
 }{}%
 
 %-------------------------------------------------------------------
-% POSITIONING STATEMENT
+% COMPUTER SKILL
 %-------------------------------------------------------------------
-\vspace{-0.4cm}
-\begin{Record}{Positioning Statement}{l}
-\courierfont Quick learner, passionate developer and curious mathematician.
+
+\newcommand{\ComputerSkill}[6]{
+    \multicolumn{2}{l}{\subsectionstyle{#1}}\\
+    \qquad\qquad\qquad\qquad%
+    \ifthenelse{\isempty{#2}}{}
+    {%
+        &\subsubsectionstyle{#2}\\
+    }%
+    \ifthenelse{\isempty{#3}}{}
+    {%
+        &\subsubsectionstyle{#3}\\
+    }%
+    \ifthenelse{\isempty{#4}}{}
+    {%
+        &\subsubsectionstyle{#4}\\
+    }%
+    \ifthenelse{\isempty{#5}}{}
+    {%
+        &\subsubsectionstyle{#5}\\
+    }%
+    \ifthenelse{\isempty{#6}}{}
+    {%
+        &\subsubsectionstyle{#6}\\
+    }%
+    \vspace{-0.4cm}\\
+}
+
+\begin{Record}{Computer Skill}{l l}
+    \ComputerSkill{Android Library}
+        {LiveData, VeiwModel, Dagger 2, RxAndroid, RxJava 2, Butter Knife, OrmLite, Greendao, Time4A}
+        {Google map, Firebase, Retrofit 2, OkHttp 3, Volley, One Signal, EventBus}
+        {Familiar with ARToolkit and JNI development}{}{}%
+    \ComputerSkill{Android Test Library}
+        {Mockito Framework, Espresso Framework}{}{}{}{}%
+    \ComputerSkill{Tool}
+        {Gradle, Ant, Make, CMake, Git, Subversion, Mercurial}
+        {Android SDK and its command line, Android NDK}{}{}{}%
+    \ComputerSkill{Operating System}
+        {Linux(Fedora, Debian, Ubuntu), Android, OS X}{}{}{}{}%
+    \ComputerSkill{Operating System tool}
+        {Linux \& OS X: Bash, Zsh, grep, sed, netstat, ps, awk, screen, etc.}
+        {Android: adb, android, emulator, sdkmanager, avdmanager, etc.}{}{}{}%
+    \ComputerSkill{Development tool}
+        {Pivotal Tracker. Github, Jenkins}
+        {Atlassian Jira, Atlassian Confluence, Gitlab, JFrog, etc.}{}{}{}%
+    \ComputerSkill{Language}
+        {Java 7, 8, Kotlin, Python 2, 3, Groovy, Javascript, Rust, C/C++, C\#, etc.}
+        {}{}{}{}%
+    \ComputerSkill{Special Software}
+        {Mathematica, Sage, Ofbiz, This article is created by using \LaTeX}
+        {Familiar with Mathlab, Euler, Maxima}{}{}{}%
+    \ComputerSkill{Back-End Development}
+        {PostgreSQL, MySQL, MsSql, JPA}
+        {Spring boot Framework, Protobuf, RESTful}
+        {PHP, YII, HTML5/CSS3, jQuery, NodeJS, Ajax, JSON}
+        {Tomcat, Nginx}{}%
+\end{Record}
+
+%-------------------------------------------------------------------
+% INTERESTED IN
+%-------------------------------------------------------------------
+\newcommand{\InterestedIn}[1]{
+    \subsubsectionstyle #1\\
+}
+\begin{Record}{Interested In}{l l}
+    \InterestedIn{Open Source programming, Open source communities, which is why my chosen platform is the Android}%
+    \InterestedIn{Security, RSA, P vs NP problems}%
+    \InterestedIn{Artificial Intelligence, Deep Learning, Machine Learning}%
+    \InterestedIn{Mathematics and Physics problems}%
 \end{Record}
 
 %-------------------------------------------------------------------
@@ -140,74 +210,13 @@
 %-------------------------------------------------------------------
 
 \newcommand{\Education}[9]{
-\copperplatefont{\textsc{#1}}&#2&#3&#6&#7\\
-\hspace{160pt}GPA:& #8&#9&#4&#5\\ %Based on http://www.educationusairan.org/edu-professionals/grading}
+\subsectionfont{#1}&\subsubsectionstyle{#2}&\subsubsectionstyle{#3}&\subsubsectionstyle{#6}&\subsubsectionstyle{#7}\\
+%\subsubsectionstyle{\hspace{160pt}GPA:}& \subsubsectionstyle{#8}&\subsubsectionstyle{#9}&\subsubsectionstyle{#4}&\subsubsectionstyle{#5}\\ %Based on http://www.educationusairan.org/edu-professionals/grading}
 }
 
 \begin{Record}{Education}{l c l l l}
     \Education{Sharif University Of Technology}{M.Sc.}{Physics}{Sep.}{2007}{Feb.}{2010}{A}{(17.08/20=85.4\%)}
     \Education{Payame-Noor University of Mashad}{B.Sc.}{Physics(Applied Solid state)}{Sep.}{2002}{Jul.}{2007}{B}{(15.09/20=75.4\%)}
-\end{Record}
-
-%-------------------------------------------------------------------
-% COMPUTER SKILL
-%-------------------------------------------------------------------
-
-\newcommand{\ComputerSkill}[6]{
-    \multicolumn{2}{l}{\copperplatefont{\textbf{\textsl{ #1}}}}\\
-    \qquad\qquad\qquad\qquad%
-    \ifthenelse{\isempty{#2}}{}
-    {%
-        &\detailsStyle{#2}\\
-    }%
-    \ifthenelse{\isempty{#3}}{}
-    {%
-        &\detailsStyle{#3}\\
-    }%
-    \ifthenelse{\isempty{#4}}{}
-    {%
-        &\detailsStyle{#4}\\
-    }%
-    \ifthenelse{\isempty{#5}}{}
-    {%
-        &\detailsStyle{#5}\\
-    }%
-    \ifthenelse{\isempty{#6}}{}
-    {%
-        &\detailsStyle{#6}\\
-    }%
-    \vspace{-0.4cm}\\
-}
-
-\begin{Record}{Computer Skill}{l l}
-    \ComputerSkill{Android Library}
-        {Live Data, Veiw Model, Dagger 2, RxAndroid, RxJava, Butter Knife, OrmLite, Time4A}
-        {Google map, Firebase, Volley, Retrofit, OkHttp, One Signal, EventBus}
-        {Familiar with ARToolkit and jni development}{}{}%
-    \ComputerSkill{Android Test Library}
-        {Mockito Framework, Espresso Framework}{}{}{}{}%
-    \ComputerSkill{Tool}
-        {Gradle, Ant, Make, CMake, Git, Subversion, Mercurial}
-        {Android SDK and its command line, Android NDK}{}{}{}%
-    \ComputerSkill{Operating System}
-        {Linux(Ubuntu, Debian, Fedora), Android, Os X}{}{}{}{}%
-    \ComputerSkill{Operating System tool}
-        {Linux \& Os X: Bash, Zsh, grep, sed, netstat, ps, screen, etc.}
-        {Android: adb, android, emulator, sdkmanager, etc.}{}{}{}%
-    \ComputerSkill{Development tool}
-        {Atlassian Jira, Atlassian Confluence, Gitlab, Jenkins, JFrog, etc.}
-        {}{}{}{}%
-    \ComputerSkill{Language}
-        {Java 7, 8, Python 2, 3, Groovy, Javascript, Rust, C/C++, C\#, etc.}
-        {}{}{}{}%
-    \ComputerSkill{Special Software}
-        {\LaTeX, Mathematica, Sage, Ofbiz}
-        {Familiar with Mathlab, Euler, Maxima}{}{}{}%
-    \ComputerSkill{Back-End Development}
-        {PostgreSQL, MySQL, MsSql, JPA}
-        {Spring boot Framework, Protobuf, RESTful}
-        {PHP, YII, HTML5/CSS3, jQuery, NodeJS, Ajax, JSON}
-        {Tomcat, Nginx}{}%
 \end{Record}
 
 %-------------------------------------------------------------------
@@ -222,97 +231,108 @@
 
 % 9 arguments are the max number of arguments
 \newcommand{\WorkExperience}[9]{
-    \multicolumn{3}{l}{\copperplatefont{\textbf{\textsl{ #1}}}}\\
-    \quad#2&%
+    \multicolumn{3}{l}{\subsectionstyle{#1}}\\
+    \quad\subsectiondetailstyle{#2}&%
         \ifthenelse{\equal{#4}{Lecturer}}
             {%
-                \scriptsize\textit{Responsibility:} \detailsStyle{#4}\\
-                \quad#3&\scriptsize\textit{Courses Taught:} \detailsStyle{#5}\\
-                &\scriptsize\textit{Courses Taught:} \detailsStyle{#6}\\
-                &\scriptsize\textit{Courses Taught:} \detailsStyle{#7}\\
-                &\scriptsize\textit{Courses Taught:} \detailsStyle{#8}
+                \subsectiondetailstyle{Responsibility:} \subsubsectionstyle{#4}\\
+                \quad#3&\subsectiondetailstyle{Courses Taught:} \subsubsectionstyle{#5}\\
+                &\subsectiondetailstyle{Courses Taught:} \subsubsectionstyle{#6}
             }
             {}%
         \ifthenelse{\equal{#4}{Open Source}}
             {%
-                \detailsStyle{#4}\\
+                \subsubsectionstyle{#4}\\
                 \quad#3
-                &\scriptsize\textit{Implemented by:} \detailsStyle{#5.} \scriptsize\textit{Source:} \detailsStyle{#6}\\
-                &\scriptsize\textit{Implemented by:} \detailsStyle{#7.} \scriptsize\textit{Source:} \detailsStyle{#8}
+                &\subsectiondetailstyle{Implemented by:} \subsubsectionstyle{#5.} \subsectiondetailstyle{Source:} \subsubsectionstyle{#6}\\
+                &\subsectiondetailstyle{Implemented by:} \subsubsectionstyle{#7.} \subsectiondetailstyle{Source:} \subsubsectionstyle{#8}
             }
             {}%
         \ifthenelse{\equal{#4}{Programmer}}
             {%
-                \scriptsize\textit{Responsibility:} \detailsStyle{#4}\\
+                \subsectiondetailstyle{Responsibility:} \subsubsectionstyle{#4}\\
                 \quad#3
-                &\scriptsize\textit{Languages:} \texttt{#5}\\
-                &\scriptsize\textit{Project:} \detailsStyle{#6}\\
-                &\scriptsize\textit{Project:} \detailsStyle{#7}
+                &\subsectiondetailstyle{Languages:} \texttt{#5}\\
+                &\subsectiondetailstyle{Project:} \subsubsectionstyle{#6}\\
+                &\subsectiondetailstyle{Project:} \subsubsectionstyle{#7}
             }
             {}%
         \ifthenelse{\equal{#4}{Senior Android Developer}}
             {%
-                \scriptsize\textit{Responsibility:} \detailsStyle{#4}\\
+                \subsectiondetailstyle{Responsibility:} \subsubsectionstyle{#4}\\
                 \quad#3
-                &\scriptsize\textit{Project:} \detailsStyle{#5}\\
-                &       \quad\quad \detailsStyle{#6}\\
-                &       \quad\quad \detailsStyle{#7}\\
-                &\scriptsize\textit{Project:} \detailsStyle{#8}\\
-                &       \quad\quad \detailsStyle{#9}
+                &\subsectiondetailstyle{Project:} \subsubsectionstyle{#5}\\
+                &       \quad\quad \subsubsectionstyle{#6}\\
+                &       \quad\quad \subsubsectionstyle{#7}\\
+                &\subsectiondetailstyle{Project:} \subsubsectionstyle{#8}\\
+                &       \quad\quad \subsubsectionstyle{#9}
+            }
+            {}%
+        \ifthenelse{\equal{#4}{Senior Android Developer and Functional Manager}}
+            {%
+                \subsectiondetailstyle{Responsibility:} \subsubsectionstyle{#4}\\
+                \quad#3
+                &\subsubsectionstyle{#5}\\
+                &\subsubsectionstyle{#6}\\
+                &\quad\quad\subsubsectionstyle{#7}\\
+                &\subsubsectionstyle{#8}\\
+                &\subsubsectionstyle{#9}
             }
             {}%
         \ifthenelse{\equal{#1}{Free Map}}
             {%
-                \detailsStyle{#4}\\
-                &\detailsStyle{#5}\\
-                &\detailsStyle{#6}\\
-                &\detailsStyle{#7}\\
-                &\detailsStyle{#8}\\
-                &\detailsStyle{#9}
+                \subsubsectionstyle{#4}\\
+                &\subsubsectionstyle{#5}\\
+                &\quad\quad\subsubsectionstyle{#6}\\
+                &\subsubsectionstyle{#7}\\
+                &\subsubsectionstyle{#8}\\
+                &\subsubsectionstyle{#9}
             }
             {}%
         \ifthenelse{\equal{#1}{Note Taking}}
             {%
-                \detailsStyle{#4}\\
-                &\detailsStyle{#5}\\
-                &\detailsStyle{#6}\\
-                &\detailsStyle{#7}\\
-                &\detailsStyle{#8}\\
-                &\detailsStyle{#9}
-            }
-            {}%
-        \ifthenelse{\equal{#1}{TV Maze Sample}}
-            {%
-                \detailsStyle{#4}\\
-                &\detailsStyle{#5}\\
-                &\detailsStyle{#6}
+                \subsubsectionstyle{#4}\\
+                &\quad\quad\subsubsectionstyle{#5}\\
+                &\subsubsectionstyle{#6}\\
+                &\subsubsectionstyle{#7}\\
+                &\subsubsectionstyle{#8}\\
+                &\subsubsectionstyle{#9}
             }
             {}%
             \\
 }
 
 \newcommand{\WorkExperienceHasinOne}[5]{
-                &\scriptsize\textit{Project:} \detailsStyle{#1}\\
-                &       \quad\quad \detailsStyle{#2}\\
-                &\scriptsize\textit{Project:} \detailsStyle{#3}\\
-                &       \quad\quad \detailsStyle{#4}\\
-                &\scriptsize\textit{Project:} \detailsStyle{#5}\\
+                &\subsectiondetailstyle{Project:} \subsubsectionstyle{#1}\\
+                &       \quad\quad \subsubsectionstyle{#2}\\
+                &\subsectiondetailstyle{Project:} \subsubsectionstyle{#3}\\
+                &       \quad\quad \subsubsectionstyle{#4}\\
+                &\subsectiondetailstyle{Project:} \subsubsectionstyle{#5}\\
+}
+
+
+\newcommand{\WorkExperienceSheypoor}[1]{
+                &\subsubsectionstyle{#1}\\
 }
 
 \begin{Record}{Work Experience}{l l l}
-    \WorkExperience{TV Maze Sample}
-        {Fall 2017}{}
-        {A sample Android app for TVmaze API}
-        {It uses Dagger, RxAndroid, LiveData, ViewModel, etc.}
-        {\href{https://github.com/hadilq/TvMazeSample}{Github}}%
-        {}{}{}%
+    \WorkExperience{\href{http://www.sheypoor.com/}{Sheypoor}}
+        {\subsectiondetailstyle{From} winter 2018}
+        {\subsectiondetailstyle{To} present}
+        {Senior Android Developer and Functional Manager}
+        {Improving the code, such as adding \texttt{Dagger} and \texttt{Kotlin}, etc.}
+        {This app had 12 million users so we have to refactor it cautiously}
+        {to achieve \texttt{MVP} architect, by using \texttt{Agile} terminology and \texttt{Kanban}.}
+        {Implementing new features and redesign.}
+        {Improvise functional programming, mainly by \texttt{Rx}.}%
+    \WorkExperienceSheypoor{As the functional manager, review codes, teach and increase the code quality.}
     \WorkExperience{Note Taking}
         {Summer 2017}{}
         {To save and remember your notes. Anyone can organize their notes in}
         {a free and simple way with this app.}
         {It supports unlimited tree structure to organize notes in directories.}
         {You can change the style of your note, such as bold, etc.}
-        {It uses Dagger, OrmLite, RxAndroid, etc.}
+        {It uses \texttt{Dagger}, \texttt{OrmLite}, \texttt{RxAndroid}, etc.}
         {\href{https://gitlab.com/hadilq/NoteTaking}{Gitlab}, \href{https://play.google.com/store/apps/details?id=com.gitlab.notetaking}{Google Play}}%
     \WorkExperience{Free Map}
         {Winter 2016}{}
@@ -320,15 +340,15 @@
         {This project allows anyone to pick a place on map and make }
         {a post to see by others.}
         {It contains Android project as the client side beside a Spring server}
-        {It uses Dagger, OrmLite, RxAndroid, Google Map, Retrofit, JPA, etc.}
+        {It uses \texttt{Dagger}, \texttt{OrmLite}, \texttt{RxAndroid}, \texttt{Google Map}, \texttt{Retrofit}, \texttt{JPA}, etc.}
         {\href{https://github.com/hadilq/HobbyTaste}{Github}, \href{https://play.google.com/store/apps/details?id=ir.asparsa.hobbytaste}{Google Play}}%
     \WorkExperience{\href{http://hasintech.com}{Hasin Technology}}
-        {\scriptsize\textit{From} fall 2015}
-        {\scriptsize\textit{To} present}
+        {\subsectiondetailstyle{From} fall 2015}
+        {\subsectiondetailstyle{To} fall 2017}
         {Senior Android Developer}
         {Implementation of search page, inbox page, }
         {handling Android intents, managing analytics' events}
-        {and many other parts of \href{http://myket.ir}{Myket} with \scriptsize{\texttt{scrum}} planning.}
+        {and many other parts of \href{http://myket.ir}{Myket} with \scriptsize{\texttt{Scrum}} planning.}
         {Improvement in \texttt{Gradle} configurations of \href{http://myket.ir}{Myket},}
         {such as handling some tasks by defining Groovy functions.}%
     \WorkExperienceHasinOne{Improvement in \texttt{Maven} configurations of \href{http://myket.ir}{Myket}}
@@ -337,8 +357,8 @@
         {to handle continuous integration with emulators and everything.}
         {Starting test driven development in \href{http://myket.ir}{Myket} team.}%
     \WorkExperience{\href{http://sohasys.ir}{Soha Company}}
-        {\scriptsize\textit{From} spring 2015}
-        {\scriptsize\textit{To} summer 2015}
+        {\subsectiondetailstyle{From} spring 2015}
+        {\subsectiondetailstyle{To} summer 2015}
         {Programmer}
         {Java, Jetty, Android, JSON, C\#, Sql Server, SOAP}
         {Controlling and saving traffic of employees}
@@ -352,14 +372,12 @@
         {Java}
         {\href{https://github.com/hadilq/java-persian-calendar}{github.com}}{}%
     \WorkExperience{\href{http://en.pnu.ac.ir/Portal/Home}{Payame-Noor University}}
-        {\scriptsize\textit{From} spring 2012}
-        {\scriptsize\textit{To} fall 2014}
+        {\subsectiondetailstyle{From} spring 2012}
+        {\subsectiondetailstyle{To} fall 2014}
         {Lecturer}
-        {Mathematical Physics}
-        {Classical Mechanics}
+        {Mathematical Physics, Classical Mechanics, Waves}
         {Application of Computers in Physics}
-        {Waves}
-        {}%
+        {}{}{}%
 \end{Record}
 
 %-------------------------------------------------------------------
@@ -372,14 +390,14 @@
 % SPECIAL HONER
 %-------------------------------------------------------------------
 \newcommand{\SpecialHonor}[3]{
-    \textsl{ #1}&#2\\
-    &#3\\
+    \subsectionstyle{#1}&\subsubsectionstyle{#2}\\
+    &\subsubsectionstyle{#3}\\
 }
 \begin{Record}{Special Honor}{l l}
-    \SpecialHonor{\copperplatefont{\textbf{44th} rank}}
+    \SpecialHonor{44th rank}
         {\scriptsize Among more than \textbf{five thousand} participants in the \textbf{Nationwide Graduate}}
         {\scriptsize \textbf{Entrance Exam} in Physics and Nanophysics branch at Spring 2007.}%
-    \SpecialHonor{\copperplatefont{First rank}}
+    \SpecialHonor{First rank}
         {\scriptsize Among all students of Physics group of Payame-Noor University}
         {\scriptsize (50 students).}%
 \end{Record}
@@ -389,7 +407,7 @@
 %-------------------------------------------------------------------
 
 \newcommand{\Language}[2]{
-    \copperplatefont{\textbf{\textsl{#1}}}&\scriptsize\textit{#2}\\
+    \subsectionstyle{#1}&\subsubsectionstyle{#2}\\
 }
 \ifthenelse{\equal{\ispubliccv}{no}}{%
     \begin{Record}{Language}{l l}
@@ -410,17 +428,23 @@
 %-------------------------------------------------------------------
 
 \newcommand{\Research}[7]{
-    \multicolumn{2}{l}{\copperplatefont{\textbf{\textsl{ #1:}}}}\\
-    \quad#2&\scriptsize\textit{#3}\\
+    \multicolumn{2}{l}{\subsectionstyle{#1:}}\\
+    \quad\subsubsectionstyle{#2}&\subsubsectionstyle{#3}\\
     \ifthenelse{\isempty{#4}}
-    {&\scriptsize\textit{#5}\\}
-    {&\scriptsize#4: \textit{#5}\\}
+    {&\subsubsectionstyle{#5}\\}
+    {&\scriptsize#4: \subsubsectionstyle{#5}\\}
     \ifthenelse{\isempty{#6}}
-    {&\scriptsize\textit{#7}\\}
-    {&\scriptsize#6: \textit{#7}\\}%
+    {&\scriptsize\subsubsectionstyle{#7}\\}
+    {&\scriptsize#6: \subsubsectionstyle{#7}\\}%
 }
 
 \begin{Record}{Research}{l p{11cm}}
+    \Research{Independent Research}
+        {Spring 2018}
+        {The dimension of the spacetime is a measure of Entropy}
+        {License}
+        {\href{https://gitlab.com/hadilq/entropy-dimension-article}{Green open access}}
+        {}{}%
     \Research{Publication}
         {Spring 2015}
         {Conservation of Optical Chirality in Superconductors as a measure for 5 dimensional Electromagnetism \href{http://arxiv.org/abs/1507.03517}{arXiv:1507.03517}}
@@ -460,10 +484,10 @@
 %-------------------------------------------------------------------
 
 \newcommand{\Reference}[5]{
-    \multicolumn{2}{l}{\copperplatefont{\textbf{\textsl{ #1}}}}\\
-    \quad#2&\scriptsize\textit{#3}\\
-    &\scriptsize\textit{#4}\\
-    &\scriptsize\textit{#5}\\
+    \multicolumn{2}{l}{\subsectionstyle{#1}}\\
+    \quad#2&\subsubsectionstyle{#3}\\
+    &\subsubsectionstyle{#4}\\
+    &\subsubsectionstyle{#5}\\
 }
 
 \ifthenelse{\equal{\ispubliccv}{no}}{%
