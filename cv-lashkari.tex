@@ -165,30 +165,30 @@
     \ComputerSkill{Android Library}
         {LiveData, VeiwModel, Dagger 2, RxAndroid, RxJava 2, Butter Knife, OrmLite, Greendao, Time4A}
         {Google map, Firebase, Retrofit 2, OkHttp 3, Volley, One Signal, EventBus}
-        {Familiar with ARToolkit and JNI development}
+        {Starting with Flutter framework. Familiar with ARToolkit and JNI development.}
         {Familiar with Android Open Source Project (AOSP) repository and building Android}{}%
     \ComputerSkill{Android Test Library}
-        {JUnit Framework, Mockito Framework, Espresso Framework, Jacoco}{}{}{}{}%
+        {JUnit, Mockito, Espresso framework, Jacoco}{}{}{}{}%
     \ComputerSkill{Tool}
         {Gradle, Ant, Make, CMake, Git, Subversion, Mercurial}
         {Android SDK and its command line, Android NDK}{}{}{}%
     \ComputerSkill{Operating System}
         {Linux(Fedora, Debian, Ubuntu), Android, OS X}{}{}{}{}%
     \ComputerSkill{Operating System tool}
-        {Linux \& OS X: Bash, Zsh, grep, sed, netstat, ps, awk, screen, etc.}
+        {Linux \& OS X: Bash, Zsh, grep, sed, netstat, ps, awk, screen, docker, etc.}
         {Android: adb, android, emulator, sdkmanager, avdmanager, repo command of AOSP, etc.}{}{}{}%
     \ComputerSkill{Development tool}
         {Pivotal Tracker. Github, Jenkins}
         {Atlassian Jira, Atlassian Confluence, Gitlab, JFrog, etc.}{}{}{}%
     \ComputerSkill{Language}
-        {Java 7, 8, Kotlin, Python 2, 3, Groovy, Javascript, Rust, C/C++, C\#, etc.}
+        {Java 7, 8, Kotlin, Python 2, 3, Groovy, Dart, Javascript, etc.}
         {}{}{}{}%
     \ComputerSkill{Special Software}
         {Mathematica, Sage, Ofbiz, This article is created by \LaTeX}
         {Familiar with Mathlab, Euler, Maxima}{}{}{}%
     \ComputerSkill{Back-End Development}
         {PostgreSQL, MySQL, MsSql, JPA}
-        {Spring boot Framework, Protobuf, RESTful}
+        {Spring boot framework, Protobuf, RESTful}
         {PHP, YII, HTML5/CSS3, jQuery, NodeJS, Ajax, JSON}
         {Tomcat, Nginx}{}%
 \end{Record}
@@ -293,6 +293,7 @@
         \ifthenelse{\equal{#1}{Note Taking}}
             {%
                 \subsubsectionstyle{#4}\\
+                \quad#3
                 &\quad\quad\subsubsectionstyle{#5}\\
                 &\subsubsectionstyle{#6}\\
                 &\subsubsectionstyle{#7}\\
@@ -312,9 +313,10 @@
 }
 
 
-\newcommand{\WorkExperienceSheypoor}[2]{
+\newcommand{\WorkExperienceSheypoor}[3]{
                 &\subsubsectionstyle{#1}\\
                 &\subsubsectionstyle{#2}\\
+                &\subsubsectionstyle{#3}\\
 }
 
 \begin{Record}{Work Experience}{l l l}
@@ -324,13 +326,14 @@
         {Senior Android Developer and Functional Manager}
         {Improving the code, such as adding \texttt{Dagger} and \texttt{Kotlin}, etc.}
         {This app had 9+ million users so we have to refactor it cautiously}
-        {to achieve \texttt{MVP} architect, by using \texttt{Agile} terminology and \texttt{Kanban}.}
-        {Implementing new features and redesign.}
+        {to achieve \texttt{MVP} architecture, by using \texttt{Agile} terminology and \texttt{Kanban}.}
+        {Implementing new features, such as loading static data on compile time, etc.}
         {Improvise functional programming, mainly by \texttt{Rx}.}%
-    \WorkExperienceSheypoor{As the functional manager, review codes, coach and increase the code quality.}
+    \WorkExperienceSheypoor{As the functional manager, review code, mentor and increase the code quality.}
+    {Redesign and rebrand the entire app.}
     {\href{https://play.google.com/store/apps/details?id=com.sheypoor.mobile}{Google Play}, \href{https://cafebazaar.ir/app/com.sheypoor.mobile/?l=en}{Cafe Bazaar Store}, \href{https://myket.ir/app/com.sheypoor.mobile?lang=en}{Myket}}%
     \WorkExperience{Note Taking}
-        {Summer 2017}{}
+        {Summer 2017}{\subsectiondetailstyle{Redesign in} Spring 2018}
         {To save and remember your notes. Anyone can organize their notes in}
         {a free and simple way with this app.}
         {It supports unlimited tree structure to organize notes in directories.}
