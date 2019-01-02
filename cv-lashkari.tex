@@ -7,7 +7,7 @@
 \usepackage{array, xcolor, stackengine}
 \usepackage[
 	a4paper, 
-	papersize={23cm, 28cm},
+	papersize={23cm, 33cm},
 	margin=1.8cm,
 	bmargin=-1cm,
 ]{geometry}
@@ -33,82 +33,54 @@
 	\newcommand{\maxpages}{3}
 }%
 
-\definecolor{awesomeblue}{RGB}{0, 109, 240}
+\definecolor{awesomeblue}{RGB}{74, 20, 140}
 \definecolor{awesomegrey}{RGB}{68, 68, 68}
 \definecolor{Gray}{gray}{0.85}
 
-\newfontfamily\sectionfont[SizeFeatures={Size=9}]{Copperplate}
-\newfontfamily\subsectionfont[SizeFeatures={Size=12}]{Apple Chancery}
+\newfontfamily\sectionfont[SizeFeatures={Size=9}]{Rubik}
+\newfontfamily\subsectionfont[SizeFeatures={Size=8}]{Rubik}
 \newfontfamily\subsubsectionfont[SizeFeatures={Size=7}, Color=awesomegrey]{Rubik}
 \newfontfamily\detailsfont[SizeFeatures={Size=5}, Color=awesomegrey]{Rubik}
-\newfontfamily\positionfont[SizeFeatures={Size=12}, Color=awesomeblue]{Apple Chancery}
-\newfontfamily\bignamefont[SizeFeatures={Size=28}]{Snell Roundhand}
-\newfontfamily\impactfont[SizeFeatures={Size=4}]{Snell Roundhand}
-\newfontfamily\snellfont[SizeFeatures={Size=18}]{Snell Roundhand}
-\newfontfamily\smallsnellfont[SizeFeatures={Size=10}]{Snell Roundhand}
-\newfontfamily\copperplatefont[SizeFeatures={Size=10}]{Copperplate}
-\newfontfamily\courierfont[SizeFeatures={Size=7}]{Courier New}
+\newfontfamily\positionfont[SizeFeatures={Size=12}, Color=awesomeblue]{Rubik}
+\newfontfamily\bignamefont[SizeFeatures={Size=28}]{Rubik}
+\newfontfamily\impactfont[SizeFeatures={Size=4}]{Rubik}
+\newfontfamily\snellfont[SizeFeatures={Size=18}]{Rubik}
+\newfontfamily\smallsnellfont[SizeFeatures={Size=10}]{Rubik}
+\newfontfamily\copperplatefont[SizeFeatures={Size=10}]{Rubik}
+\newfontfamily\courierfont[SizeFeatures={Size=7}]{Rubik}
 
 
-\newcommand\sectionstyle[1]{\large{\textbf{\sectionfont{#1}}}}
-\newcommand\subsectionstyle[1]{\textbf{\textsl{\subsectionfont{#1}}}\vspace{1mm}}
+\newcommand\sectionstyle[1]{\textcolor{awesomeblue}{\large{\textbf{\sectionfont{#1}}}}}
+\newcommand\subsectionstyle[1]{\subsectionfont{#1}\vspace{1mm}}
 \newcommand\subsubsectionstyle[1]{\scriptsize{\subsubsectionfont{#1}}}
 \newcommand\detailsstyle[1]{\scriptsize{\detailsfont{#1}}}
-\newcommand\positionstyle[1]{\textbf{\textsl{\positionfont{#1}}}}
+\newcommand\positionstyle[1]{\textbf{\positionfont{#1}}}
 
 
 % Shrink spacing around section headings
 \titleformat{\section}{}{}{0pt}{\large\itshape\sectionfont}
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
-\newcommand\shadowfy[1]{\expandafter\shadowfypars#1\par\relax\relax}
-\long\def\shadowfypars#1\par#2\relax{%
-	\ifx#1\relax\else
-		\shadowfywords#1 \relax\relax%
-		\fi%
-		\ifx\relax#2\else\par\shadowfypars#2\relax\fi%
-}
-\def\shadowfywords#1 #2\relax{%
-	\ifx#1\relax\else
-		\shadowfyletters#1\relax\relax%
-		\fi%
-		\ifx\relax#2\else\ \shadowfywords#2\relax\fi%
-}
-\def\shadowfyletters#1#2\relax{%
-	\shadow{#1}%
-		\ifx\relax#2\else\shadowfyletters#2\relax\fi
-}
-
-\newlength\shadowHoffset
-\newlength\shadowVoffset
 \def\primarycolor{black}%
 \def\secondarycolor{black!30}%
-\setlength\shadowHoffset{2pt}
-\setlength\shadowVoffset{-2pt}
-
-\def\shadow#1{\kern\shadowHoffset%
-	\raisebox{\shadowVoffset}{%
-		\stackinset{c}{-\shadowHoffset}{c}{-\shadowVoffset}%
-		{\textcolor{\primarycolor}{#1}}{\textcolor{\secondarycolor}{#1}}}%
-	\kern-\shadowHoffset
-}
 
 %-------------------------------------------------------------------
 % Header
 %-------------------------------------------------------------------
 \newcommand{\titleposition}{
 	\begin{minipage}{0.80\textwidth}%
-		\Huge{\textit{\bignamefont{\shadowfy{Hadi Lashkari-Ghouchani}}}}\vspace{-3mm}\\
+		\Huge{\bignamefont{Hadi Lashkari Ghouchani}}\vspace{-3mm}\\
 		\textcolor{awesomeblue}{\Large{\positionstyle{Senior Android Developer}}}
 	\end{minipage}%
 }
 
-\newcommand{\phonetitle}{         $\vcenter{\hbox{\includegraphics[width=2mm]{icons/phone}}}$}
-\newcommand{\emailtitle}{         $\vcenter{\hbox{\includegraphics[width=2mm]{icons/email}}}$}
-\newcommand{\linkedintitle}{      $\vcenter{\hbox{\includegraphics[width=2mm]{icons/linkedin}}}$}
-\newcommand{\addresstitle}{       $\vcenter{\hbox{\includegraphics[width=2mm]{icons/address}}}$}
-\newcommand{\githubtitle}{	      $\vcenter{\hbox{\includegraphics[width=2mm]{icons/github}}}$}
-\newcommand{\stackoverflowtitle}{	$\vcenter{\hbox{\includegraphics[width=2mm]{icons/stackoverflow}}}$}
+\newcommand{\phonetitle}{         $\vcenter{\hbox{\includegraphics[width=2mm]{icons/phone-purple}}}$}
+\newcommand{\emailtitle}{         $\vcenter{\hbox{\includegraphics[width=2mm]{icons/email-purple}}}$}
+\newcommand{\linkedintitle}{      $\vcenter{\hbox{\includegraphics[width=2mm]{icons/linkedin-purple}}}$}
+\newcommand{\addresstitle}{       $\vcenter{\hbox{\includegraphics[width=2mm]{icons/address-purple}}}$}
+\newcommand{\githubtitle}{	      $\vcenter{\hbox{\includegraphics[width=2mm]{icons/github-purple}}}$}
+\newcommand{\stackoverflowtitle}{	$\vcenter{\hbox{\includegraphics[width=2mm]{icons/stackoverflow-purple}}}$}
+
 \newcommand{\locationtitle}{	    $\vcenter{\hbox{\includegraphics[width=2mm]{icons/location}}}$}
 \newcommand{\calendartitle}{	    $\vcenter{\hbox{\includegraphics[width=2mm]{icons/calendar}}}$}
 
@@ -162,17 +134,39 @@
 		\sectionstyle{Tools / Skills}\\
 		\rightsectionline
 		%
-		\subsectionstyle{Android library}\\
-		\subsubsectionstyle{Dagger 2/RxJava 2/Retrofit 2}\\
-		\subsubsectionstyle{Butter Knife/JetPack/...}\\
+		\subsectionstyle{Android}\\
+		\subsubsectionstyle{Android Architecture Components/JetPack}\\
+		\subsubsectionstyle{Lifecycles/LiveData/Navigation/Paging}\\
+		\subsubsectionstyle{ViewModel/WorkManager}\\
+		\subsubsectionstyle{Dagger 2/RxJava 2/Retrofit 2/...}\\
+		\subsubsectionstyle{Butter Knife/ObjectBox/...}\\
    	\rightsubsectionline
+		%
+		\subsectionstyle{Architecture}\\
+	  \subsubsectionstyle{Clean Architecture/Hexagonal Architecture}\\
+	  \subsubsectionstyle{MVVM, MVP, RMVVM}\\
+		\rightsubsectionline
+		%
+		\subsectionstyle{Principle}\\
+		\subsubsectionstyle{Clean Code/SOLID}\\
+		\subsubsectionstyle{Object Oriented Programming}\\
+		\subsubsectionstyle{Functional Programming}\\
+		\subsubsectionstyle{Stable Dependencies Principle}\\
+		\subsubsectionstyle{Stable Abstractions Principle}\\
+		\rightsubsectionline
+		%
+    \subsectionstyle{Design Pattern}\\
+		\subsubsectionstyle{Factory/Builder/Singleton/...}\\
+		\subsubsectionstyle{Adapter/Facade/Proxy/...}\\
+		\subsubsectionstyle{Strategy/Chain of responsibility/...}\\
+		\rightsubsectionline
 		%
 		\subsectionstyle{Android test library}\\
     \subsubsectionstyle{JUnit/Mockito/Espresso/Jacoco/...}\\
 		\rightsubsectionline
 		%
-		\subsectionstyle{Tool}\\
-    \subsubsectionstyle{Gradle/Maven/Ant/Make/Git/Subversion/...}\\
+		\subsectionstyle{Build Tool}\\
+    \subsubsectionstyle{Gradle/Maven/Ant/Make/...}\\
    	\rightsubsectionline
 		%
 		\subsectionstyle{Command Line Tool}\\
@@ -190,7 +184,7 @@
 		\rightsubsectionline
 		%
 		\subsectionstyle{Operating System}\\
-    \subsubsectionstyle{Linux(Fedora/Ubuntu)}\\
+    \subsubsectionstyle{Linux(Fedora/Ubuntu/Debian), OS X}\\
    	\rightsubsectionline
 		%
 		\sectionstyle{Language}\\
@@ -210,19 +204,24 @@
 		\sectionstyle{Summary}\\
 		\leftsectionline
 		\subsubsectionstyle{%
-			Professional guy with 3+ years of experience in Android development who has profound learning and contributing skills. Creative person who prefers to not reinventing the wheel, instead create a vehicle, but in case of performance, memory management, app size and security will invent a spherical wheel. A value oriented and passionate developer who enjoys solving problems and creating scalable, maintainable and efficient app to make the world better place to live.}\\
+			A professional developer with over 14 years of experience in software development, where over 3 years of his experience covers Android development. An introvert person who has profound learning and contributing skills.\\
+			A Creative, value driven and passionate developer who enjoys doing math, solving problems and creating scalable, maintainable, and efficient apps to make the world better place to live.\\
+			A person whose goal is to surround himself with happy, creative, motivative and clever persons, so his talent becomes flourished.\\
+			He's interested in Data Science and Data Engineering so he's looking forward to learn TensorFlow Lite as soon as possible.
+		}\\
 		\leftsubsectionline
 		%
 		\sectionstyle{Experience}\\
 		\leftsectionline
 		\subsectionstyle{Lead Android Developer}\\
-		\at{\href{https://sheypoor.com}{\underline{Sheypoor}}}{Jan. 2018 - Present}
-		\subsubsectionstyle{Sheypoor is one of lead classifieds marketplaces in Iran with over 1.5+ M users per day, 13+ M overall users and 344+ M sessions.}\\\\
+		\at{\href{https://play.google.com/store/apps/details?id=com.sheypoor.mobile&hl=en_GB}{\underline{Sheypoor}}}{Jan. 2018 - Present}
+		\subsubsectionstyle{Sheypoor is one of two lead classified marketplaces in Iran with 1.5+ million users per day, 13+ million overall users and 344+ million sessions.}\\\\
 		\subsubsectionstyle{Missions:}
 		\begin{itemize}\itembackspace%
-			\item\subsubsectionstyle{Increase the number of users per day from 0.5+ M to 1.5+ M in a year.}\itembackspace
-			\item\subsubsectionstyle{As the functional manager of Android team, I'm responsible for the code quality of Sheypoor app. I coach the team to practice design patterns, clean code and using app architecture, along with updating libraries and adding new features with focus on agility and UX.}\itembackspace
-			\item\subsubsectionstyle{Implement new design of the entire app, including rebranding, for summer campaign.}
+			\item\subsubsectionstyle{Increase the number of users per day from 0.5+ million to 1.5+ million in a year.}\itembackspace
+			\item\subsubsectionstyle{As functional manager of the Android team, I'm responsible for the code quality of the Sheypoor app. I coach the team to practice design patterns, clean code, and using app architecture, along with updating libraries and adding new features with focus on agility and UX.}\itembackspace
+			\item\subsubsectionstyle{Implement new design of the entire app, including rebranding for summer campaign.}\itembackspace
+		  \item\subsubsectionstyle{Improve the legacy code quality by adding Dagger and Kotlin.}
 	  \end{itemize}\itembackspace
 		\subsubsectionstyle{Technologies:}
 		\begin{itemize}\itembackspace
@@ -235,7 +234,7 @@
     \leftsubsectionline
   	\subsectionstyle{Senior Android Developer}\\
 		\at{\href{https://myket.ir}{\underline{Myket}}}{ Sep. 2015 - Des. 2017 }
-    \subsubsectionstyle{Myket is one of lead app stores in Iran with over 8+ M users.}\\\\
+    \subsubsectionstyle{Myket is one of two lead app stores in Iran with over 8+ million users.}\\\\
 		\subsubsectionstyle{Missions:}
 		\begin{itemize}\itembackspace
 			\item\subsubsectionstyle{Starting TDD and installing Jenking's pipeline to handle CI/CD.}\itembackspace
@@ -243,7 +242,7 @@
 		\end{itemize}\itembackspace
 		\subsubsectionstyle{Technologies:}
 		\begin{itemize}\itembackspace
-			\item\subsubsectionstyle{Volley, One Signal, EventBus, OrmLite, etc.}\itembackspace
+			\item\subsubsectionstyle{Volley, OneSignal, EventBus, OrmLite, etc.}\itembackspace
 		  \item\subsubsectionstyle{Agile, Scrum, Git Flow}\itembackspace
 		  \item\subsubsectionstyle{Mockito, Espresso}\itembackspace
 		  \item\subsubsectionstyle{Atlassian Jira, Atlassian Confluence, Gitlab, Jfrog, Jenkins}\itembackspace
@@ -252,7 +251,12 @@
 		\leftsubsectionline
 		\subsectionstyle{Java and C\# developer}\\
 		\at{\href{http://sohasys.ir}{\underline{Soha System}}}{Mar. 2015 - Aug. 2015}
-		\subsubsectionstyle{SOHA was formed to focus on solutions based on smart cards.}\\
+		\subsubsectionstyle{SOHA was formed to focus on solutions based on smart cards.}\\\\
+		\subsubsectionstyle{Missions:}
+		\begin{itemize}\itembackspace
+		  \item\subsubsectionstyle{Implementing RFID card reader Android app via bluetooth connection.}\itembackspace
+		  \item\subsubsectionstyle{Implementing Android and desktop apps.}\itembackspace
+		\end{itemize}\itembackspace
 		%
 		\leftsubsectionline
 		\sectionstyle{Article}\\
@@ -261,6 +265,12 @@
 	  \subsubsectionstyle{ProAndroidDev post: \href{https://proandroiddev.com/reactive-mvvm-architectural-pattern-42acc2bbb5e7}{Reactive MVVM architectural pattern}}\\
 		\subsubsectionstyle{ProAndroidDev post: \href{https://proandroiddev.com/loading-entities-from-database-and-server-api-by-using-rxjava-e1b798b549b4}{Loading entities from database and server API by using RxJava}}\\
 		\subsubsectionstyle{ProAndroidDev post: \href{https://proandroiddev.com/livedata-with-single-events-2395dea972a8}{LiveData with single events}}\\
+		%
+		\leftsubsectionline
+		\sectionstyle{Special Honor}\\
+		\leftsectionline
+		\subsubsectionstyle{Ranked 44th among more than five thousand participants in the National Graduate Entrance Exam in Physics at Spring 2007.}\\
+		\subsubsectionstyle{Receive result-oriented badge in Sheypoor at 2018}\\
 		%
 		\leftsubsectionline
 		\sectionstyle{Education}\\
@@ -275,7 +285,7 @@
 
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash} m{#1} }
 
-\newcommand\itembackspace{\vspace{-2.5mm}}
+\newcommand\itembackspace{\vspace{-2mm}}
 \newcommand\subsectionbackspace{\vspace{-4mm}}
 
 \newcommand\rightsectionline{
@@ -285,9 +295,9 @@
 	\vspace{1.5mm}\\
 }
 \newcommand\rightsubsectionline{
-	\vspace{3mm}
+	\vspace{-2mm}
 	\begin{tikzpicture}
-	\draw [thick,dash dot, draw=Gray] (0,1) -- (5.5,1);
+	  \draw [thick,dash dot, draw=Gray] (0,1) -- (5.5,1);
 	\end{tikzpicture}
 	\vspace{2mm}\\
 }
@@ -299,11 +309,11 @@
 	\vspace{1.1mm}\\
 }
 \newcommand\leftsubsectionline{
-	\vspace{2.5mm}
+%	\vspace{2.5mm}
 	\begin{tikzpicture}
 	\draw [thick,dash dot, draw=Gray] (0,1) -- (12.266,1);
 	\end{tikzpicture}
-	\vspace{3mm}\\
+	\vspace{2mm}\\
 }
 
 \newcommand\at[2]{\subsubsectionstyle{at #1\qquad\qquad \calendartitle\hspace{1mm}#2 \qquad\qquad \locationtitle\hspace{1mm} Tehran, Iran}\\\\
