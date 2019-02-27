@@ -7,7 +7,7 @@
 \usepackage{array, xcolor, stackengine}
 \usepackage[
 	a4paper, 
-	papersize={23cm, 34.3cm},
+	papersize={23cm, 33.5cm},
 	margin=1.8cm,
 	bmargin=-1cm,
 ]{geometry}
@@ -101,29 +101,29 @@
 
 \newcommand{\Header}{
 	\noindent
-		\titleposition
-		\vspace{2mm}\\
-		\noindent
-		\begin{tabularx}{\textwidth}{L{3.5cm} L{4.1cm} L{4.5cm}}%
-		\begin{tabular}[t]{@{}l} %
-		\emailtitle \space \emailvalue %
-		\end{tabular} & %
-		\begin{tabular}[t]{@{}ll} %
-		\phonetitle \space \phonevalue %
-		\end{tabular} & %
-		\begin{tabular}[t]{@{}l} %
-		\addresstitle \space \addressvalue %
-		\end{tabular}\\	
-		\begin{tabular}[t]{@{}l} %
-		\githubtitle \space \githubvalue %
-		\end{tabular} &%
-		\begin{tabular}[t]{@{}l} %
-		\stackoverflowtitle \space \stackoverflowvalue %
-		\end{tabular}%
-		\begin{tabular}[t]{@{}l} %
-		\linkedintitle \space \linkedinvalue %
-		\end{tabular} & %
-		\end{tabularx}
+	\titleposition
+  \vspace{2mm}\\
+  \noindent
+  \begin{tabularx}{\textwidth}{L{3.5cm} L{4.1cm} L{4.5cm}}%
+    \begin{tabular}[t]{@{}l} %
+  		\emailtitle \space \emailvalue %
+  	\end{tabular} & %
+  	\begin{tabular}[t]{@{}ll} %
+  		\phonetitle \space \phonevalue %
+  	\end{tabular} & %
+  	\begin{tabular}[t]{@{}l} %
+    	\addresstitle \space \addressvalue %
+  	\end{tabular}\\	
+  	\begin{tabular}[t]{@{}l} %
+    	\githubtitle \space \githubvalue %
+  	\end{tabular} &%
+  	\begin{tabular}[t]{@{}l} %
+  		\stackoverflowtitle \space \stackoverflowvalue %
+  	\end{tabular}%
+  	\begin{tabular}[t]{@{}l} %
+  		\linkedintitle \space \linkedinvalue %
+  	\end{tabular} & %
+  \end{tabularx}
 }
 
 %-------------------------------------------------------------------
@@ -198,7 +198,6 @@
 		\subsubsectionstyle{English: Advance}\\
 		\subsubsectionstyle{Farsi: Native}\\
     \rightsubsectionline
-		\\\\\\
 		%
 		\detailsstyle{The source of this resume in \href{https://github.com/hadilq/cv-english}{\underline{github}}}\\
 		\detailsstyle{Built at \today}
@@ -328,20 +327,16 @@
 %-------------------------------------------------------------------
 
 \begin{document}
-\Header
-
-\begin{table}[h]
-  \begin{center}
-    \begin{tabular}[t]{L{0.65\textwidth} L{0.35\textwidth}}
-      \begin{minipage}{0.63\textwidth}%
-        \summaryexperience%
-      \end{minipage} & %
-      \begin{minipage}{0.28\textwidth}% 
-			  \skills%
-			\end{minipage} %
-    \end{tabular}
-  \end{center}
-\end{table}
+  \Header
+  \begin{minipage}[t][][c]{0.63\textwidth}%
+  	\vspace{5mm}
+    \summaryexperience%
+  \end{minipage}  %
+  \hspace{0.02\linewidth} %
+  \begin{minipage}[t][][c]{0.28\textwidth}% 
+	  \vspace{5mm}
+    \skills%
+  \end{minipage} %
 \end{document}
 
 
