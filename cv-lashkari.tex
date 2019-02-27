@@ -7,7 +7,7 @@
 \usepackage{array, xcolor, stackengine}
 \usepackage[
 	a4paper, 
-	papersize={23cm, 36.5cm},
+	papersize={23cm, 34.3cm},
 	margin=1.8cm,
 	bmargin=-1cm,
 ]{geometry}
@@ -187,13 +187,19 @@
     \subsubsectionstyle{Linux(Fedora/Ubuntu/Debian), OS X}\\
    	\rightsubsectionline
 		%
-		\sectionstyle{Language}\\
+		\sectionstyle{Special Honor}\\
+		\rightsectionline
+		\subsubsectionstyle{- Ranked 44th among more than five thousand participants in the National Graduate Entrance Exam in Physics at Spring 2007.}\\
+		\subsubsectionstyle{- Received result-oriented badge in Sheypoor at 2018}\\
+    \rightsubsectionline
+		%
+	\sectionstyle{Language}\\
 		\rightsectionline
 		\subsubsectionstyle{English: Advance}\\
 		\subsubsectionstyle{Farsi: Native}\\
     \rightsubsectionline
+		\\\\\\
 		%
-		\\\\\\\\\\\\\\\\
 		\detailsstyle{The source of this resume in \href{https://github.com/hadilq/cv-english}{\underline{github}}}\\
 		\detailsstyle{Built at \today}
 }
@@ -276,12 +282,6 @@
 		\subsubsectionstyle{ProAndroidDev post: \href{https://proandroiddev.com/livedata-with-single-events-2395dea972a8}{LiveData with single events}}\\
 		%
 		\leftsubsectionline
-		\sectionstyle{Special Honor}\\
-		\leftsectionline
-		\subsubsectionstyle{Ranked 44th among more than five thousand participants in the National Graduate Entrance Exam in Physics at Spring 2007.}\\
-		\subsubsectionstyle{Received result-oriented badge in Sheypoor at 2018}\\
-		%
-		\leftsubsectionline
 		\sectionstyle{Education}\\
 		\leftsectionline
 		\subsubsectionstyle{\href{http://www.en.sharif.edu/}{\underline{Sharif University Of Technology}}\qquad\qquad M.Sc\qquad in Physics\qquad\calendartitle\hspace{2mm}Feb. 2010\qquad\qquad\locationtitle\hspace{1mm}Tehran}\\
@@ -299,13 +299,12 @@
 
 \newcommand\rightsectionline{
 	\begin{tikzpicture}
-	\draw [thick] (0,1) -- (5.5,1);
+	  \draw [thick] (0,1) -- (5.5,1);
 	\end{tikzpicture}
 	\vspace{1.5mm}\\
 }
 \newcommand\rightsubsectionline{
-	\vspace{-2mm}
-	\begin{tikzpicture}
+  \begin{tikzpicture}
 	  \draw [thick,dash dot, draw=Gray] (0,1) -- (5.5,1);
 	\end{tikzpicture}
 	\vspace{2mm}\\
@@ -313,16 +312,14 @@
 
 \newcommand\leftsectionline{
 	\begin{tikzpicture}
-	\draw [thick] (0,1) -- (12.266,1);
-	\end{tikzpicture}
-	\vspace{1.1mm}\\
+	  \draw [thick] (0,1) -- (12.266,1);
+	\end{tikzpicture}\\
 }
 \newcommand\leftsubsectionline{
-%	\vspace{2.5mm}
 	\begin{tikzpicture}
-	\draw [thick,dash dot, draw=Gray] (0,1) -- (12.266,1);
+	  \draw [thick,dash dot, draw=Gray] (0,1) -- (12.266,1);
 	\end{tikzpicture}
-	\vspace{2mm}\\
+	\vspace{1mm}\\
 }
 
 \newcommand\at[3]{\subsubsectionstyle{at #1\qquad\qquad \calendartitle\hspace{2mm}#2 \qquad\qquad \locationtitle\hspace{1mm} #3, Iran}\\\\}
@@ -336,12 +333,12 @@
 \begin{table}[h]
   \begin{center}
     \begin{tabular}[t]{L{0.65\textwidth} L{0.35\textwidth}}
-      \begin{minipage}{0.64\textwidth}%
+      \begin{minipage}{0.63\textwidth}%
         \summaryexperience%
       \end{minipage} & %
-      \begin{tabular}[t]{l} 
+      \begin{minipage}{0.28\textwidth}% 
 			  \skills%
-			\end{tabular} %
+			\end{minipage} %
     \end{tabular}
   \end{center}
 \end{table}
