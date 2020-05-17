@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/usr/local/bin/zsh
 
 ORIGINAL_CV=cv-lashkari.tex
 CV=cv-hadi-lashkari-ghouchani.tex
 PUBLIC_CV=cv-public-lashkari.tex
 
-source $PWD/credential-data.sh
+source ./credential-data.sh
 
 cat $ORIGINAL_CV | \
 	sed -e "s/CREDENTIAL_PHONE_NUMBER/$CREDENTIAL_PHONE_NUMBER/g" | \
@@ -22,7 +22,7 @@ echo "render the CV"
 xelatex $CV
 
 echo "render the public CV"
-cat $CV |sed -e 's/\\newcommand{\\ispubliccv}{no}/\\newcommand{\\ispubliccv}{yes}/g' > $PUBLIC_CV
+cat $CV | sed -e 's/\\newcommand{\\ispubliccv}{no}/\\newcommand{\\ispubliccv}{yes}/g' > $PUBLIC_CV
 
 xelatex $PUBLIC_CV
 

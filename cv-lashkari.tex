@@ -7,7 +7,7 @@
 \usepackage{array, xcolor, stackengine}
 \usepackage[
 	a4paper, 
-	papersize={23cm, 39cm},
+	papersize={23cm, 42cm},
 	margin=1.8cm,
 	bmargin=-1cm,
 ]{geometry}
@@ -79,13 +79,13 @@
 \newcommand{\linkedintitle}{      $\vcenter{\hbox{\includegraphics[width=2mm]{icons/linkedin-purple}}}$}
 \newcommand{\addresstitle}{       $\vcenter{\hbox{\includegraphics[width=2mm]{icons/address-purple}}}$}
 \newcommand{\githubtitle}{	      $\vcenter{\hbox{\includegraphics[width=2mm]{icons/github-purple}}}$}
-\newcommand{\stackoverflowtitle}{	$\vcenter{\hbox{\includegraphics[width=2mm]{icons/stackoverflow-purple}}}$}
+\newcommand{\mediumtitle}{            $\vcenter{\hbox{\includegraphics[width=2.4mm]{icons/medium-purple}}}$}
 
 \newcommand{\locationtitle}{	    $\vcenter{\hbox{\includegraphics[width=2mm]{icons/location}}}$}
 \newcommand{\calendartitle}{	    $\vcenter{\hbox{\includegraphics[width=2mm]{icons/calendar}}}$}
 
 
-\newcommand{\phonevalue}{ \subsubsectionstyle{\href{tel: CREDENTIAL_PHONE_NUMBER}{CREDENTIAL_PHONE_NUMBER}}}
+\newcommand{\phonevalue}{ \subsubsectionstyle{\href{tel:CREDENTIAL_PHONE_NUMBER}{CREDENTIAL_PHONE_NUMBER}}}
 \newcommand{\emailvalue}{\subsubsectionstyle{\href{CREDENTIAL_MAILTO}{CREDENTIAL_EMAIL}}}
 \newcommand{\linkedinvalue}{\subsubsectionstyle{\href{https://www.linkedin.com/in/hadilq}{linkedin.com/in/hadilq}}}
 \newcommand{\addressvalue}{\subsubsectionstyle{%
@@ -96,7 +96,7 @@
 	}%
 }}
 \newcommand{\githubvalue}{\subsubsectionstyle{\href{https://github.com/hadilq}{github.com/hadilq}}}
-\newcommand{\stackoverflowvalue}{\subsubsectionstyle{\href{https://stackoverflow.com/users/2482947}{stackoverflow.com/users/2482947}}}
+\newcommand{\mediumvalue}{\subsubsectionstyle{\href{https://medium.com/@hadilq.dev}{medium.com/@hadilq.dev}}}
 
 
 \newcommand{\Header}{
@@ -105,24 +105,24 @@
   \vspace{2mm}\\
   \noindent
   \begin{tabularx}{\textwidth}{L{3.5cm} L{4.1cm} L{4.5cm}}%
-    \begin{tabular}[t]{@{}l} %
-  		\emailtitle \space \emailvalue %
-  	\end{tabular} & %
-  	\begin{tabular}[t]{@{}ll} %
-  		\phonetitle \space \phonevalue %
-  	\end{tabular} & %
-  	\begin{tabular}[t]{@{}l} %
-    	\addresstitle \space \addressvalue %
-  	\end{tabular}\\	
-  	\begin{tabular}[t]{@{}l} %
-    	\githubtitle \space \githubvalue %
-  	\end{tabular} &%
-  	\begin{tabular}[t]{@{}l} %
-  		\stackoverflowtitle \space \stackoverflowvalue %
-  	\end{tabular}%
-  	\begin{tabular}[t]{@{}l} %
-  		\linkedintitle \space \linkedinvalue %
-  	\end{tabular} & %
+	\begin{tabular}[t]{@{}l} %
+		\emailtitle \space \emailvalue %
+	\end{tabular} & %
+	\begin{tabular}[t]{@{}ll} %
+		\phonetitle \space \phonevalue %
+	\end{tabular} & %
+	\begin{tabular}[t]{@{}l} %
+		\addresstitle \space \addressvalue %
+	\end{tabular}\\
+	\begin{tabular}[t]{@{}l} %
+		\githubtitle \space \githubvalue %
+	\end{tabular} &	%
+	\begin{tabular}[t]{@{}ll} %
+		\mediumtitle \space \mediumvalue %
+	\end{tabular} &	%
+	\begin{tabular}[t]{@{}l} %
+		\linkedintitle \space \linkedinvalue %
+	\end{tabular} %
   \end{tabularx}
 }
 
@@ -139,7 +139,9 @@
 		\subsubsectionstyle{Multidex/Test/Data Binding/WorkManager/Room}\\
 		\subsubsectionstyle{Android Architecture Components/JetPack}\\
 		\subsubsectionstyle{Dagger 2/RxJava 2/Retrofit 2/...}\\
-		\subsubsectionstyle{Butter Knife/ObjectBox/...}\\
+		\subsubsectionstyle{Kotlin Multiplatform/Kotlin Coroutines}\\
+		\subsubsectionstyle{Kotlin Compiler Plugin/...}\\
+		\subsubsectionstyle{View Binding/Butter Knife/ObjectBox/...}\\
    	\rightsubsectionline
 		%
 		\subsectionstyle{Architecture}\\
@@ -224,11 +226,12 @@
 		\leftsectionline
 		\subsectionstyle{Senior Android Developer}\\
 		\at{\href{https://play.google.com/store/apps/details?id=com.abtnprojects.ambatana&hl=en}{\underline{Letgo}}}{Oct. 2019 - Present}{Barcelona, Spain}
-		\subsubsectionstyle{Letgo is the biggest classified marketplace in Turkey and one of the fastest growing one in the USA, Canada, and Norway with 15+ million apps installed on Android devices alone.}\\\\
+		\subsubsectionstyle{Letgo is the biggest classified marketplace in Turkey with 15+ million apps installed on Android devices alone.}\\\\
 		\subsubsectionstyle{Mission:}
 		\begin{itemize}\itembackspace%
-			\item\subsubsectionstyle{After his first week of start, he could convince the professional Letgo team to allow him to jump right into the migrations of Kotlin, RxJava and Dagger.}\itembackspace%
-		  \item\subsubsectionstyle{Fix a couple of bugs and implement multiple features and their A/B Testing}
+			\item\subsubsectionstyle{After his first week of start, he could convince the professional Letgo team to allow him to jump right into the migrations of Kotlin, RxJava and Dagger.}\itembackspace
+			\item\subsubsectionstyle{Fix a couple of bugs and implement multiple features and their A/B Testing}\itembackspace
+			\item\subsubsectionstyle{Known as "The man who broke the escape room" to emphasize his ability to think out of the box}
 		\end{itemize}\itembackspace
 		\subsubsectionstyle{Technologies:}
 		\begin{itemize}\itembackspace
@@ -236,7 +239,7 @@
 			\item\subsubsectionstyle{Agile, Sprint, Github Flow, CI/CD}\itembackspace
 			\item\subsubsectionstyle{Mockito, Espresso, Jacoco, Ktlint, Fastlane}\itembackspace
 			\item\subsubsectionstyle{Atlassian Jira, Atlassian Confluence, Github, Jenkins, Slack, Figma}\itembackspace
-			\item\subsubsectionstyle{New Relic, Amplitude, Firebase, Leanplum, etc.}\itembackspace
+			\item\subsubsectionstyle{New Relic, Firebase, Amplitude, Leanplum, etc.}\itembackspace
 		\end{itemize}\itembackspace
 		%
 		\leftsubsectionline
@@ -248,8 +251,8 @@
 			\item\subsubsectionstyle{Increase the number of users per day from 0.5+ million to 1.5+ million in a year.}\itembackspace
 			\item\subsubsectionstyle{As functional manager of the Android team, he was responsible for the code quality of the Sheypoor app. He coached the team to practice design patterns, clean code, and using app architecture, along with updating libraries and adding new features with focus on agility and UX.}\itembackspace
 			\item\subsubsectionstyle{Implementing new design of the entire app, including rebranding for summer campaign.}\itembackspace
-		  \item\subsubsectionstyle{Improving the legacy code quality by adding Dagger and Kotlin.}
-	  \end{itemize}\itembackspace
+			\item\subsubsectionstyle{Improving the legacy code quality by adding Dagger and Kotlin.}
+		\end{itemize}\itembackspace
 		\subsubsectionstyle{Technologies:}
 		\begin{itemize}\itembackspace
 			\item\subsubsectionstyle{Dagger 2, RxJava 2, Butter Knife, Greendao, etc.}\itembackspace
@@ -295,14 +298,24 @@
 		\end{itemize}\itembackspace
     %
 		\leftsubsectionline
-		\sectionstyle{Article}\\
+		\sectionstyle{Article / Repository}\\
 		\leftsectionline
-		\subsubsectionstyle{2020 Medium post: \href{https://medium.com/@hadilq.dev/save-state-by-using-rxjava-or-kotlin-flow-526f6d282b84}{Save State By Using RxJava or Kotlin Flow}}\\
-		\subsubsectionstyle{2020 Medium post: \href{https://medium.com/@hadilq.dev/rxjava-instead-of-livedata-in-mvvm-f95e8fe0aa41}{RxJava instead of LiveData in MVVM}}\\
-		\subsubsectionstyle{2018 ProAndroidDev post: \href{https://proandroiddev.com/logging-in-kotlin-8ecfb97a4840}{Logging in Kotlin}}\\
-	  \subsubsectionstyle{2018 ProAndroidDev post: \href{https://proandroiddev.com/reactive-mvvm-architectural-pattern-42acc2bbb5e7}{Reactive MVVM architectural pattern}}\\
-		\subsubsectionstyle{2018 ProAndroidDev post: \href{https://proandroiddev.com/loading-entities-from-database-and-server-api-by-using-rxjava-e1b798b549b4}{Loading entities from database and server API by using RxJava}}\\
-		\subsubsectionstyle{2018 ProAndroidDev post: \href{https://proandroiddev.com/livedata-with-single-events-2395dea972a8}{LiveData with single events}}\\
+		\githubtitle\space\subsubsectionstyle{2020 Library: \href{https://github.com/hadilq/trackable-compiler-plugin}{A Kotlin compiler plugin that generates trackable method}}\\
+		\mediumtitle\space\subsubsectionstyle{2020 Medium post: \href{https://medium.com/@hadilq.dev/save-state-by-using-rxjava-or-kotlin-flow-526f6d282b84}{Save State By Using RxJava or Kotlin Flow}}\\
+		\mediumtitle\space\subsubsectionstyle{2020 Medium post: \href{https://medium.com/@hadilq.dev/rxjava-instead-of-livedata-in-mvvm-f95e8fe0aa41}{RxJava instead of LiveData in MVVM}}\\
+		\githubtitle\space\subsubsectionstyle{2020 Library: \href{https://github.com/hadilq/RxLifecycleHandler}{A glue between the lifecycle of LifecycleOwner in Android and upstreams in RxJava}}\\
+		\githubtitle\space\subsubsectionstyle{2020 Library: \href{https://github.com/hadilq/CoroutineLifecycleHandler}{A glue between the lifecycle of LifecycleOwner in Android and Kotlin Coroutines}}\\
+		\githubtitle\space\subsubsectionstyle{2020 Library: \href{https://github.com/hadilq/AndroidLifecycleHandler}{Simplifier for unnecessary complex lifecycles}}\\
+		\githubtitle\space\subsubsectionstyle{2019 Sample App: \href{https://github.com/hadilq/CleanArchitectureFP}{Functional Programming + Clean Architecture}}\\
+		\githubtitle\space\subsubsectionstyle{2019 Sample App: \href{https://github.com/hadilq/MoviesChallenge}{Movie Challenge}}\\
+		\githubtitle\space\subsubsectionstyle{2019 Math Library: \href{https://github.com/hadilq/num4k}{Modularized, mathematical and multiplatform Kotlin library}}\\
+		\mediumtitle\space\subsubsectionstyle{2018 ProAndroidDev post: \href{https://proandroiddev.com/logging-in-kotlin-8ecfb97a4840}{Logging in Kotlin}}\\
+		\githubtitle\space\subsubsectionstyle{2018 Log4k Library: \href{https://github.com/sheypoor/log4}{Easy logging library, but unfortunately it's in Sheypoor repository}}\\
+		\mediumtitle\space\subsubsectionstyle{2018 ProAndroidDev post: \href{https://proandroiddev.com/reactive-mvvm-architectural-pattern-42acc2bbb5e7}{Reactive MVVM architectural pattern}}\\
+		\githubtitle\space\subsubsectionstyle{2018 Sample App: \href{https://github.com/hadilq/CleanArchitucture}{Clean Architecture}}\\
+		\mediumtitle\space\subsubsectionstyle{2018 ProAndroidDev post: \href{https://proandroiddev.com/loading-entities-from-database-and-server-api-by-using-rxjava-e1b798b549b4}{Loading entities from database and server API by using RxJava}}\\
+		\mediumtitle\space\subsubsectionstyle{2018 ProAndroidDev post: \href{https://proandroiddev.com/livedata-with-single-events-2395dea972a8}{LiveData with single events}}\\
+		\githubtitle\space\subsubsectionstyle{2018 LiveEvent library: \href{https://github.com/hadilq/LiveEvent}{It's useful to propagate single event to View}}\\
 		%
 		\leftsubsectionline
 		\sectionstyle{Education}\\
