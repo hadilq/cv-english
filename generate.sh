@@ -1,4 +1,3 @@
-#!/usr/local/bin/zsh
 
 ORIGINAL_CV=cv-lashkari.tex
 CV=cv-hadi-lashkari-ghouchani.tex
