@@ -7,7 +7,7 @@
 \usepackage{array, xcolor, stackengine}
 \usepackage[
 	a4paper, 
-	papersize={24cm, 42cm},
+	papersize={24cm, 43cm},
 	margin=1.8cm,
 	bmargin=-1cm,
 ]{geometry}
@@ -141,7 +141,7 @@
 		\subsubsectionstyle{Dagger 2/RxJava 2/Retrofit 2/...}\\
 		\subsubsectionstyle{Kotlin Multiplatform/Kotlin Coroutines}\\
 		\subsubsectionstyle{Kotlin Compiler Plugin/...}\\
-		\subsubsectionstyle{View Binding/Butter Knife/ObjectBox/...}\\
+		\subsubsectionstyle{Compose/Data Binding/View Binding/...}\\
    	\rightsubsectionline
 		%
 		\subsectionstyle{Architecture}\\
@@ -160,7 +160,7 @@
 		%
     \subsectionstyle{Design Pattern}\\
 		\subsubsectionstyle{Factory/Builder/Singleton/...}\\
-		\subsubsectionstyle{Adapter/Facade/Proxy/Visitor/...}\\
+		\subsubsectionstyle{Adapter/Facade/Proxy/Visitor/Delegate/...}\\
 		\subsubsectionstyle{Strategy/Chain of responsibility/...}\\
 		\rightsubsectionline
 		%
@@ -169,7 +169,7 @@
 		\rightsubsectionline
 		%
 		\subsectionstyle{Build Tool}\\
-    \subsubsectionstyle{Gradle/Sbt/Maven/Ant/Make/...}\\
+    \subsubsectionstyle{Gradle/Cargo/Sbt/Maven/Ant/Make/...}\\
    	\rightsubsectionline
 		%
 		\subsectionstyle{Command Line Tool}\\
@@ -182,16 +182,17 @@
 		\rightsubsectionline
 		%
 		\subsectionstyle{Programing Language}\\
-		\subsubsectionstyle{Java/Kotlin/Scala/Haskell/Python}\\
-		\subsubsectionstyle{Groovy/Dart/Javascript/Rust/...}\\
+		\subsubsectionstyle{Java/Kotlin/Rust/Scala/Haskell/Python}\\
+		\subsubsectionstyle{Groovy/Dart/Javascript/Ruby...}\\
 		\rightsubsectionline
 		%
 		\subsectionstyle{Operating System}\\
-    \subsubsectionstyle{Linux(Fedora/Ubuntu/Debian), OS X}\\
+    \subsubsectionstyle{Linux(Nix OS/Fedora/Ubuntu/Debian), OS X}\\
    	\rightsubsectionline
 		%
 		\sectionstyle{Special Honor}\\
 		\rightsectionline
+		\subsubsectionstyle{- 2020 Had an offer from iFood, Remote}\\
 		\subsubsectionstyle{- 2019 Had an offer from Kik, Kitechener, Canada}\\
 		\subsubsectionstyle{- 2019 Had an offer from Letgo, Barcelona, Spain}\\
 		\subsubsectionstyle{- 2019 Had an offer from CRITICAL Techworks, BMW, Porto, Portugal}\\
@@ -216,7 +217,7 @@
 		\sectionstyle{Summary}\\
 		\leftsectionline
 		\subsubsectionstyle{%
-			A curious developer with over 15 years of experience in software development, where almost 5 years of his experience covers Android development, over 2 years covers teaching algorithms and programming in universities, and over 8 years covers academic and self-employed experiences while he was a student.\\
+			A curious developer with over 16 years of experience in software development, where almost 6 years of his experience covers Android development, over 2 years covers teaching algorithms and programming in universities, and over 8 years covers academic and self-employed experiences while he was a student.\\
 			An Introvert person who has profound learning and contributing skills. A creative, value driven and passionate developer who enjoys doing math, solving problems and creating scalable, maintainable, testable and efficient apps to make the world a better place to live.\\
 			A person whose goal is to surround himself with happy, creative, motivative and clever persons, so his talent becomes flourished.\\
 			He's interested in Data Science, Machine Learning, Functional Programming, Differentiable Programming, Category Theory, Math, etc. so constantly looking forward to learning related technologies to use in Mobile apps.
@@ -225,24 +226,38 @@
 		%
 		\sectionstyle{Experience}\\
 		\leftsectionline
+		\subsectionstyle{Staff Android Developer}\\
+    \at{\href{https://play.google.com/store/apps/details?id=br.com.brainweb.ifood&hl=en_US&gl=US}{\underline{iFood}}}{Oct. 2020 - Present}{Barcelona, Spain}
+		\subsubsectionstyle{iFood is an ambitious project to build an entire food delivery ecosystem for all around the world. Currently, it's the biggest food delivery in Brazil, Colombia and Mexico, with 50+ million apps installed on Android devices alone. The Android project is highly modularized to make it possible for 50+ develpers working on it fast.}\\\\
+		\subsubsectionstyle{Mission:}
+		\begin{itemize}\itembackspace%
+			\item\subsubsectionstyle{Propose and implement composite build to handle dependency management in Gradle. It decreased the rebuild time while updating a library from more than 13 min to less than a minute.}\itembackspace
+			\item\subsubsectionstyle{Implement Android side of metadata project. Its purpose is gathering all information of our highly modularized Android/iOS projects in a dashboard along backend information.}\itembackspace
+			\item\subsubsectionstyle{Propose and apply a concept to move away the legacy code from the root module to another one. It decreased the rebuild time of freed up modules by 55\%.}\itembackspace
+			\item\subsubsectionstyle{Wrap up external libraries to better handling panic situations.}
+		\end{itemize}\itembackspace
+		\subsubsectionstyle{Technologies:}
+		\begin{itemize}\itembackspace
+			\item\subsubsectionstyle{Dagger 2, Room, Kotlin Coroutines, Moshi, WorkManager / Mockk, Robolectric, jUnit, etc.}\itembackspace
+			\item\subsubsectionstyle{Agile, Sprint, Github Flow, CI/CD, Gradle Enterprise}\itembackspace
+			\item\subsubsectionstyle{Atlassian Jira, Atlassian Confluence, Github, Jenkins, Slack, Databricks, Firebase, Bugsnag, Logzio, etc.}\itembackspace
+		\end{itemize}\itembackspace
+		%
+		\leftsubsectionline
 		\subsectionstyle{Senior Android Developer}\\
 		\at{\href{https://play.google.com/store/apps/details?id=com.abtnprojects.ambatana&hl=en}{\underline{Letgo}}}{Oct. 2019 - Present}{Barcelona, Spain}
 		\subsubsectionstyle{Letgo is the biggest classified marketplace in Turkey with 15+ million apps installed on Android devices alone.}\\\\
 		\subsubsectionstyle{Mission:}
 		\begin{itemize}\itembackspace%
-			\item\subsubsectionstyle{Fix a couple of bugs and implement multiple features and their A/B Testing}\itembackspace
-			\item\subsubsectionstyle{Working on variants of Search Alert Entry Points}\itembackspace
 			\item\subsubsectionstyle{Improve the performance of loading feeds by at least a minute}\itembackspace
 			\item\subsubsectionstyle{Fix multiple Memory leaks}\itembackspace
 			\item\subsubsectionstyle{Known as "The man who broke the escape room" to emphasize his ability to think out of the box}
 		\end{itemize}\itembackspace
 		\subsubsectionstyle{Technologies:}
 		\begin{itemize}\itembackspace
-			\item\subsubsectionstyle{Dagger 2, RxJava 2, Room, etc.}\itembackspace
+			\item\subsubsectionstyle{Dagger 2, RxJava 2, Room / Mockito, Espresso, Robolectric, Jacoco, Ktlint, Fastlane, etc.}\itembackspace
 			\item\subsubsectionstyle{Agile, Sprint, Github Flow, CI/CD, Dynamic Feature Module Delivery}\itembackspace
-			\item\subsubsectionstyle{Mockito, Espresso, Robolectric, Jacoco, Ktlint, Fastlane}\itembackspace
-			\item\subsubsectionstyle{Atlassian Jira, Atlassian Confluence, Github, Jenkins, Slack, Figma}\itembackspace
-			\item\subsubsectionstyle{New Relic, Firebase, Amplitude, Leanplum, etc.}\itembackspace
+			\item\subsubsectionstyle{Atlassian Jira, Atlassian Confluence, Github, Jenkins, Slack, Figma, New Relic, Firebase, Amplitude, etc.}\itembackspace
 		\end{itemize}\itembackspace
 		%
 		\leftsubsectionline
@@ -251,17 +266,12 @@
 		\subsubsectionstyle{Sheypoor is one of two lead classified marketplaces in Iran with 1.5+ million users per day, 13+ million overall users and 344+ million sessions.}\\\\
 		\subsubsectionstyle{Missions:}
 		\begin{itemize}\itembackspace%
-			\item\subsubsectionstyle{Increase the number of users per day from 0.5+ million to 1.5+ million in a year.}\itembackspace
-			\item\subsubsectionstyle{As functional manager of the Android team, he was responsible for the code quality of the Sheypoor app. He coached the team to practice design patterns, clean code, and using app architecture, along with updating libraries and adding new features with focus on agility and UX.}\itembackspace
-			\item\subsubsectionstyle{Implementing new design of the entire app, including rebranding for summer campaign.}\itembackspace
-			\item\subsubsectionstyle{Improving the legacy code quality by adding Dagger and Kotlin.}
+			\item\subsubsectionstyle{Increase the number of users per day from 0.5+ million to 1.5+ million in a year.}
 		\end{itemize}\itembackspace
 		\subsubsectionstyle{Technologies:}
 		\begin{itemize}\itembackspace
-			\item\subsubsectionstyle{Dagger 2, RxJava 2, Butter Knife, Greendao, etc.}\itembackspace
-			\item\subsubsectionstyle{Agile, Kanban, Git Flow, CI/CD}\itembackspace
-			\item\subsubsectionstyle{Mockito, Espresso, Jacoco}\itembackspace
-			\item\subsubsectionstyle{Pivotal Tracker, Github, Jenkins, Slack, Zeplin, etc.}\itembackspace
+			\item\subsubsectionstyle{Dagger 2, RxJava 2, Butter Knife, Greendao / Mockito, Espresso, Jacoco, etc.}\itembackspace
+			\item\subsubsectionstyle{Agile, Kanban, Git Flow, CI/CD / Pivotal Tracker, Github, Jenkins, Slack, Zeplin, etc.}\itembackspace
 		\end{itemize}\itembackspace
 		%
     \leftsubsectionline
@@ -270,15 +280,7 @@
     \subsubsectionstyle{Myket is one of two lead app stores in Iran with over 8+ million users.}\\\\
 		\subsubsectionstyle{Missions:}
 		\begin{itemize}\itembackspace
-			\item\subsubsectionstyle{Starting TDD and installing Jenking's pipeline to handle CI/CD.}\itembackspace
-			\item\subsubsectionstyle{Implementing features such as handling deeplinks, search page, inbox page, etc.}
-		\end{itemize}\itembackspace
-		\subsubsectionstyle{Technologies:}
-		\begin{itemize}\itembackspace
-			\item\subsubsectionstyle{Dagger 2, Volley, OneSignal, EventBus, OrmLite, etc.}\itembackspace
-		  \item\subsubsectionstyle{Agile, Scrum, Git Flow}\itembackspace
-		  \item\subsubsectionstyle{Mockito, Espresso}\itembackspace
-		  \item\subsubsectionstyle{Atlassian Jira, Atlassian Confluence, Gitlab, Jfrog, Jenkins}\itembackspace
+			\item\subsubsectionstyle{Starting TDD and installing Jenking's pipeline to handle CI/CD.}
 		\end{itemize}\itembackspace
 		%
 		\leftsubsectionline
@@ -287,7 +289,6 @@
 		\subsubsectionstyle{SOHA is formed to focus on solutions based on smart cards.}\\\\
 		\subsubsectionstyle{Missions:}
 		\begin{itemize}\itembackspace
-		  \item\subsubsectionstyle{Implementing RFID card reader Android app via bluetooth connection.}\itembackspace
 		  \item\subsubsectionstyle{Implementing Android and desktop apps.}\itembackspace
 		\end{itemize}\itembackspace
 		%
@@ -303,6 +304,10 @@
 		\leftsubsectionline
 		\sectionstyle{Article / Repository}\\
 		\leftsectionline
+		\mediumtitle\space\subsubsectionstyle{2021 iFood Engneering: \href{https://medium.com/ifood-engineering/modularization-tip-optimize-the-root-module-b0a904a8d5f5}{Modularization tip: optimize the Root Module.}}\\
+		\mediumtitle\space\subsubsectionstyle{2021 ProAndroidDev post: \href{https://proandroiddev.com/happy-railway-79cd25aa0806}{Happy Railway. An improvement for Railway Oriented Programming in Kotlin.}}\\
+		\githubtitle\space\subsubsectionstyle{2021 Happy: \href{https://github.com/hadilq/happy}{A library to auto-generate Kotlin code to make calling APIs more concise.}}\\
+		\githubtitle\space\subsubsectionstyle{2020 Rust Flutter Reactive: \href{https://github.com/hadilq/rust-flutter-reactive}{POC for and idea to use Flutter as UI and Rust as the main project.}}\\
 		\githubtitle\space\subsubsectionstyle{2020 Make Log4k Multiplatform: \href{https://github.com/hadilq/log4k}{Simple logging library for Android, iOS, Mac, etc.}}\\
 		\mediumtitle\space\subsubsectionstyle{2020 ProAndroidDev post: \href{https://proandroiddev.com/a-b-testing-myths-adeceb6668fa}{A/B Testing Myths}}\\
 		\githubtitle\space\subsubsectionstyle{2020 Sample App: \href{https://github.com/hadilq/youtube-app}{Provide a full implementation for a No-Framework Dependency Injection in Kotlin}}\\
