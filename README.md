@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-I write my CV by `Latex`, which I'm comftable with. To re-generate the pdf files just add the `credential-data.sh` file with the following variables, then run `$ ./generate.sh` command.
+I write my CV by `Latex`, which I'm comftable with. Also I can track the changes with `git`, how cool is this? To re-generate the pdf files just add the `credential-data.sh` file with the following variables, then run `$ ./generate.sh` command.
 
 ```
 #!/bin/bash
