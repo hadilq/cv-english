@@ -40,6 +40,7 @@
 \newfontfamily\sectionfont[SizeFeatures={Size=9}]{Rubik}
 \newfontfamily\subsectionfont[SizeFeatures={Size=8}]{Rubik}
 \newfontfamily\subsubsectionfont[SizeFeatures={Size=7}, Color=awesomegrey]{Rubik}
+\newfontfamily\subsectiondescriptionfont[SizeFeatures={Size=6}, Color=awesomegrey]{Rubik}
 \newfontfamily\detailsfont[SizeFeatures={Size=5}, Color=awesomegrey]{Rubik}
 \newfontfamily\positionfont[SizeFeatures={Size=12}, Color=awesomeblue]{Rubik}
 \newfontfamily\bignamefont[SizeFeatures={Size=28}]{Rubik}
@@ -52,6 +53,7 @@
 
 \newcommand\sectionstyle[1]{\textcolor{awesomeblue}{\large{\textbf{\sectionfont{#1}}}}}
 \newcommand\subsectionstyle[1]{\subsectionfont{#1}\vspace{1mm}}
+\newcommand\subsectiondescriptionstyle[1]{\subsectiondescriptionfont{#1}}
 \newcommand\subsubsectionstyle[1]{\scriptsize{\subsubsectionfont{#1}}}
 \newcommand\detailsstyle[1]{\scriptsize{\detailsfont{#1}}}
 \newcommand\positionstyle[1]{\textbf{\positionfont{#1}}}
@@ -131,85 +133,116 @@
 %-------------------------------------------------------------------
 
 \newcommand{\skills}{
-		\sectionstyle{Tools / Skills}\\
-		\rightsectionline
-		%
-		\subsectionstyle{Android}\\
-		\subsubsectionstyle{Lifecycles/LiveData/Navigation/Paging/ViewModel}\\
-		\subsubsectionstyle{Multidex/Test/Data Binding/WorkManager/Room}\\
-		\subsubsectionstyle{Android Architecture Components/JetPack}\\
-		\subsubsectionstyle{Dagger 2/RxJava 2/Retrofit 2/...}\\
-		\subsubsectionstyle{Kotlin Multiplatform/Kotlin Coroutines}\\
-		\subsubsectionstyle{Kotlin Compiler Plugin/...}\\
-		\subsubsectionstyle{Compose/Data Binding/View Binding/...}\\
-   	\rightsubsectionline
-		%
-		\subsectionstyle{Architecture}\\
-	  \subsubsectionstyle{Clean Architecture/Hexagonal Architecture}\\
-	  \subsubsectionstyle{Unidirectional data flow Architecture}\\
-	  \subsubsectionstyle{MVVM/MVI/MVP/RMVVM}\\
-		\rightsubsectionline
-		%
-		\subsectionstyle{Principle}\\
-		\subsubsectionstyle{Clean Code/SOLID}\\
-		\subsubsectionstyle{Object Oriented Programming}\\
-		\subsubsectionstyle{Functional Programming}\\
-		\subsubsectionstyle{Stable Dependencies Principle}\\
-		\subsubsectionstyle{Stable Abstractions Principle}\\
-		\rightsubsectionline
-		%
+    \sectionstyle{Tools / Skills}\\
+    \rightsectionline
+    %
+    \subsectionstyle{Android}\\
+    \subsubsectionstyle{Partially Open Source Mobile}\\
+    \subsubsectionstyle{Lifecycles/LiveData/Navigation/Paging/ViewModel}\\
+    \subsubsectionstyle{Multidex/Test/Data Binding/WorkManager/Room}\\
+    \subsubsectionstyle{Android Architecture Components/JetPack}\\
+    \subsubsectionstyle{Anvil/Dagger 2/RxJava 2/Retrofit 2/...}\\
+    \subsubsectionstyle{Kotlin Multiplatform/Kotlin Coroutines}\\
+    \subsubsectionstyle{Kotlin Compiler Plugin/KSP/...}\\
+    \subsubsectionstyle{Compose/Data Binding/View Binding/...}\\\\
+    \subsectiondescriptionstyle{Summary of why are you interested?}\\
+    \subsubsectionstyle{It's partially open source OS.}\\
+    \subsubsectionstyle{Generally interested on Mobile Technologies.}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{Flutter}\\
+    \subsubsectionstyle{StatelessWidget/StatefulWidget}\\
+    \subsubsectionstyle{StreamController/Isolates}\\
+    \subsubsectionstyle{FFI}\\\\
+    \subsectiondescriptionstyle{Summary of why are you interested?}\\
+    \subsubsectionstyle{Generally interested on all cross-platform}\\
+    \subsubsectionstyle{and multi-platform solutions.}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{Rust}\\
+    \subsubsectionstyle{tonic/prost/openssl/tokio/flatbuffers/thrift}\\
+    \subsubsectionstyle{Rc/Arc/Mutex}\\
+    \subsubsectionstyle{FFI}\\\\
+    \subsectiondescriptionstyle{Summary of why are you interested?}\\
+    \subsubsectionstyle{Rust's type system is what you need for scale-up.}\\
+    \subsubsectionstyle{Borrow Checker restrictly stops any memory leaks.}\\
+    \subsubsectionstyle{Bevy, and Dioxus frameworks look like good}\\
+    \subsubsectionstyle{candidates for cross-platform solutions}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{Nix}\\
+    \subsubsectionstyle{NixOS/Nix Darwin}\\
+    \subsubsectionstyle{mkDrivation/mkShell}\\\\
+    \subsectiondescriptionstyle{Summary of why are you interested?}\\
+    \subsubsectionstyle{Reproducibility is very important!}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{Architecture}\\
+    \subsubsectionstyle{Clean Architecture/Hexagonal Architecture}\\
+    \subsubsectionstyle{Unidirectional data flow Architecture}\\
+    \subsubsectionstyle{MVVM/MVI/MVP/RMVVM}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{Principle}\\
+    \subsubsectionstyle{Clean Code/SOLID}\\
+    \subsubsectionstyle{Object Oriented Programming}\\
+    \subsubsectionstyle{Functional Programming}\\
+    \subsubsectionstyle{Stable Dependencies Principle}\\
+    \subsubsectionstyle{Stable Abstractions Principle}\\
+    \rightsubsectionline
+    %
     \subsectionstyle{Design Pattern}\\
-		\subsubsectionstyle{Factory/Builder/Singleton/...}\\
-		\subsubsectionstyle{Adapter/Facade/Proxy/Visitor/Delegate/...}\\
-		\subsubsectionstyle{Strategy/Chain of responsibility/...}\\
-		\rightsubsectionline
-		%
-		\subsectionstyle{Android test library}\\
+    \subsubsectionstyle{Factory/Builder/Singleton/...}\\
+    \subsubsectionstyle{Adapter/Facade/Proxy/Visitor/Delegate/...}\\
+    \subsubsectionstyle{Strategy/Chain of responsibility/...}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{Android test library}\\
     \subsubsectionstyle{JUnit/Mockito/Espresso/Jacoco/...}\\
-		\rightsubsectionline
-		%
-		\subsectionstyle{Build Tool}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{Build Tool}\\
     \subsubsectionstyle{Gradle/Cargo/Sbt/Maven/Ant/Make/...}\\
-   	\rightsubsectionline
-		%
-		\subsectionstyle{Command Line Tool}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{Command Line Tool}\\
     \subsubsectionstyle{grep/sed/netstat/awk/docker/...}\\
-		\subsubsectionstyle{adb/sdkmanager/avdmanager/...}\\
-   	\rightsubsectionline	
-		%
-		\subsectionstyle{Development Tool}\\
-		\subsubsectionstyle{Pivotal Tracker/Jira/Jenkins/Travis/CircleCi/...}\\
-		\rightsubsectionline
-		%
-		\subsectionstyle{Programing Language}\\
-		\subsubsectionstyle{Java/Kotlin/Rust/Scala/Haskell/Python}\\
-		\subsubsectionstyle{Groovy/Dart/Javascript/Ruby...}\\
-		\rightsubsectionline
-		%
-		\subsectionstyle{Operating System}\\
+    \subsubsectionstyle{adb/sdkmanager/avdmanager/...}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{Development Tool}\\
+    \subsubsectionstyle{Pivotal Tracker/Jira/Jenkins/Travis/CircleCi/...}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{Programing Language}\\
+    \subsubsectionstyle{Java/Kotlin/Rust/Scala/Haskell/Python}\\
+    \subsubsectionstyle{Groovy/Dart/Javascript/Ruby...}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{Operating System}\\
     \subsubsectionstyle{Linux(Nix OS/Fedora/Ubuntu/Debian), OS X}\\
-   	\rightsubsectionline
-		%
-		\sectionstyle{Special Honor}\\
-		\rightsectionline
-		\subsubsectionstyle{- 2020 Had an offer from MobileLIVE, Toronto, Canada}\\
-		\subsubsectionstyle{- 2020 Had an offer from iFood, Remote}\\
-		\subsubsectionstyle{- 2019 Had an offer from Kik, Kitechener, Canada}\\
-		\subsubsectionstyle{- 2019 Had an offer from Letgo, Barcelona, Spain}\\
-		\subsubsectionstyle{- 2019 Had an offer from CRITICAL Techworks, BMW, Porto, Portugal}\\
-		\subsubsectionstyle{- 2019 Had an offer from The Next Big Thing, Berlin, Germany}\\
-		\subsubsectionstyle{- 2018 Received result-oriented badge in Sheypoor}\\
-		\subsubsectionstyle{- 2007 Ranked 44th among more than five thousand participants in the National Graduate Entrance Exam in Physics}\\
     \rightsubsectionline
-		%
-	\sectionstyle{Language}\\
-		\rightsectionline
-		\subsubsectionstyle{English: Advance}\\
-		\subsubsectionstyle{Farsi: Native}\\
+    %
+    \sectionstyle{Special Honor}\\
+    \rightsectionline
+    \subsubsectionstyle{- 2020 Had an offer from MobileLIVE, Toronto, Canada}\\
+    \subsubsectionstyle{- 2020 Had an offer from iFood, Remote}\\
+    \subsubsectionstyle{- 2019 Had an offer from Kik, Kitechener, Canada}\\
+    \subsubsectionstyle{- 2019 Had an offer from Letgo, Barcelona, Spain}\\
+    \subsubsectionstyle{- 2019 Had an offer from CRITICAL Techworks, BMW, Porto, Portugal}\\
+    \subsubsectionstyle{- 2019 Had an offer from The Next Big Thing, Berlin, Germany}\\
+    \subsubsectionstyle{- 2018 Received result-oriented badge in Sheypoor}\\
+    \subsubsectionstyle{- 2007 Ranked 44th among more than five thousand participants in the National Graduate Entrance Exam in Physics}\\
     \rightsubsectionline
-		%
-		\detailsstyle{The source of this resume is in \href{https://github.com/hadilq/cv-english}{\underline{github}}}\\
-		\detailsstyle{Built on \today}
+    %
+    \sectionstyle{Language}\\
+    \rightsectionline
+    \subsubsectionstyle{English: Advance}\\
+    \subsubsectionstyle{Farsi: Native}\\
+    \rightsubsectionline
+    %
+    \detailsstyle{The source of this resume is in \href{https://github.com/hadilq/cv-english}{\underline{github}}}\\
+    \detailsstyle{Built on \today}
 }
 %-------------------------------------------------------------------
 % Summary and Experience
@@ -218,22 +251,24 @@
 		\sectionstyle{Summary}\\
 		\leftsectionline
 		\subsubsectionstyle{%
-			A curious developer with over 16 years of experience in software development, where almost 6 years of his experience covers Android development, over 2 years covers teaching algorithms and programming in universities, and over 8 years covers academic and self-employed experiences while he was a student.\\
+			A curious developer with over 17 years of experience in software development, where almost 7 years of his experience covers Android development, over 2 years covers teaching algorithms and programming in universities, and over 8 years covers academic and self-employed experiences while he was a student.\\
 			An Introvert person who has profound learning and contributing skills. A creative, value driven and passionate developer who enjoys doing math, solving problems and creating scalable, maintainable, testable and efficient apps to make the world a better place to live.\\
-			A person whose goal is to surround himself with happy, creative, motivative and clever persons, so his talent becomes flourished.\\
-			He's interested in Data Science, Machine Learning, Functional Programming, Differentiable Programming, Category Theory, Math, etc. so constantly looking forward to learning related technologies to use in Mobile apps.
+			A person whose goal is to surround himself with creative, clever, motivative and happy persons, so he can continuously learn more and more.\\
+			He's interested in decreasing build time, improving productivity of engineers by tooling, Functional Programming,  Machine Learning, Type Theory, Math, etc. so constantly looking forward to learning related technologies to use in Mobile apps.
 		}\\
 		\leftsubsectionline
 		%
 		\sectionstyle{Experience}\\
 		\leftsectionline
-		\subsectionstyle{Android Developer}\\
+		\subsectionstyle{Software Engineer}\\
     \at{\href{https://www.mobilelive.ca}{\underline{MobileLIVE}}}{Apr. 2021 - Present}{Toronto, Canada}
-		\subsubsectionstyle{MobileLIVE is a Canadian tech-service provider unifying people, technology, and business to accelerate digital transformation.}\\\\
+		\subsubsectionstyle{MobileLIVE is a Canadian tech-service provider unifying people, technology, and business to accelerate digital transformation. Over this time, he worked in Bell Canada as a contractor. Bell Canada is subsidiary Bell Aliant provides services in the Atlantic provinces. It provides mobile service through its Bell Mobility (including Virgin Mobile Canada) subsidiary, and television through its Bell Satellite TV and Bell Fibe TV subsidiaries.}\\\\
 		\subsubsectionstyle{Mission:}
 		\begin{itemize}\itembackspace%
 			\item\subsubsectionstyle{Introduced RFCs to make technical decisions and steps to applying any new idea.}\itembackspace
-			\item\subsubsectionstyle{Adding value by teaching and discussing SOLID, modularization best practices, feature flags, and monorepo, etc.}
+			\item\subsubsectionstyle{Adding value by teaching and discussing SOLID, modularization best practices, feature flags, and monorepo, etc.}\itembackspace%
+			\item\subsubsectionstyle{Implement a tooling Gradle Plugin to manage Bell's multi-repo setup.}\itembackspace%
+			\item\subsubsectionstyle{Raise the need for Gradle Enterprise and Productivity Engneer in the team, which leads to be the one who set up the GE in the project.}
 		\end{itemize}\itembackspace
 		\subsubsectionstyle{Technologies:}
 		\begin{itemize}\itembackspace
@@ -250,7 +285,7 @@
 		\begin{itemize}\itembackspace%
 			\item\subsubsectionstyle{Propose and implement composite build to handle dependency management in Gradle. It decreased the rebuild time while updating a library from more than 13 min to less than a minute.}\itembackspace
 			\item\subsubsectionstyle{Implement Android side of metadata project. Its purpose is gathering all information of our highly modularized Android/iOS projects in a dashboard along backend information.}\itembackspace
-			\item\subsubsectionstyle{Propose and apply a concept to move away the legacy code from the root module to another one. It decreased the rebuild time of freed up modules by 55\%.}\itembackspace
+			\item\subsubsectionstyle{Propose and apply a concept to move out the legacy code from the root module. It decreased the rebuild time of freed up modules by 55\%.}\itembackspace
 			\item\subsubsectionstyle{Wrap up external libraries to better handling panic situations.}
 		\end{itemize}\itembackspace
 		\subsubsectionstyle{Technologies:}
@@ -301,11 +336,6 @@
 		\at{\href{http://sohasys.ir}{\underline{Soha System}}}{Mar. 2015 - Aug. 2015}{Tehran, Iran}
 		\subsubsectionstyle{SOHA is formed to focus on solutions based on smart cards. TL;DR Mission: Implementing Android and desktop apps.}\\
 		%
-		\leftsubsectionline
-    \subsectionstyle{Lecturer}\\
-    \at{Universities}{Feb. 2012 - Dec. 2014}{Mashhad, Iran}
-    \subsubsectionstyle{After two years of enrollment by conscription, he had been starting his work in two universities, \href{http://en.pnu.ac.ir/Portal/Home/}{\underline{Payame Noor University}} and \href{https://www.sadjad.ac.ir/en}{\underline{Sadjad University of Technology}}. TL;DR Course Taught: Application of Computers in Physics, Mathematical Physics, etc.}\\
-    %
 		\leftsubsectionline
 		\sectionstyle{Article / Repository}\\
 		\leftsectionline
