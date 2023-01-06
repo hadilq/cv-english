@@ -76,18 +76,21 @@
 	\end{minipage}%
 }
 
-\newcommand{\phonetitle}{         $\vcenter{\hbox{\includegraphics[width=2mm]{icons/phone-purple}}}$}
+%\newcommand{\phonetitle}{         $\vcenter{\hbox{\includegraphics[width=2mm]{icons/phone-purple}}}$}
+\newcommand{\urltitle}{           $\vcenter{\hbox{\includegraphics[width=2mm]{icons/url-purple}}}$}
 \newcommand{\emailtitle}{         $\vcenter{\hbox{\includegraphics[width=2mm]{icons/email-purple}}}$}
 \newcommand{\linkedintitle}{      $\vcenter{\hbox{\includegraphics[width=2mm]{icons/linkedin-purple}}}$}
 \newcommand{\addresstitle}{       $\vcenter{\hbox{\includegraphics[width=2mm]{icons/address-purple}}}$}
 \newcommand{\githubtitle}{	      $\vcenter{\hbox{\includegraphics[width=2mm]{icons/github-purple}}}$}
 \newcommand{\mediumtitle}{            $\vcenter{\hbox{\includegraphics[width=2.4mm]{icons/medium-purple}}}$}
+\newcommand{\mastodontitle}{        $\vcenter{\hbox{\includegraphics[width=2.4mm]{icons/mastodon-purple}}}$}
 
 \newcommand{\locationtitle}{	    $\vcenter{\hbox{\includegraphics[width=2mm]{icons/location}}}$}
 \newcommand{\calendartitle}{	    $\vcenter{\hbox{\includegraphics[width=2mm]{icons/calendar}}}$}
 
 
-\newcommand{\phonevalue}{ \subsubsectionstyle{\href{tel:CREDENTIAL_PHONE_NUMBER}{CREDENTIAL_PHONE_NUMBER}}}
+%\newcommand{\phonevalue}{ \subsubsectionstyle{\href{tel:CREDENTIAL_PHONE_NUMBER}{CREDENTIAL_PHONE_NUMBER}}}
+\newcommand{\urlvalue}{ \subsubsectionstyle{\href{https://hadilq.com}{hadilq.com}}}
 \newcommand{\emailvalue}{\subsubsectionstyle{\href{CREDENTIAL_MAILTO}{CREDENTIAL_EMAIL}}}
 \newcommand{\linkedinvalue}{\subsubsectionstyle{\href{https://www.linkedin.com/in/hadilq}{linkedin.com/in/hadilq}}}
 \newcommand{\addressvalue}{\subsubsectionstyle{%
@@ -98,7 +101,8 @@
 	}%
 }}
 \newcommand{\githubvalue}{\subsubsectionstyle{\href{https://github.com/hadilq}{github.com/hadilq}}}
-\newcommand{\mediumvalue}{\subsubsectionstyle{\href{https://medium.com/@hadilq.dev}{medium.com/@hadilq.dev}}}
+%\newcommand{\mediumvalue}{\subsubsectionstyle{\href{https://medium.com/@hadilq.dev}{medium.com/@hadilq.dev}}}
+\newcommand{\mastodonvalue}{\subsubsectionstyle{\href{https://androiddev.social/@hadilq}{@hadilq@androiddev.social}}}
 
 
 \newcommand{\Header}{
@@ -111,7 +115,7 @@
 		\emailtitle \space \emailvalue %
 	\end{tabular} & %
 	\begin{tabular}[t]{@{}ll} %
-		\phonetitle \space \phonevalue %
+		\urltitle \space \urlvalue %
 	\end{tabular} & %
 	\begin{tabular}[t]{@{}l} %
 		\addresstitle \space \addressvalue %
@@ -120,7 +124,7 @@
 		\githubtitle \space \githubvalue %
 	\end{tabular} &	%
 	\begin{tabular}[t]{@{}ll} %
-		\mediumtitle \space \mediumvalue %
+		\mastodontitle \space \mastodonvalue %
 	\end{tabular} &	%
 	\begin{tabular}[t]{@{}l} %
 		\linkedintitle \space \linkedinvalue %
