@@ -83,7 +83,7 @@
 \newcommand{\addresstitle}{       $\vcenter{\hbox{\includegraphics[width=2mm]{icons/address-purple}}}$}
 \newcommand{\githubtitle}{	      $\vcenter{\hbox{\includegraphics[width=2mm]{icons/github-purple}}}$}
 \newcommand{\mediumtitle}{            $\vcenter{\hbox{\includegraphics[width=2.4mm]{icons/medium-purple}}}$}
-\newcommand{\mastodontitle}{        $\vcenter{\hbox{\includegraphics[width=2.4mm]{icons/mastodon-purple}}}$}
+\newcommand{\twitterxtitle}{        $\vcenter{\hbox{\includegraphics[width=2.4mm]{icons/twitter-x-purple}}}$}
 
 \newcommand{\locationtitle}{	    $\vcenter{\hbox{\includegraphics[width=2mm]{icons/location}}}$}
 \newcommand{\calendartitle}{	    $\vcenter{\hbox{\includegraphics[width=2mm]{icons/calendar}}}$}
@@ -101,9 +101,7 @@
 	}%
 }}
 \newcommand{\githubvalue}{\subsubsectionstyle{\href{https://github.com/hadilq}{github.com/hadilq}}}
-%\newcommand{\mediumvalue}{\subsubsectionstyle{\href{https://medium.com/@hadilq.dev}{medium.com/@hadilq.dev}}}
-\newcommand{\mastodonvalue}{\subsubsectionstyle{\href{https://androiddev.social/@hadilq}{@hadilq@androiddev.social}}}
-
+\newcommand{\twitterxvalue}{\subsubsectionstyle{\href{https://x.com/@hadilq}{x.com/@hadilq}}}
 
 \newcommand{\Header}{
 	\noindent
@@ -124,7 +122,7 @@
 		\githubtitle \space \githubvalue %
 	\end{tabular} &	%
 	\begin{tabular}[t]{@{}ll} %
-		\mastodontitle \space \mastodonvalue %
+		\twitterxtitle \space \twitterxvalue %
 	\end{tabular} &	%
 	\begin{tabular}[t]{@{}l} %
 		\linkedintitle \space \linkedinvalue %
@@ -261,10 +259,12 @@
 		\leftsectionline
 		\subsubsectionstyle{%
 			A humble and curious developer with over 19 years of experience in software development, where 9 years of his experience covers professional Android development, over 2 years covers teaching algorithms and programming in universities, and over 8 years covers academic and self-employed experiences while he was a student.\\
-			An Introvert person who has profound contributing skills. A creative, value-driven developer who enjoys doing math, solving problems and creating scalable, maintainable, testable and efficient apps to make the world a better place to live. Advocate of bayesian mindsets. As a software architect, he pursue reproducible, frictionless, consistent, and scalable structures.\\
+			An introverted person who has profound contributing skills. A creative, value-driven developer who enjoys doing math, solving problems and creating scalable, maintainable, testable and efficient apps to make the world a better place to live. Advocate of bayesian mindsets. As a software architect, he pursue reproducible, frictionless, consistent, and scalable structures.\\
 			A person whose goal is to surround himself with creative, clever, motivative and happy engineers. \\
-			He's especially good at understanding, designing, and applying software architectures, all kinds of automations, including CI/CD. Additionally, he's a big fan of SSOT, principle of ownership, isolation principle, pure functions, SOLID principles especially DIP. \\
-      He believes an open source resume would contribute to his credibility, even though, because of that the bullet points in this resume are degrading super fast in the market,
+      He's especially good at understanding, designing, and applying software architectures. Additionally, he's a big fan of Single Source of Truth principle(SSOT), principle of ownership, isolation principle, pure functions/stateless design, SOLID principles especially DIP. \\
+      Since his study, then teaching and working in software, he was deeply interested in the machine learning and its applications in human life, so he has been accumulating his knowledge in this area for a long time. On the other hand, Android development becomes more boring over time, thus, he's actively chasing to focus on ML more than ever. \\
+      For a long time he has been accumulating Machine Learning knowledge
+      He believes an open source resume would contribute to his credibility, even though, because of that the bullet points in this resume are degrading faster than usual in the market,
       therefore, just reach out. Maybe we'll be good friends.
 		}\\
 		\leftsubsectionline
@@ -280,11 +280,11 @@
 			\item\subsubsectionstyle{Raised and implemented the need for Gradle Conventional Plugins to reduce duplication and errors. This also applied SSOT on versions of external libraries, which reduced the runtime crashes due to version conflicts.}\itembackspace%
       \item\subsubsectionstyle{Raised the idea and created a workflow POC in Gitlab to showcase how to achieve code quality by using Merge Trains and Merge request pipelines.}\itembackspace%
       \item\subsubsectionstyle{Decreased the time of running tests by 18\%.}
-      \item\subsubsectionstyle{The single point of training and supporting for the build and its related issues in the team of 50+ Android developers.}
+      \item\subsubsectionstyle{The single point of training for the build, and supporting for its related issues in the team of 50+ Android developers.}
 		\end{itemize}\itembackspace
 		\subsubsectionstyle{Additional Technologies:}
 		\begin{itemize}\itembackspace
-			\item\subsubsectionstyle{Gradle Enterprise, Gradle Conventional Plugin, Jetpack Compose Desktop.}\itembackspace
+        \item\subsubsectionstyle{Developcity(Gradle Enterprise), Gradle Conventional Plugin, Jetpack Compose Desktop.}\itembackspace
 		\end{itemize}\itembackspace
 		%
 		\leftsubsectionline
@@ -336,23 +336,23 @@
     \leftsubsectionline
   	\subsectionstyle{Senior Android Developer}\\
 		\at{\href{https://myket.ir}{\underline{Myket}}}{ Sep. 2015 - Des. 2017}{Tehran, Iran}
-    \subsubsectionstyle{Myket was one of two leading app stores in Iran with over 8+ million users. TL;DR Mission: Implemented features in the Myket app store, started TDD, installed Jenking's pipeline to handle CI/CD.}\\
 		%
 		\leftsubsectionline
 		\subsectionstyle{Java and C\# developer}\\
 		\at{\href{http://sohasys.ir}{\underline{Soha System}}}{Mar. 2015 - Aug. 2015}{Tehran, Iran}
-		\subsubsectionstyle{SOHA was formed to focus on solutions based on smart cards. TL;DR Mission: Implementted Android and desktop apps.}\\
 		%
 		\leftsubsectionline
 		\sectionstyle{Article / Repository}\\
 		\leftsectionline
+		\githubtitle\space\subsubsectionstyle{2024 Hair Segmentation: \href{https://github.com/hadilq/hair-segment}{A ML model to detect and segment hair in images}}\\
+		\githubtitle\space\subsubsectionstyle{2024 dragon detector: \href{https://replicate.com/hadilq/dragon-notdragon}{A simple ML model to detect dragon in images}}\\
 		\githubtitle\space\subsubsectionstyle{2024 Sample Rust App: \href{https://github.com/hadilq/rust-polygon-io-crawler}{A sample app to crawl an API and put the data in a database.}}\\
 		\githubtitle\space\subsubsectionstyle{2024 Nix Effect pod: \href{https://github.com/hadilq/nix-effect-pod}{Modularize effects of all kinds, and stay in-control, with NixOS and podman.}}\\
-		\githubtitle\space\subsubsectionstyle{2023 Sample App: \href{https://github.com/hadilq/Mastan}{Refactored a Mastodon client app to a modularized Jetpack Compose-driven architecture, LTA, which is designed by himself.}}\\
+    \githubtitle\space\subsubsectionstyle{2023 Sample App: \href{https://github.com/hadilq/Mastan}{Refactored a Mastodon client app to a modularized Jetpack Compose-driven architecture.}}\\
 		\mediumtitle\space\subsubsectionstyle{2023 Post: \href{https://hadilq.com/posts/dependency-inversion-principle/}{Dependency Inversion Principle}}\\
 		\githubtitle\space\subsubsectionstyle{2023 Contributing to nixpkgs/androidenv: \href{https://github.com/NixOS/nixpkgs/tree/master/pkgs/development/mobile/androidenv}{Nix is a language that is designed to have reproducibile output.}}\\
 		\mediumtitle\space\subsubsectionstyle{2022 Post: \href{https://hadilq.com/posts/logic-tree}{Logic Tree in Android}}\\
-		\githubtitle\space\subsubsectionstyle{2022 Sample App: \href{https://github.com/hadilq/molecule-sample-app}{Molecule sample app to solve some scoping problems in Android development. }}\\
+		\githubtitle\space\subsubsectionstyle{2022 Sample App: \href{https://github.com/hadilq/molecule-sample-app}{Molecule sample app to solve some scoping problems in Android development.}}\\
 		\mediumtitle\space\subsubsectionstyle{2022 Post: \href{https://hadilq.com/posts/reproducibility}{Reproducibility}}\\
 		\mediumtitle\space\subsubsectionstyle{2021 ProAndroidDev post: \href{https://hadilq.com/posts/are-feature-flags-build-variants-and-sample-apps-related-concepts}{Are feature flags, build variants, and sample apps related concepts?}}\\
 		\mediumtitle\space\subsubsectionstyle{2021 iFood Engneering post: \href{https://medium.com/ifood-engineering/modularization-tip-optimize-the-root-module-b0a904a8d5f5}{Modularization tip: optimize the Root Module.}}\\
@@ -384,7 +384,7 @@
 }
 
 %-------------------------------------------------------------------
-% Util commands
+% Utility commands
 %-------------------------------------------------------------------
 
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash} m{#1} }
