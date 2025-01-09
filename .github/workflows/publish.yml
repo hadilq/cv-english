@@ -27,7 +27,7 @@ jobs:
           echo "CREDENTIAL_BENAM_MAILTO='mailto:...'" >> credential-data.sh
           echo "CREDENTIAL_BENAM_EMAIL='...'" >> credential-data.sh
       - name: Run generate
-        run: ./generate.sh
+        run: cp $(nix run .#resume) .
       - name: Commit and push the PDF
         run: |
           git config --global user.name 'CI'

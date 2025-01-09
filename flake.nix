@@ -11,30 +11,51 @@
         inherit system;
       };
 
+      buildInputs = with pkgs; [
+       (texlive.combine {
+         inherit (texlive)
+         scheme-small
+         fontspec
+         xcolor
+         stackengine
+         geometry
+         titlesec
+         tocloft
+         hyperref
+         xifthen
+         etoolbox
+         ifmtarg;
+       })
+      ];
+
+      FONTCONFIG_FILE = pkgs.makeFontsConf {
+        fontDirectories = [ ./fonts/Rubik/static ];
+      };
+
     in {
+      packages.resume = pkgs.stdenv.mkDerivation {
+        name = "resume";
+        inherit buildInputs FONTCONFIG_FILE;
+        src = ./.;
+        buildPhase = ''
+          ./generate.sh
+        '';
+        installPhase = ''
+          mkdir -p $out/bin
+          cp cv-public-lashkari-mobile.pdf $out
+
+          cat <<EOF > $out/bin/resume
+          #!/bin/bash
+          echo $out/cv-public-lashkari-mobile.pdf
+          EOF
+
+          chmod +x $out/bin/resume
+        '';
+      };
+
       devShells.default = pkgs.mkShell {
-        name = "xelatex-default";
-
-        buildInputs = with pkgs; [
-         (texlive.combine {
-           inherit (texlive)
-           scheme-small
-           fontspec
-           xcolor
-           stackengine
-           geometry
-           titlesec
-           tocloft
-           hyperref
-           xifthen
-           etoolbox
-           ifmtarg;
-         })
-        ];
-
-        FONTCONFIG_FILE = pkgs.makeFontsConf {
-          fontDirectories = [ ./fonts/Rubik/static ];
-        };
+        name = "xelatex-shell";
+        inherit buildInputs FONTCONFIG_FILE;
       };
     });
 }
