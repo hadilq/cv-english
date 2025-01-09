@@ -1,7 +1,7 @@
 
 ORIGINAL_CV=cv-lashkari.tex
 CV=cv-hadi-lashkari-ghouchani.tex
-PUBLIC_CV=cv-public-lashkari-android.tex
+PUBLIC_CV=cv-public-lashkari-mobile.tex
 
 source ./credential-data.sh
 
