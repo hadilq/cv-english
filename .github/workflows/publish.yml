@@ -1,0 +1,24 @@
+name: Publish PDF
+on:
+  push:
+    branches: "main"
+  pull_request:
+permissions:
+  contents: write
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v27
+        with:
+          nix_path: nixpkgs=channel:nixos-stable
+      - name: Run generate
+        run: ./generate.sh
+      - name: Commit and push the PDF
+        run: |
+          git config --global user.name 'CI'
+          git config --global user.email 'hadilq.dev@gmail.com'
+          git commit -am "Automated publishing resume"
+          git push
+
