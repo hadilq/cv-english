@@ -4,7 +4,6 @@
 *.log
 *.out
 *.swp
-*.lock
 credential-data.sh
 cv-hadi-lashkari-ghouchani.tex
 cv-public-lashkari.tex
