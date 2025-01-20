@@ -42,11 +42,11 @@
         '';
         installPhase = ''
           mkdir -p $out/bin
-          cp cv-public-lashkari-mobile.pdf $out
+          cp cv-public-lashkari-*.pdf $out
 
           cat <<EOF > $out/bin/resume
           #!/bin/bash
-          echo $out/cv-public-lashkari-mobile.pdf
+          echo $out/cv-public-lashkari-*.pdf
           EOF
 
           chmod +x $out/bin/resume
