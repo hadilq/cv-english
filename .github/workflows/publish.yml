@@ -1,0 +1,40 @@
+name: Publish PDF
+on:
+  push:
+    branches:
+      - "main"
+      - "backend"
+      - "ml"
+  pull_request:
+permissions:
+  contents: write
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v27
+        with:
+          nix_path: nixpkgs=channel:nixos-stable
+      - name: Create credential-data.sh file
+        run: |
+          echo '#!/bin/bash' > credential-data.sh
+          echo "CREDENTIAL_PHONE_NUMBER='${{ secrets.PHONE_NUMBER }}'" >> credential-data.sh
+          echo "CREDENTIAL_ADDRESS='${{ secrets.EMAIL }}'" >> credential-data.sh
+          echo "CREDENTIAL_MAILTO='mailto:${{ secrets.EMAIL }}'" >> credential-data.sh
+          echo "CREDENTIAL_EMAIL=' ${{ secrets.EMAIL }}'" >> credential-data.sh
+          echo "CREDENTIAL_PARVIZI_MAILTO='mailto:...'" >> credential-data.sh
+          echo "CREDENTIAL_PARVIZI_EMAIL='...'" >> credential-data.sh
+          echo "CREDENTIAL_ARIAI_MAILTO='mailto:...'" >> credential-data.sh
+          echo "CREDENTIAL_ARIAI_EMAIL='...'" >> credential-data.sh
+          echo "CREDENTIAL_BENAM_MAILTO='mailto:...'" >> credential-data.sh
+          echo "CREDENTIAL_BENAM_EMAIL='...'" >> credential-data.sh
+      - name: Run generate
+        run: cp $(nix run .#resume) .
+      - name: Commit and push the PDF
+        run: |
+          git config --global user.name 'CI'
+          git config --global user.email 'hadilq.dev@gmail.com'
+          git commit -am "Automated publishing resume"
+          git push
+

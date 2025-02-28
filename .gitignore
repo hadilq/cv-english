@@ -3,7 +3,9 @@
 *~
 *.log
 *.out
+*.swp
 credential-data.sh
 cv-hadi-lashkari-ghouchani.tex
 cv-public-lashkari.tex
 cv-hadi-lashkari-ghouchani.pdf
+.direnv/
