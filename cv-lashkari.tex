@@ -7,7 +7,7 @@
 \usepackage{array, xcolor, stackengine}
 \usepackage[
 	a4paper, 
-	papersize={24cm, 52cm},
+	papersize={24cm, 56cm},
 	margin=1.8cm,
 	bmargin=-1cm,
 ]{geometry}
@@ -140,22 +140,23 @@
     %
     \subsectionstyle{Kotlin Multiplatform/KMP}\\
     \subsubsectionstyle{Compose Multiplatform/Android/iOS/Desktop}\\
-    \subsectiondescriptionstyle{Professional Summary, Interests, and Insights:}\\
-    \subsubsectionstyle{- Advocate for independent UI/UX from platform.}\\
-    \subsubsectionstyle{- Main Contributor of \href{https://github.com/sheypoor/log4}{Log4K}}\\
-    \subsubsectionstyle{- Main Contributor of \href{https://github.com/hadilq/AndroidLifecycleHandler}{LifecycleHandler}}\\
+    \subsubsectionstyle{Advocate for independent UI/UX from platform}\\
+    \subsubsectionstyle{Main Contributor of \href{https://github.com/sheypoor/log4}{Log4K}}\\
+    \subsubsectionstyle{Main Contributor of \href{https://github.com/hadilq/AndroidLifecycleHandler}{LifecycleHandler}}\\
     \rightsubsectionline
     %
     \subsectionstyle{Android}\\
-    \subsubsectionstyle{Android Architecture Components/JetPack}\\
+    \subsubsectionstyle{MVVM/Android Architecture Components/JetPack}\\
     \subsubsectionstyle{Anvil/Dagger 2/RxJava 2/Retrofit 2/...}\\
     \subsubsectionstyle{Kotlin Multiplatform/Kotlin Coroutines}\\
     \subsubsectionstyle{custom Kotlin Compiler Plugins/...}\\
     \subsubsectionstyle{custom KSP plugins/...}\\
-    \subsubsectionstyle{Jetpack Compose/View Binding/...}\\\\
-    \subsectiondescriptionstyle{Professional Summary, Interests, and Insights:}\\
-    \subsubsectionstyle{- Android is partially open source OS.}\\
-    \subsubsectionstyle{- He generally interested in distributed computations.}\\
+    \subsubsectionstyle{Jetpack Compose/View Binding/...}\\
+    \subsubsectionstyle{Contributor of \href{https://github.com/NixOS/nixpkgs/blob/de2550ce84c41996add9e6cffa3740c1c38dfb08/maintainers/team-list.nix\#L50}{NixOS's Android Env}}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{iOS}\\
+    \subsubsectionstyle{Swift/SwiftUI}\\
     \rightsubsectionline
     %
     \subsectionstyle{Software Architecture}\\
@@ -212,36 +213,24 @@
     \rightsubsectionline
     %
     \subsectionstyle{Command Line Tool}\\
-    \subsubsectionstyle{tmux/bash/grep/sed/netstat/awk/podman/...}\\
-    \subsubsectionstyle{adb/sdkmanager/avdmanager/...}\\
+    \subsubsectionstyle{tmux/bash/zsh/git/grep/sed/netstat/awk/podman/...}\\
+    \subsubsectionstyle{adb/sdkmanager/avdmanager/xcodebuild/...}\\
     \rightsubsectionline
     %
     \subsectionstyle{Rust}\\
     \subsubsectionstyle{actix/rusqlite/tokio/thiserror/crossbeam}\\
     \subsubsectionstyle{tonic/prost/openssl/flatbuffers/thrift}\\
     \subsubsectionstyle{Rc/Arc/Mutex}\\
-    \subsubsectionstyle{FFI}\\\\
-    \subsectiondescriptionstyle{Professional Summary, Interests, and Insights:}\\
-    \subsubsectionstyle{- Rust's type system is what you need for scale-up.}\\
-    \subsubsectionstyle{- Borrow Checker restrictly stops any memory leaks.}\\
-    \subsubsectionstyle{- The second most efficient programming language.}\\
+    \subsubsectionstyle{FFI}\\
     \rightsubsectionline
     %
     \subsectionstyle{Podman/Docker}\\
-    \subsubsectionstyle{Buildkit/Compose/Cache}\\\\
-    \subsectiondescriptionstyle{Professional Summary, Interests, and Insights:}\\
-    \subsubsectionstyle{- Reproducibility is the key to productivity.}\\
-    \subsubsectionstyle{- Isolation is the key to reproducibility.}\\
+    \subsubsectionstyle{Buildkit/Compose/Cache}\\
     \rightsubsectionline
     %
     \subsectionstyle{Nix}\\
-    \subsubsectionstyle{NixOS/Nix Darwin}\\
-    \subsubsectionstyle{mkDrivation/mkShell}\\\\
-    \subsectiondescriptionstyle{Professional Summary, Interests, and Insights:}\\
-    \subsubsectionstyle{- Reproducibility and isolation are guaraneed.}\\
-    \subsubsectionstyle{- Respecting pure functions, building block of caching.}\\
-    \subsubsectionstyle{- More consistent caching experience than containers.}\\
-    \subsubsectionstyle{- Honored to be a NixOS Maintainer (2023-Present).}\\
+    \subsubsectionstyle{NixOS/Nix Darwin/Home Manager}\\
+    \subsubsectionstyle{mkDrivation/mkShell}\\
     \rightsubsectionline
     %
     \subsectionstyle{Programing Language}\\
@@ -291,7 +280,7 @@
 		\sectionstyle{Summary}\\
 		\leftsectionline
 		\subsubsectionstyle{%
-      Dedicated software developer with 19+ years of experience, including 9 years in professional Android development. Skilled in software architecture, algorithm design, and machine learning applications. \\
+      Dedicated software developer with 20+ years of experience, including 10 years in professional Android development. Skilled in software architecture, algorithm design, and machine learning applications. \\
       - Expertise in creating scalable, maintainable, and efficient software\\
       - Strong advocate for SOLID principles, SSOT, pure functions, and stateless design\\
       - Passionate about applying machine learning to improve human life\\
@@ -307,9 +296,20 @@
 		\subsectionstyle{Lead Android Developer}\\
     \at{\href{https://visiontalent.io}{\underline{CIBC (via Vision Talent)}}}{March, 2025 - Present}{Toronto, Canada}
 		\subsubsectionstyle{The Canadian Imperial Bank of Commerce is a Canadian multinational banking and financial services corporation headquartered at CIBC Square in the Financial District of Toronto, Ontario.}\\\\
+		\subsubsectionstyle{Mission:}
+    \begin{itemize}\itembackspace%
+      \item\subsubsectionstyle{Rewriting features in the newly developing CIBC mobile apps}\itembackspace%
+      \item\subsubsectionstyle{Improved the shared CI pipeline build-time by almost 50\%, mostly by using build caches}\itembackspace%
+      \item\subsubsectionstyle{Initiated and Implemented memory management by applying structural DI scopes to release resources, ViewModels(in MVVM architecture), and their state}\itembackspace%
+      \item\subsubsectionstyle{Working on remote FeatureFlag functionality}\itembackspace%
+      \item\subsubsectionstyle{Migrated a Confluence's scraping script to use Selenium}
+    \end{itemize}\itembackspace
 		\subsubsectionstyle{Technologies:}
 		\begin{itemize}\itembackspace
-        \item\subsubsectionstyle{Kotlin Multiplatform, Compose Multiplatform, Gradle Plugin}\itembackspace
+        \item\subsubsectionstyle{Kotlin Multiplatform/KMP, Android, Compose Multiplatform/CMP, Gradle Plugin, code generator}\itembackspace%
+        \item\subsubsectionstyle{iOS, Swift, XCode, SwiftUI}\itembackspace%
+        \item\subsubsectionstyle{Ktor, Koin, Compose Navigation, etc.}\itembackspace%
+        \item\subsubsectionstyle{Atlassian Jira, Atlassian Confluence, Github, Jenkins, etc.}\itembackspace%
 		\end{itemize}\itembackspace
 		%
 		\leftsubsectionline
@@ -318,7 +318,7 @@
 		\subsubsectionstyle{Promoted to Productivity Engineer.}\\\\
 		\subsubsectionstyle{Mission:}
 		\begin{itemize}\itembackspace%
-        \item\subsubsectionstyle{Resolved VPN network proxy and self-signed certificate issues by developing an automated installation script and Compose Multiplatform app, resulting in a 164\% increase in build count on the Gradle Enterprise(Develocity) dashboard.}\itembackspace%
+      \item\subsubsectionstyle{Resolved VPN network proxy and self-signed certificate issues by developing an automated installation script and Compose Multiplatform app, resulting in a 164\% increase in build count on the Gradle Enterprise(Develocity) dashboard.}\itembackspace%
 			\item\subsubsectionstyle{Initiated and implemented Gradle Conventional Plugins to reduce code duplication and errors. Established Single Source of Truth (SSOT) for external library versions, significantly reducing runtime crashes caused by version conflicts.}\itembackspace%
       \item\subsubsectionstyle{Spearheaded the adoption of Merge Trains and Merge Request Pipelines in GitLab, creating a Proof of Concept (POC) workflow that demonstrably improved code quality and streamlined the integration process.}\itembackspace%
       \item\subsubsectionstyle{Optimized test execution, reducing incremental runtime by 52\% and improving overall development efficiency.}\itembackspace%
