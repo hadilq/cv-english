@@ -7,7 +7,7 @@
 \usepackage{array, xcolor, stackengine}
 \usepackage[
 	a4paper, 
-	papersize={24cm, 60cm},
+	papersize={24cm, 62cm},
 	margin=1.8cm,
 	bmargin=-1cm,
 ]{geometry}
@@ -301,15 +301,19 @@
 		\subsubsectionstyle{Mission:}
     \begin{itemize}\itembackspace%
       \item\subsubsectionstyle{Implemented Trunk Based Development's pipelines in Gitlab for both Android and iOS on multiple repositories, including create release branch, cherry pick into release, publish, and promote artifacts from RC}\itembackspace%
-      \item\subsubsectionstyle{Pinned down dependencies}\itembackspace%
+      \item\subsubsectionstyle{Pinned down dependencies, architect best practices, proper caching on CI/CD, and prepare the code for releases}\itembackspace%
       \item\subsubsectionstyle{Fixed security issues reported by Gitlab SAST}\itembackspace%
-      \item\subsubsectionstyle{Migrated Gitlab jobs to custom, and task specific, Linux containers to improve efficiency, isolation, reproducibility, etc.}\itembackspace%
-      \item\subsubsectionstyle{Improved code verifications on pipelines to achieve frictionless experience for engineers}
+      \item\subsubsectionstyle{Migrated Gitlab jobs to custom, and task specific containers/Linux to improve efficiency, isolation, reproducibility, etc.}\itembackspace%
+      \item\subsubsectionstyle{Improved code verifications on pipelines to achieve frictionless experience for engineers}\itembackspace%
+      \item\subsubsectionstyle{Introduced reproducible jobs by wrapping builds, and their emulator, using flake.nix}\itembackspace%
+      \item\subsubsectionstyle{Split Merge Request's jobs into light, required but heavy, and optional ones, to improve DevX and confident before merging}\itembackspace%
+      \item\subsubsectionstyle{Maintain CI/CD's EC2 instances to acheive their best performance}
     \end{itemize}\itembackspace
 		\subsubsectionstyle{Technologies:}
 		\begin{itemize}\itembackspace
-        \item\subsubsectionstyle{Android, Kotlin Multiplatform/KMP, Giltab's Configurations, Gradle Plugin}\itembackspace%
-        \item\subsubsectionstyle{iOS, Swift, XCode}\itembackspace%
+        \item\subsubsectionstyle{Android, Kotlin Multiplatform, Gradle Plugin}\itembackspace%
+        \item\subsubsectionstyle{iOS, Swift, XCode, XCodebuild}\itembackspace%
+        \item\subsubsectionstyle{CI/CD, Giltab's Configurations, Gitlab SAST, Podman, Nix, AWS EC2}\itembackspace%
 		\end{itemize}\itembackspace
 		%
 		\leftsubsectionline
