@@ -7,7 +7,7 @@
 \usepackage{array, xcolor, stackengine}
 \usepackage[
 	a4paper, 
-	papersize={24cm, 52cm},
+	papersize={24cm, 57cm},
 	margin=1.8cm,
 	bmargin=-1cm,
 ]{geometry}
@@ -72,7 +72,7 @@
 \newcommand{\titleposition}{
 	\begin{minipage}{0.80\textwidth}%
 		\Huge{\bignamefont{Hadi Lashkari Ghouchani}}\vspace{-3mm}\\
-		\textcolor{awesomeblue}{\Large{\positionstyle{Software Engineer}}}
+		\textcolor{awesomeblue}{\Large{\positionstyle{Software Engineer \textbullet{} ML Systems}}}
 	\end{minipage}%
 }
 
@@ -139,125 +139,75 @@
     \rightsectionline
     %
     \subsectionstyle{Machine Learning}\\
-    \subsubsectionstyle{Tensorflow/Keras/OpenCV}\\
-    \subsubsectionstyle{Numpy/Ultralytics/PyTorch}\\
-    \subsubsectionstyle{LLM/RAG/GenAI/LangChain/HF Candle}\\
-    \subsubsectionstyle{Supervised/Unsupervised}\\
-    \subsubsectionstyle{KMeans/Principal Component Analysis}\\
-    \subsubsectionstyle{Hugging Face/Replicate/Paperspace}\\\\
+    \subsubsectionstyle{PyTorch: custom autograd Functions, nn.Module,}\\
+    \subsubsectionstyle{\quad custom optimizers, state\_dict migration}\\
+    \subsubsectionstyle{GPU execution with PyTorch/CUDA, fused GEMM}\\
+    \subsubsectionstyle{Structure learning: growing/pruning networks}\\
+    \subsubsectionstyle{Model selection (BIC), multi-seed evaluation}\\
+    \subsubsectionstyle{Numerical stability, log-space gradients}\\
+    \subsubsectionstyle{LLM APIs, RAG, multi-agent workflows}\\
     \rightsubsectionline
     %
-    \subsectionstyle{Android}\\
-    \subsubsectionstyle{Android Architecture Components/JetPack}\\
-    \subsubsectionstyle{Anvil/Dagger 2/RxJava 2/Retrofit 2/...}\\
-    \subsubsectionstyle{Kotlin Multiplatform/Kotlin Coroutines}\\
-    \subsubsectionstyle{custom Kotlin Compiler Plugins/...}\\
-    \subsubsectionstyle{custom KSP plugins/...}\\
-    \subsubsectionstyle{Jetpack Compose/View Binding/...}\\\\
+    \subsectionstyle{Research Engineering}\\
+    \subsubsectionstyle{Reproducible experiments: Nix flakes, pinned data}\\
+    \subsubsectionstyle{Deterministic benchmarks and result boards}\\
+    \subsubsectionstyle{Cross-implementation numerical verification}\\
+    \subsubsectionstyle{pytest, ruff, PyPI packaging (sdist/wheel)}\\
     \rightsubsectionline
     %
-    \subsectionstyle{Rust}\\
-    \subsubsectionstyle{actix/rusqlite/tokio/thiserror/crossbeam}\\
-    \subsubsectionstyle{tonic/prost/openssl/flatbuffers/thrift}\\
-    \subsubsectionstyle{Rc/Arc/Mutex}\\
-    \subsubsectionstyle{FFI}\\\\
+    \subsectionstyle{Mathematics / Physics}\\
+    \subsubsectionstyle{M.Sc. Physics, Sharif University of Technology}\\
+    \subsubsectionstyle{Linear algebra, probability, FFT}\\
+    \subsubsectionstyle{Statistical mechanics / partition functions}\\
     \rightsubsectionline
     %
-    \subsectionstyle{Database}\\
-    \subsubsectionstyle{PostgreSQL(UDF)/MySQL/SQLite}\\
+    \subsectionstyle{Programming Languages}\\
+    \subsubsectionstyle{Python/C/Rust/Kotlin/Java/Scala/Swift}\\
+    \subsubsectionstyle{Groovy/Dart/Javascript/Ruby/Bash}\\
     \rightsubsectionline
     %
-    \subsectionstyle{Kotlin Multiplatform/KMP}\\
-    \subsubsectionstyle{Compose Multiplatform/Android/iOS/Desktop}\\
+    \subsectionstyle{Infrastructure / CI}\\
+    \subsubsectionstyle{Linux (NixOS/Fedora/Ubuntu/Debian), MacOS}\\
+    \subsubsectionstyle{Nix/NixOS, Podman/Docker, Buildkit}\\
+    \subsubsectionstyle{AWS EC2, GitLab CI, GitHub Actions}\\
+    \subsubsectionstyle{BuildKite, Jenkins, Develocity}\\
+    \subsubsectionstyle{GitLab SAST, dependency pinning, caching}\\
     \rightsubsectionline
     %
-    \subsectionstyle{Software Architecture}\\
-    \subsubsectionstyle{Clean Architecture/Hexagonal Architecture}\\
-    \subsubsectionstyle{Unidirectional data flow Architecture}\\
-    \subsubsectionstyle{Stateless Architecture}\\
-    \subsubsectionstyle{Logic Tree Architecture}\\
-    \subsubsectionstyle{MVVM/MVI/MVP/RMVVM}\\
+    \subsectionstyle{Systems Programming (Rust)}\\
+    \subsubsectionstyle{tokio/crossbeam/Rc/Arc/Mutex}\\
+    \subsubsectionstyle{FFI/UniFFI, tonic/prost, flatbuffers/thrift}\\
     \rightsubsectionline
     %
-    \subsectionstyle{Principle}\\
-    \subsubsectionstyle{Clean Code/SOLID}\\
-    \subsubsectionstyle{Object Oriented Programming}\\
-    \subsubsectionstyle{Functional Programming}\\
-    \subsubsectionstyle{Isolation/Reproducibility}\\
-    \subsubsectionstyle{Stable Dependencies Principle}\\
-    \subsubsectionstyle{Stable Abstractions Principle}\\
+    \subsectionstyle{Software Design}\\
+    \subsubsectionstyle{Clean/Hexagonal/Unidirectional Architecture}\\
+    \subsubsectionstyle{SOLID, Functional Programming, Stateless design}\\
+    \subsubsectionstyle{Modularization, Stable Dependencies/Abstractions}\\
     \rightsubsectionline
     %
-    \subsectionstyle{Design Pattern}\\
-    \subsubsectionstyle{Factory/Builder/Singleton/...}\\
-    \subsubsectionstyle{Adapter/Facade/Proxy/Visitor/Delegate/...}\\
-    \subsubsectionstyle{Strategy/Chain of responsibility/...}\\
-    \rightsubsectionline
-    %
-    \subsectionstyle{Modularization Strategies}\\
-    \subsubsectionstyle{Applying DIP/Decrease incremental build time}\\
-    \subsubsectionstyle{Code isolation to reduce dependencies}\\
-    \rightsubsectionline
-    %
-    \subsectionstyle{Continuous Integration/Deployment}\\
-    \subsubsectionstyle{Jenkins, GitLab CI, Fastlane}\\
-    \rightsubsectionline
-    %
-    \subsectionstyle{Build Tool}\\
-    \subsubsectionstyle{Nix/Gradle/Cargo/Sbt/Maven/Ant/Make/...}\\
-    \rightsubsectionline
-    %
-    \subsectionstyle{Command Line Tool}\\
-    \subsubsectionstyle{tmux/bash/grep/sed/netstat/awk/podman/...}\\
-    \subsubsectionstyle{adb/sdkmanager/avdmanager/...}\\
-    \rightsubsectionline
-    %
-    \subsectionstyle{Podman/Docker}\\
-    \subsubsectionstyle{Buildkit/Compose/Cache}\\\\
-    \subsectiondescriptionstyle{Professional Summary, Interests, and Insights:}\\
-    \subsubsectionstyle{- Reproducibility is the key to productivity.}\\
-    \subsubsectionstyle{- Isolation is the key to reproducibility.}\\
-    \rightsubsectionline
-    %
-    \subsectionstyle{Nix}\\
-    \subsubsectionstyle{NixOS/Nix Darwin}\\
-    \subsubsectionstyle{mkDrivation/mkShell}\\\\
-    \rightsubsectionline
-    %
-    \subsectionstyle{Programing Language}\\
-    \subsubsectionstyle{Kotlin/Rust/Python/Java/Scala}\\
-    \subsubsectionstyle{Groovy/Dart/Javascript/Ruby...}\\
+    \subsectionstyle{Mobile (11 years)}\\
+    \subsubsectionstyle{Android, Kotlin Multiplatform, Compose}\\
+    \subsubsectionstyle{iOS, Swift/SwiftUI}\\
+    \subsubsectionstyle{Gradle/Kotlin compiler/KSP/Detekt plugins}\\
+    \subsubsectionstyle{Main Contributor of \href{https://github.com/sheypoor/log4}{Log4K}, \href{https://github.com/hadilq/AndroidLifecycleHandler}{LifecycleHandler}}\\
     \rightsubsectionline
     %
     \subsectionstyle{Workflow}\\
-    \subsubsectionstyle{Trunk Based development/Github flow/Git Flow}\\
-    \subsubsectionstyle{Cross-functional team}\\
-    \rightsubsectionline
-    %
-    \subsectionstyle{Operating System}\\
-    \subsubsectionstyle{Linux(NixOS/Fedora/Ubuntu/Debian), MacOS}\\
+    \subsubsectionstyle{Trunk-based development, RFC process}\\
+    \subsubsectionstyle{Cross-functional teams, mentoring}\\
     \rightsubsectionline
     %
     \sectionstyle{Achievements and Recognition}\\
     \rightsectionline
-    \subsubsectionstyle{- 2025 Had an offer from CIBC via Jrvs}\\
-    \subsubsectionstyle{- 2024 Had an offer from Accenture via Experis}\\
-    \subsubsectionstyle{- 2024 First position in National Health Datathon}\\
-    \subsubsectionstyle{- 2024 Second position in AWS Summit's Gameday}\\
-    \subsubsectionstyle{- 2024 Second position in Toronto Machine Learning \#TMLS Hackathon}\\
-    \subsubsectionstyle{- 2020 Had an offer from MobileLIVE, Toronto, Canada}\\
-    \subsubsectionstyle{- 2020 Had an offer from iFood, Remote}\\
-    \subsubsectionstyle{- 2019 Had an offer from Kik, Kitechener, Canada}\\
-    \subsubsectionstyle{- 2019 Had an offer from Letgo, Barcelona, Spain}\\
-    \subsubsectionstyle{- 2019 Had an offer from CRITICAL Techworks, BMW, Porto, Portugal}\\
-    \subsubsectionstyle{- 2019 Had an offer from The Next Big Thing, Berlin, Germany}\\
-    \subsubsectionstyle{- 2018 Received result-oriented badge in Sheypoor}\\
-    \subsubsectionstyle{- 2007 Ranked 44th among more than five thousand participants in the National Graduate Entrance Exam in Physics}\\
+    \subsubsectionstyle{- 2024 Second place, AWS Summit GameDay}\\
+    \subsubsectionstyle{- 2018 Result-oriented badge, Sheypoor}\\
+    \subsubsectionstyle{- 2007 Ranked 44th of 5,000+ participants in the}\\
+    \subsubsectionstyle{\quad National Graduate Entrance Exam in Physics}\\
     \rightsubsectionline
     %
     \sectionstyle{Language}\\
     \rightsectionline
-    \subsubsectionstyle{English: Advance}\\
+    \subsubsectionstyle{English: Advanced}\\
     \subsubsectionstyle{Farsi: Native}\\
     \rightsubsectionline
     %
@@ -271,131 +221,129 @@
 		\sectionstyle{Summary}\\
 		\leftsectionline
 		\subsubsectionstyle{%
-      Dedicated software developer with 19+ years of experience, including 9 years in professional Android development. Skilled in software architecture, algorithm design, and machine learning applications. \\
-      - Expertise in creating scalable, maintainable, and efficient software\\
-      - Strong advocate for SOLID principles, SSOT, pure functions, and stateless design\\
-      - Passionate about applying machine learning to improve human life\\
-      - Experience teaching algorithms and programming at university level\\
-      - Committed to continuous learning and open-source contributions\\
-      - Proactive, and transparent, in technical decision-making\\
-      Eager to collaborate with creative, motivated teams in challenging technical environments.
+      Software engineer with 21+ years of development experience and an M.Sc. in Theoretical Physics. Independently designed, implemented, and benchmarked a new neural-network architecture (type-nn) in C and PyTorch, with custom autograd, a per-unit optimizer, structure learning, and a GPU backend. Brings 11 years of production engineering, most recently CI/CD infrastructure, build reproducibility, and multi-agent LLM workflows.\\
+      - Takes ML ideas from the math to a C reference, a PyTorch library, and a GPU backend, verified number for number\\
+      - Brings engineering rigor to research: reproducible environments, pinned datasets, deterministic multi-seed benchmarks\\
+      - Comfortable deriving and debugging gradients, numerical stability, and optimization dynamics\\
+      - Built production multi-agent LLM workflows (planner, coder, reviewer) in CI\\
+      - Taught algorithms and programming at university level\\
+      - Communicates technical decisions openly, through RFCs, write-ups, and blog posts\\
+      Looking to move into empirical AI research, focused on ML systems and on making AI systems reliable and beneficial.
 		}\\
 		\leftsubsectionline
 		%
-		\sectionstyle{Experience}\\
+		\sectionstyle{Machine Learning Research \& Engineering}\\
 		\leftsectionline
-		\subsectionstyle{Software Engineer -> Productivity Engineer}\\
-    \at{\href{https://www.mobilelive.ca}{\underline{Bell Canada (via MobileLIVE)}}}{Aug, 2022 - Nov, 2024}{Toronto, Canada}
-		\subsubsectionstyle{Promoted to Productivity Engineer.}\\\\
-		\subsubsectionstyle{Mission:}
-		\begin{itemize}\itembackspace%
-        \item\subsubsectionstyle{Resolved VPN network proxy and self-signed certificate issues by developing an automated installation script and Compose Multiplatform app, resulting in a 164\% increase in build count on the Gradle Enterprise(Develocity) dashboard.}\itembackspace%
-			\item\subsubsectionstyle{Initiated and implemented Gradle Conventional Plugins to reduce code duplication and errors. Established Single Source of Truth (SSOT) for external library versions, significantly reducing runtime crashes caused by version conflicts.}\itembackspace%
-      \item\subsubsectionstyle{Spearheaded the adoption of Merge Trains and Merge Request Pipelines in GitLab, creating a Proof of Concept (POC) workflow that demonstrably improved code quality and streamlined the integration process.}\itembackspace%
-      \item\subsubsectionstyle{Optimized test execution, reducing incremental runtime by 52\% and improving overall development efficiency.}\itembackspace%
-      \item\subsubsectionstyle{Served as the primary resource for build-related training and support across a team of 50+ Android developers, enhancing team productivity and knowledge sharing.}\itembackspace%
-      \item\subsubsectionstyle{Implemented a custom No-Framework dependency injection solution across multiple app and library repositories, enhancing modularity, testability, and maintainability while minimizing build times by avoiding code generation.}\itembackspace%
-      \item\subsubsectionstyle{Integrated Detekt to verify code quality in the merge request's pipelines.}
-		\end{itemize}\itembackspace
-		\subsubsectionstyle{Additional Technologies:}
-		\begin{itemize}\itembackspace
-        \item\subsubsectionstyle{Develocity(Gradle Enterprise), Gradle Conventional Plugin, Detekt}\itembackspace
-        \item\subsubsectionstyle{Kotlin Multiplatform, Compose Multiplatform}\itembackspace
-		\end{itemize}\itembackspace
+		\subsectionstyle{Type Neural Network: \href{https://github.com/hadilq/type-nn}{\underline{type-nn}} (C) and \href{https://github.com/hadilq/torch-type-nn}{\underline{torch-type-nn}} (PyTorch)}\\
+    \indep{2025 - Present}{Toronto, Canada}\\
+		\subsubsectionstyle{A neural network whose layers are partition functions of an And over Ors (product and sum types), derived from my \href{https://hadilq.com/posts/type-mechanics/}{\underline{Type Mechanics}} framework. The network grows and prunes its own width, degree, and depth while it trains, so there is no width or depth hyperparameter to choose. Write-up: \href{https://hadilq.com/posts/train-the-knowledge/}{\underline{Train the knowledge}}.}\\
+    \begin{itemize}\itembackspace%
+      \item\subsubsectionstyle{Wrote the C reference implementation and a PyTorch port published on PyPI; forward pass, every gradient, and optimizer steps agree with C to 1e-12, enforced by a test that compiles and runs the C code}\itembackspace%
+      \item\subsubsectionstyle{Implemented a custom autograd Function that computes exact gradients in log space, including one-sided derivatives at exact zeros where standard autograd returns NaN}\itembackspace%
+      \item\subsubsectionstyle{Built a per-unit Adam optimizer whose moments move with the weights through structural edits, and made stock torch.optim optimizers work by remapping their state through index maps}\itembackspace%
+      \item\subsubsectionstyle{Designed an architecture-agnostic structure scaler (protocol + adapters) that also grows and prunes standard MLPs, with a threshold rule and a Bayesian-information-criterion rule}\itembackspace%
+      \item\subsubsectionstyle{Batched variable-size layers with exact identity padding for GPU training, and packed ragged layers into a fused GEMM; the GPU test suite fails if it silently falls back to CPU}\itembackspace%
+      \item\subsubsectionstyle{Ported the C benchmark board exactly (same splits, shuffles, learning rates, 5 seeds per cell) and reproduced it digit for digit; the whole pipeline runs from one Nix flake}
+    \end{itemize}\itembackspace
 		%
 		\leftsubsectionline
-		\subsectionstyle{Software Engineer}\\
-    \at{\href{https://www.mobilelive.ca}{\underline{Bell Canada (via MobileLIVE)}}}{Apr. 2021 - Aug. 2022}{Toronto, Canada}
-		\subsubsectionstyle{MobileLIVE: A Canadian tech-service provider specializing in digital transformation solutions. Bell Canada: Canada's largest telecommunications company, offering mobile services (Bell Mobility, Virgin Mobile), television (Bell Satellite TV, Bell Fibe TV), and internet services across the country.}\\\\
+		\subsectionstyle{Matrix Fast Fourier Transform (MFFT)}\\
+    \indep{2024 - Present}{Toronto, Canada}\\
+		\subsubsectionstyle{Proposed an FFT-based optimization for matrix multiplication (\href{https://hadilq.com/posts/matrix-fast-fourier-transform/}{\underline{post}}) and built \href{https://github.com/hadilq/mfft-bench}{\underline{mfft-bench}}, a benchmark comparing matmul implementations.}\\
+		%
+		\leftsubsectionline
+		\subsectionstyle{Applied ML competitions}\\
+		\subsubsectionstyle{- 2024 First place, National Health Datathon}\\
+		\subsubsectionstyle{- 2024 Second place, TMLS Hackathon: a \href{https://github.com/TMLS-2024-T1/city-of-TO-RAG-GPT}{\underline{retrieval-augmented LLM assistant}} over City of Toronto data}\\
+		%
+		\leftsubsectionline
+		\sectionstyle{Experience}\\
+		\leftsectionline
+		\subsectionstyle{Senior Mobile Developer}\\
+    \at{\href{https://www.bell.ca}{\underline{Bell Canada (via Hays)}}}{April, 2026 - Present}{Toronto, Canada}\\
+		\subsubsectionstyle{Bell Canada is Canada's largest telecommunications company. I own the CI/CD infrastructure for its Android and iOS apps.}\\\\
+		\subsubsectionstyle{Mission:}
+    \begin{itemize}\itembackspace%
+      \item\subsubsectionstyle{Built a multi-agent LLM workflow in CI that turns Jira tickets into merge requests, with planner, coder, and reviewer agents committing an initial implementation}\itembackspace%
+      \item\subsubsectionstyle{Took ownership of GitLab CI/CD and reversed a declining trend in pipeline job success rate, raising it from 18\% to 31\% (a 72\% relative improvement) within six months}\itembackspace%
+      \item\subsubsectionstyle{Made builds and emulator runs reproducible by wrapping them in Nix flakes, and migrated jobs to custom, task-specific Linux containers for performance and isolation}\itembackspace%
+      \item\subsubsectionstyle{Designed trunk-based development pipelines for Android and iOS across multiple repositories, automating release branches, cherry-picks, publishing, and release-candidate promotion}\itembackspace%
+      \item\subsubsectionstyle{Restructured merge request pipelines into fast checks, required heavy jobs, and optional jobs, shortening feedback loops}\itembackspace%
+      \item\subsubsectionstyle{Automated DTO and mapper generation from API specs in CI, removing hand-written boilerplate}\itembackspace%
+      \item\subsubsectionstyle{Reduced GitLab SAST security findings to zero across multiple projects}\itembackspace%
+      \item\subsubsectionstyle{Maintain and tune the AWS EC2 instances running CI/CD for reliability and performance}
+    \end{itemize}\itembackspace
+		\subsubsectionstyle{Technologies: Android, Kotlin Multiplatform, iOS, Swift, GitLab CI, GitLab SAST, Podman, Nix, AWS EC2, LLM agents}\\
+		%
+		\leftsubsectionline
+		\subsectionstyle{Senior Mobile Developer}\\
+    \at{\href{https://touchlab.co}{\underline{Block Inc. - Bitkey project (via Touchlab)}}}{November, 2025 - Feb, 2026}{Toronto, Canada}\\
+		\subsubsectionstyle{Bitkey is Block Inc.'s self-custody bitcoin wallet, available in the U.S. and 95 other countries.}\\\\
+		\subsubsectionstyle{Mission:}
+    \begin{itemize}\itembackspace%
+      \item\subsubsectionstyle{Fixed flaky unit and functional tests by diagnosing and resolving multiple race conditions and state management problems}\itembackspace%
+      \item\subsubsectionstyle{Worked on the multi-backup project and the new onboarding flow}
+    \end{itemize}\itembackspace
+		\subsubsectionstyle{Technologies: Kotlin Multiplatform, Compose Multiplatform, Swift, Rust bindings (UniFFI), Ktor, SqlDelight, Kotest, BuildKite}\\
+		%
+		\leftsubsectionline
+		\subsectionstyle{Lead Android Developer}\\
+    \at{\href{https://visiontalent.io}{\underline{CIBC (via Vision Talent)}}}{March, 2025 - November, 2025}{Toronto, Canada}\\
+		\subsubsectionstyle{The Canadian Imperial Bank of Commerce is one of Canada's largest banks.}\\\\
+		\subsubsectionstyle{Mission:}
+    \begin{itemize}\itembackspace%
+      \item\subsubsectionstyle{Cut the shared CI pipeline build time by almost 50\%, mainly through build caching}\itembackspace%
+      \item\subsubsectionstyle{Initiated and implemented memory management by applying structural DI scopes to release resources, ViewModels, and their state}\itembackspace%
+      \item\subsubsectionstyle{Rewrote features in the new CIBC mobile apps and worked on remote feature flags}
+    \end{itemize}\itembackspace
+		\subsubsectionstyle{Technologies: Kotlin Multiplatform, Compose Multiplatform, SwiftUI, Ktor, Koin, Jenkins}\\
+		%
+		\leftsubsectionline
+		\subsectionstyle{Software Engineer -> Productivity Engineer}\\
+    \at{\href{https://www.mobilelive.ca}{\underline{Bell Canada (via MobileLIVE)}}}{Apr. 2021 - Nov. 2024}{Toronto, Canada}\\
+		\subsubsectionstyle{Promoted to Productivity Engineer, supporting a team of 50+ Android developers.}\\\\
 		\subsubsectionstyle{Mission:}
 		\begin{itemize}\itembackspace%
-			\item\subsubsectionstyle{Implemented a Request for Comments (RFC) process for technical decision-making, streamlining the evaluation and adoption of new ideas across the organization.}\itembackspace
-			\item\subsubsectionstyle{Led regular knowledge-sharing discussions across the team on SOLID principles, modularization best practices, feature flag implementation, and monorepo architecture, elevating the team's overall code quality and architectural design skills.}\itembackspace%
-			\item\subsubsectionstyle{Conceived and executed an automated system for cloning and building source code across a multi-repo setup, significantly reducing version conflicts and enhancing code visibility for efficient debugging.}
-		\end{itemize}\itembackspace
-    \subsubsectionstyle{Technologies:}
-    \begin{itemize}\itembackspace
-      \item\subsubsectionstyle{Kotlin Coroutines / Mockk, Mockito, jUnit, etc.}\itembackspace
-      \item\subsubsectionstyle{Agile, Sprint, Lane based branching strategy, CI/CD}\itembackspace
-      \item\subsubsectionstyle{Atlassian Jira, Atlassian Confluence, Gitlab, Jenkins, Slack, Branch.io, inVision, Dynatrace, etc.}\itembackspace
+      \item\subsubsectionstyle{Resolved VPN proxy and self-signed certificate issues with an automated installer and a Compose Multiplatform app, increasing builds on the Develocity dashboard by 164\%}\itembackspace%
+      \item\subsubsectionstyle{Reduced incremental test runtime by 52\%}\itembackspace%
+      \item\subsubsectionstyle{Introduced Gradle convention plugins and a single source of truth for library versions, significantly reducing crashes from version conflicts}\itembackspace%
+      \item\subsubsectionstyle{Introduced an RFC process for technical decisions and led regular knowledge-sharing sessions on SOLID, modularization, feature flags, and monorepos}\itembackspace%
+      \item\subsubsectionstyle{Spearheaded Merge Trains and Merge Request Pipelines in GitLab, and integrated Detekt code-quality checks}
 		\end{itemize}\itembackspace
 		%
 		\leftsubsectionline
 		\subsectionstyle{Staff Android Developer}\\
-    \at{\href{https://play.google.com/store/apps/details?id=br.com.brainweb.ifood&hl=en_US&gl=US}{\underline{iFood (via Letgo)}}}{Oct. 2020 - Mar. 2021}{Barcelona, Spain}
-		\subsubsectionstyle{iFood is a leading food delivery platform, dominating markets in Brazil, Colombia, and Mexico. It's the market leader in Latin America with 50+ million Android app installations.}\\\\
-		\subsubsectionstyle{Mission:}
-		\begin{itemize}\itembackspace%
-			\item\subsubsectionstyle{Spearheaded the implementation of composite build for Gradle dependency management, reducing incremental build time from 13+ minutes to under 60 seconds when updating libraries.}\itembackspace
-      \item\subsubsectionstyle{Developed the Android component of a cross-platform metadata project, contributing to a comprehensive dashboard that unified information from highly modularized Android/iOS projects(200+ modules) with backend data.}\itembackspace
-			\item\subsubsectionstyle{Initiated and executed a strategy to refactor legacy code out of the root module, resulting in a 55\% decrease in incremental build time and improved overall system architecture.}\itembackspace
-			\item\subsubsectionstyle{Identified and resolved multiple Application Not Responding (ANR) issues by applying robust architectural principles, significantly enhancing app stability and user experience.}\itembackspace
-			\item\subsubsectionstyle{Engineered custom wrappers for external libraries to improve error handling and system resilience during critical failures.}
-		\end{itemize}\itembackspace
-		\subsubsectionstyle{Technologies:}
-		\begin{itemize}\itembackspace
-			\item\subsubsectionstyle{Dagger 2, Room, Kotlin Coroutines, Moshi, WorkManager / Mockk, Robolectric, jUnit, etc.}\itembackspace
-			\item\subsubsectionstyle{Agile, Sprint, Github Flow, CI/CD, Gradle Enterprise}\itembackspace
-			\item\subsubsectionstyle{Atlassian Jira, Atlassian Confluence, Github, Jenkins, Slack, Databricks, Firebase, Bugsnag, Logzio, etc.}\itembackspace
-		\end{itemize}\itembackspace
+    \at{\href{https://play.google.com/store/apps/details?id=br.com.brainweb.ifood&hl=en_US&gl=US}{\underline{iFood (via Letgo)}}}{Oct. 2020 - Mar. 2021}{Barcelona, Spain}\\
+		\subsubsectionstyle{Latin America's leading food delivery platform (50M+ Android installs). Refactored legacy code out of the root module, cutting incremental build time by 55\%.}\\
 		%
 		\leftsubsectionline
 		\subsectionstyle{Senior Android Developer}\\
-		\at{\href{https://play.google.com/store/apps/details?id=com.abtnprojects.ambatana&hl=en}{\underline{Letgo: Leading Classified Marketplace}}}{Oct. 2019 - Mar. 2021}{Barcelona, Spain}
-		\subsubsectionstyle{One of the largest classified marketplaces in the United States at the time. Market leader in Turkey with 15+ million Android app installations. Mission-critical achievement: Optimized feed loading performance, reducing launch time by over 60 seconds.}\\
+		\at{\href{https://play.google.com/store/apps/details?id=com.abtnprojects.ambatana&hl=en}{\underline{Letgo}}}{Oct. 2019 - Mar. 2021}{Barcelona, Spain}\\
+		\subsubsectionstyle{One of the largest classified marketplaces in the U.S. at the time (15M+ Android installs in Turkey). Optimized feed loading, reducing launch time by over 60 seconds.}\\
 		%
 		\leftsubsectionline
 		\subsectionstyle{Lead Android Developer}\\
-		\at{\href{https://play.google.com/store/apps/details?id=com.sheypoor.mobile&hl=en_GB}{\underline{Sheypoor: Top-Tier Classified Marketplace}}}{Jan. 2018 - Jan. 2019}{Tehran, Iran}
-		\subsubsectionstyle{Impressive user base: 13+ million overall users, 1.5+ million daily active users. High engagement: 344+ million sessions. Key Achievement: Spearheaded initiatives that tripled daily active users from 500,000 to 1.5+ million within one year.}\\
+		\at{\href{https://play.google.com/store/apps/details?id=com.sheypoor.mobile&hl=en_GB}{\underline{Sheypoor}}}{Jan. 2018 - Jan. 2019}{Tehran, Iran}\\
+		\subsubsectionstyle{Classified marketplace with 13M+ users. Led initiatives that tripled daily active users from 500K to 1.5M+ within one year.}\\
 		%
     \leftsubsectionline
   	\subsectionstyle{Senior Android Developer}\\
-		\at{\href{https://myket.ir}{\underline{Myket: Top-Tier App Store and Social Network}}}{ Sep. 2015 - Des. 2017}{Tehran, Iran}
+		\at{\href{https://myket.ir}{\underline{Myket: App Store and Social Network}}}{Sep. 2015 - Dec. 2017}{Tehran, Iran}\\
 		%
 		\leftsubsectionline
 		\subsectionstyle{Java and C\# developer}\\
-		\at{\href{http://sohasys.ir}{\underline{Soha System}}}{Mar. 2015 - Aug. 2015}{Tehran, Iran}
+		\at{\href{http://sohasys.ir}{\underline{Soha System}}}{Mar. 2015 - Aug. 2015}{Tehran, Iran}\\
 		%
 		\leftsubsectionline
-		\sectionstyle{Article / Repository}\\
+		\sectionstyle{Other Public Contributions}\\
 		\leftsectionline
-		\mediumtitle\space\subsubsectionstyle{2024 Post: \href{https://hadilq.com/posts/matrix-fast-fourier-transform/}{Matrix Fast Fourier transform(MFFT) - An optimization for Matrix Multiplication}}\\
-		\githubtitle\space\subsubsectionstyle{2024 C Numbers: \href{https://github.com/hadilq/c-numbers}{This is a collection of number types, including floating numbers and p-adic numbers.}}\\
-		\mediumtitle\space\subsubsectionstyle{2024 Post: \href{https://hadilq.com/posts/not-all-codes-are-liabilities/}{Not All codes are liabilities}}\\
-		\githubtitle\space\subsubsectionstyle{2024 Contribution to HF Candle: \href{https://github.com/huggingface/candle}{HF Candle is a Rust alternative to work with LLMs.}}\\
-		\githubtitle\space\subsubsectionstyle{2024 City of Toronto RAG GPT: \href{https://github.com/TMLS-2024-T1/city-of-TO-RAG-GPT}{The project received the second position award in the TMLS Hackathon.}}\\
-		\githubtitle\space\subsubsectionstyle{2024 Hair Segmentation: \href{https://github.com/hadilq/hair-segment}{A ML model to detect and segment hair in images}}\\
-		\githubtitle\space\subsubsectionstyle{2024 dragon detector: \href{https://replicate.com/hadilq/dragon-notdragon}{A simple ML model to detect dragon in images}}\\
-		\githubtitle\space\subsubsectionstyle{2024 Sample Rust App: \href{https://github.com/hadilq/rust-polygon-io-crawler}{A sample app to crawl an API and put the data in a database.}}\\
-		\githubtitle\space\subsubsectionstyle{2024 Nix Effect pod: \href{https://github.com/hadilq/nix-effect-pod}{Modularize effects of all kinds, and stay in-control, with NixOS and podman.}}\\
-    \githubtitle\space\subsubsectionstyle{2023 Sample App: \href{https://github.com/hadilq/Mastan}{Refactored a Mastodon client app to a modularized Jetpack Compose-driven architecture.}}\\
-		\mediumtitle\space\subsubsectionstyle{2023 Post: \href{https://hadilq.com/posts/dependency-inversion-principle/}{Dependency Inversion Principle}}\\
-		\githubtitle\space\subsubsectionstyle{2023 Contributing to nixpkgs/androidenv: \href{https://github.com/NixOS/nixpkgs/tree/master/pkgs/development/mobile/androidenv}{Nix is a language that is designed to have reproducibile output.}}\\
-		\mediumtitle\space\subsubsectionstyle{2022 Post: \href{https://hadilq.com/posts/logic-tree}{Logic Tree in Android}}\\
-		\githubtitle\space\subsubsectionstyle{2022 Sample App: \href{https://github.com/hadilq/molecule-sample-app}{Molecule sample app to solve some scoping problems in Android development.}}\\
-		\mediumtitle\space\subsubsectionstyle{2022 Post: \href{https://hadilq.com/posts/reproducibility}{Reproducibility}}\\
-		\mediumtitle\space\subsubsectionstyle{2021 ProAndroidDev post: \href{https://hadilq.com/posts/are-feature-flags-build-variants-and-sample-apps-related-concepts}{Are feature flags, build variants, and sample apps related concepts?}}\\
-		\mediumtitle\space\subsubsectionstyle{2021 iFood Engneering post: \href{https://medium.com/ifood-engineering/modularization-tip-optimize-the-root-module-b0a904a8d5f5}{Modularization tip: optimize the Root Module.}}\\
-		\mediumtitle\space\subsubsectionstyle{2021 ProAndroidDev post: \href{https://proandroiddev.com/happy-railway-79cd25aa0806}{Happy Railway. An improvement for Railway Oriented Programming in Kotlin.}}\\
-		\githubtitle\space\subsubsectionstyle{2021 Library: \href{https://github.com/hadilq/happy}{Happy is a library to auto-generate Kotlin code to make calling APIs more concise.}}\\
-		\githubtitle\space\subsubsectionstyle{2020 POC: \href{https://github.com/hadilq/rust-flutter-reactive}{Rust Flutter Reactive is an idea to use Flutter as UI and Rust for the main project.}}\\
-		\githubtitle\space\subsubsectionstyle{2020 Make Log4k Multiplatform: \href{https://github.com/hadilq/log4k}{Simple logging library for Android, iOS, Mac, etc.}}\\
-		\mediumtitle\space\subsubsectionstyle{2020 ProAndroidDev post: \href{https://proandroiddev.com/a-b-testing-myths-adeceb6668fa}{A/B Testing Myths}}\\
-		\githubtitle\space\subsubsectionstyle{2020 Sample App: \href{https://github.com/hadilq/youtube-app}{Provide a full implementation for a No-Framework Dependency Injection in Kotlin}}\\
-		\githubtitle\space\subsubsectionstyle{2020 Contributing on $\Lambda$rrow Library: \href{https://arrow-kt.io}{$\Lambda$rrow is a library for Typed Functional Programming in Kotlin}}\\
-		\githubtitle\space\subsubsectionstyle{2020 Library: \href{https://github.com/hadilq/trackable-compiler-plugin}{A Kotlin compiler plugin that generates trackable method}}\\
-		\mediumtitle\space\subsubsectionstyle{2020 Medium post: \href{https://medium.com/@hadilq.dev/save-state-by-using-rxjava-or-kotlin-flow-526f6d282b84}{Save State By Using RxJava or Kotlin Flow}}\\
-		\mediumtitle\space\subsubsectionstyle{2020 Medium post: \href{https://medium.com/@hadilq.dev/rxjava-instead-of-livedata-in-mvvm-f95e8fe0aa41}{RxJava instead of LiveData in MVVM}}\\
-		\githubtitle\space\subsubsectionstyle{2020 Library: \href{https://github.com/hadilq/RxLifecycleHandler}{A glue between the lifecycle of LifecycleOwner in Android and upstreams in RxJava}}\\
-		\githubtitle\space\subsubsectionstyle{2020 Library: \href{https://github.com/hadilq/CoroutineLifecycleHandler}{A glue between the lifecycle of LifecycleOwner in Android and Kotlin Coroutines}}\\
-		\githubtitle\space\subsubsectionstyle{2020 Library: \href{https://github.com/hadilq/AndroidLifecycleHandler}{Simplifier for unnecessary complex lifecycles}}\\
-		\githubtitle\space\subsubsectionstyle{2019 Sample App: \href{https://github.com/hadilq/CleanArchitectureFP}{Functional Programming + Clean Architecture}}\\
-		\githubtitle\space\subsubsectionstyle{2019 Sample App: \href{https://github.com/hadilq/MoviesChallenge}{Movie Challenge}}\\
-		\githubtitle\space\subsubsectionstyle{2019 Math Library: \href{https://github.com/hadilq/num4k}{Modularized, mathematical and multiplatform Kotlin library}}\\
-		\mediumtitle\space\subsubsectionstyle{2018 ProAndroidDev post: \href{https://proandroiddev.com/logging-in-kotlin-8ecfb97a4840}{Logging in Kotlin}}\\
-		\githubtitle\space\subsubsectionstyle{2018 Log4k Library: \href{https://github.com/sheypoor/log4}{Easy logging library, but unfortunately it's in Sheypoor repository}}\\
-		\mediumtitle\space\subsubsectionstyle{2018 ProAndroidDev post: \href{https://proandroiddev.com/reactive-mvvm-architectural-pattern-42acc2bbb5e7}{Reactive MVVM architectural pattern}}\\
+		\githubtitle\space\subsubsectionstyle{2026 Tabular center: \href{https://github.com/tabula-center/tabular-center}{State machines whose declaration is the transition matrix}}\\
+		\mediumtitle\space\subsubsectionstyle{2025 Post: \href{https://hadilq.com/posts/geometrical-probability/}{Geometrical Probability}}\\
+		\githubtitle\space\subsubsectionstyle{2024 C Numbers: \href{https://github.com/hadilq/c-numbers}{Number types in C, including floating-point and p-adic numbers}}\\
+		\githubtitle\space\subsubsectionstyle{2024 Dragon detector: \href{https://replicate.com/hadilq/dragon-notdragon}{An image classification model deployed on Replicate}}\\
+		\githubtitle\space\subsubsectionstyle{2024 Nix Effect pod: \href{https://github.com/hadilq/nix-effect-pod}{Isolating side effects with NixOS and podman}}\\
+		\mediumtitle\space\subsubsectionstyle{2024 Post: \href{https://hadilq.com/posts/not-all-codes-are-liabilities/}{Not all code is a liability}}\\
+		\githubtitle\space\subsubsectionstyle{2023 Contributor to \href{https://github.com/NixOS/nixpkgs/tree/master/pkgs/development/mobile/androidenv}{nixpkgs/androidenv}}\\
 		%
 		\leftsubsectionline
 		\sectionstyle{Education}\\
@@ -438,7 +386,8 @@
 	\vspace{1mm}\\
 }
 
-\newcommand\at[3]{\subsubsectionstyle{at #1\qquad\qquad \calendartitle\hspace{2mm}#2 \qquad\qquad \locationtitle\hspace{1mm} #3}\\\\}
+\newcommand\indep[2]{\subsubsectionstyle{Independent research\qquad\qquad \calendartitle\hspace{2mm}#1 \qquad\qquad \locationtitle\hspace{1mm} #2}}
+\newcommand\at[3]{\subsubsectionstyle{at #1\qquad\qquad \calendartitle\hspace{2mm}#2 \qquad\qquad \locationtitle\hspace{1mm} #3}}
 %-------------------------------------------------------------------
 % Document
 %-------------------------------------------------------------------
