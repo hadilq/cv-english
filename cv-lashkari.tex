@@ -7,7 +7,7 @@
 \usepackage{array, xcolor, stackengine}
 \usepackage[
 	a4paper, 
-	papersize={24cm, 64cm},
+	papersize={24cm, 68cm},
 	margin=1.8cm,
 	bmargin=-1cm,
 ]{geometry}
@@ -72,7 +72,7 @@
 \newcommand{\titleposition}{
 	\begin{minipage}{0.80\textwidth}%
 		\Huge{\bignamefont{Hadi Lashkari Ghouchani}}\vspace{-3mm}\\
-		\textcolor{awesomeblue}{\Large{\positionstyle{Software Engineer}}}
+		\textcolor{awesomeblue}{\Large{\positionstyle{Software Engineer \textbar{} Developer Platform \& AI Agents}}}
 	\end{minipage}%
 }
 
@@ -138,6 +138,27 @@
     \sectionstyle{Tools / Skills}\\
     \rightsectionline
     %
+    \subsectionstyle{Developer Platform / CI/CD}\\
+    \subsubsectionstyle{GitLab CI, GitHub, Jenkins, BuildKite, Fastlane}\\
+    \subsubsectionstyle{Merge trains/tiered MR pipelines/trunk-based release}\\
+    \subsubsectionstyle{Develocity (Gradle Enterprise)/build caching}\\
+    \subsubsectionstyle{Self-hosted runners on AWS EC2}\\
+    \subsubsectionstyle{Nix flakes/Podman/Docker/custom containers}\\
+    \subsubsectionstyle{GitLab SAST/Detekt/Konsist}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{AI Coding Agents / LLMs}\\
+    \subsubsectionstyle{Multi-agent workflows (coder/reviewer loop)}\\
+    \subsubsectionstyle{Ticket-to-merge-request automation in CI}\\
+    \subsubsectionstyle{Daily use of AI coding tools}\\
+    \subsubsectionstyle{RAG (TMLS Hackathon), PyTorch, CUDA}\\
+    \rightsubsectionline
+    %
+    \subsectionstyle{Programming Language}\\
+    \subsubsectionstyle{Kotlin (advanced)/Python/Rust/Java/Swift}\\
+    \subsubsectionstyle{Scala/Groovy/Dart/JavaScript/Ruby/C}\\
+    \rightsubsectionline
+    %
     \subsectionstyle{Kotlin Multiplatform/KMP}\\
     \subsubsectionstyle{Compose Multiplatform/Android/iOS/Desktop}\\
     \subsubsectionstyle{Advocate for independent UI/UX from platform}\\
@@ -187,10 +208,6 @@
     \subsubsectionstyle{Code isolation to reduce dependencies}\\
     \rightsubsectionline
     %
-    \subsectionstyle{Continuous Integration/Deployment}\\
-    \subsubsectionstyle{Jenkins, GitLab CI, Fastlane}\\
-    \rightsubsectionline
-    %
     \subsectionstyle{Android Performance Optimization}\\
     \subsubsectionstyle{memory management/threading/profiling tools}\\
     \rightsubsectionline
@@ -230,12 +247,7 @@
     %
     \subsectionstyle{Nix}\\
     \subsubsectionstyle{NixOS/Nix Darwin/Home Manager}\\
-    \subsubsectionstyle{mkDrivation/mkShell}\\
-    \rightsubsectionline
-    %
-    \subsectionstyle{Programing Language}\\
-    \subsubsectionstyle{Kotlin/Rust/Python/Java/Scala}\\
-    \subsubsectionstyle{Groovy/Dart/Javascript/Ruby...}\\
+    \subsubsectionstyle{mkDerivation/mkShell}\\
     \rightsubsectionline
     %
     \subsectionstyle{Workflow}\\
@@ -247,28 +259,18 @@
     \subsubsectionstyle{Linux(NixOS/Fedora/Ubuntu/Debian), MacOS}\\
     \rightsubsectionline
     %
-    \sectionstyle{Achievements and Recognition}\\
+    \sectionstyle{Awards and Recognition}\\
     \rightsectionline
-    \subsubsectionstyle{- 2026 Had an offer from Bell Canada}\\
-    \subsubsectionstyle{- 2025 Had an offer from Block Inc. via Touchlab}\\
-    \subsubsectionstyle{- 2025 Had an offer from CIBC via Vision Talent}\\
-    \subsubsectionstyle{- 2024 Had an offer from Accenture via Experis}\\
     \subsubsectionstyle{- 2024 First position in National Health Datathon}\\
     \subsubsectionstyle{- 2024 Second position in AWS Summit's Gameday}\\
     \subsubsectionstyle{- 2024 Second position in Toronto Machine Learning \#TMLS Hackathon}\\
-    \subsubsectionstyle{- 2020 Had an offer from MobileLIVE, Toronto, Canada}\\
-    \subsubsectionstyle{- 2020 Had an offer from iFood, Remote}\\
-    \subsubsectionstyle{- 2019 Had an offer from Kik, Kitechener, Canada}\\
-    \subsubsectionstyle{- 2019 Had an offer from Letgo, Barcelona, Spain}\\
-    \subsubsectionstyle{- 2019 Had an offer from CRITICAL Techworks, BMW, Porto, Portugal}\\
-    \subsubsectionstyle{- 2019 Had an offer from The Next Big Thing, Berlin, Germany}\\
     \subsubsectionstyle{- 2018 Received result-oriented badge in Sheypoor}\\
     \subsubsectionstyle{- 2007 Ranked 44th among more than five thousand participants in the National Graduate Entrance Exam in Physics}\\
     \rightsubsectionline
     %
     \sectionstyle{Language}\\
     \rightsectionline
-    \subsubsectionstyle{English: Advance}\\
+    \subsubsectionstyle{English: Advanced}\\
     \subsubsectionstyle{Farsi: Native}\\
     \rightsubsectionline
     %
@@ -282,15 +284,16 @@
 		\sectionstyle{Summary}\\
 		\leftsectionline
 		\subsubsectionstyle{%
-      Software engineer with 21+ years of development experience, including 11 years of professional Android development and, most recently, mobile CI/CD and developer-experience engineering. Skilled in software architecture, algorithm design, and applied machine learning. \\
-      - Builds scalable, maintainable, and efficient systems, from low-level Android internals to app architecture\\
-      - Automates mobile delivery with trunk-based release pipelines, reproducible Nix builds, and AI-agent workflows\\
-      - Advocates SOLID principles, single source of truth, pure functions, and stateless design\\
-      - Applies machine learning to problems that make a real difference in people's lives\\
+      Software engineer with 21+ years of development experience and 11 years in industry, the last several focused on developer platforms: CI/CD, build systems, reproducible environments, and AI coding agents that other engineers depend on every day. Deep Kotlin expertise, working Python, and a background in algorithms and applied machine learning. \\
+      - Treats developers as customers: gathers and analyzes their feedback daily and proactively fixes what slows them down\\
+      - Built a multi-agent CI workflow that turns tickets into merge requests, with coder and reviewer agents in a loop\\
+      - Owns CI/CD as production infrastructure: pipeline reliability, runners on AWS EC2, caching, security scanning\\
+      - Shortens the path from ticket to merged change: tiered merge request checks, merge trains, faster tests and builds\\
+      - Makes environments reproducible and isolated with Nix flakes and task-specific containers\\
+      - Served as the build and tooling resource for 50+ engineers; ran RFC and knowledge-sharing practices\\
+      - Designs for verifiability: open-source work holds three languages to one behaviour via shared conformance tests\\
       - Taught algorithms and programming at university level\\
-      - Continuous learner and open-source contributor\\
-      - Makes technical decisions proactively and transparently\\
-      Looking to join a creative, motivated team working on challenging technical problems.
+      Looking to own how code gets written, validated, and shipped by people and agents.
 		}\\
 		\leftsubsectionline
 		%
@@ -301,22 +304,22 @@
 		\subsubsectionstyle{Bell Canada is a Canadian telecommunications company}\\\\
 		\subsubsectionstyle{Mission:}
     \begin{itemize}\itembackspace%
-      \item\subsubsectionstyle{Took ownership of GitLab CI/CD and reversed a declining trend in pipeline job success rate, raising it from 18\% to 31\% (a 72\% relative improvement) within six months}\itembackspace%
-      \item\subsubsectionstyle{Designed and implemented trunk-based development pipelines for Android and iOS across multiple repositories, automating release-branch creation, cherry-picks, publishing, and release-candidate promotion}\itembackspace%
-      \item\subsubsectionstyle{Built a multi-agent CI workflow that turns Jira tickets into merge requests, with planner, coder, and reviewer agents committing an initial implementation}\itembackspace%
-      \item\subsubsectionstyle{Automated DTO and mapper generation from APIDog API specs in CI, eliminating hand-written boilerplate from developer merge requests}\itembackspace%
+      \item\subsubsectionstyle{Treat the developers who use CI/CD as my customers: collect and analyze their feedback, ship improvements to their experience daily, and proactively find and fix problems before they are reported}\itembackspace%
+      \item\subsubsectionstyle{Built a multi-agent CI workflow that turns Jira tickets into merge requests: a planner agent scopes the ticket, then coder and reviewer agents iterate in a loop until the change is ready to commit for human review}\itembackspace%
+      \item\subsubsectionstyle{Took ownership of GitLab CI/CD for Android and iOS and reversed a declining pipeline job success rate, raising it from 18\% to 31\% (a 72\% relative improvement) within six months}\itembackspace%
       \item\subsubsectionstyle{Restructured merge request pipelines into fast checks, required heavy jobs, and optional jobs, and strengthened automated code verification, shortening feedback loops and raising confidence before merge}\itembackspace%
-      \item\subsubsectionstyle{Made builds and emulator runs reproducible by wrapping them in Nix flakes}\itembackspace%
-      \item\subsubsectionstyle{Migrated GitLab jobs to custom, task-specific Linux containers, improving performance, isolation, and reproducibility}\itembackspace%
+      \item\subsubsectionstyle{Designed and implemented trunk-based development pipelines across multiple repositories, automating release-branch creation, cherry-picks, publishing, and release-candidate promotion}\itembackspace%
+      \item\subsubsectionstyle{Run the AWS EC2 instances behind CI/CD as production infrastructure, tuning them for reliability and performance}\itembackspace%
+      \item\subsubsectionstyle{Made builds and emulator runs reproducible by wrapping them in Nix flakes, and migrated GitLab jobs to custom, task-specific Linux containers for performance and isolation}\itembackspace%
+      \item\subsubsectionstyle{Automated DTO and mapper generation from APIDog API specs in CI, eliminating hand-written boilerplate from developer merge requests}\itembackspace%
       \item\subsubsectionstyle{Reduced GitLab SAST security findings to zero across multiple projects}\itembackspace%
-      \item\subsubsectionstyle{Pinned dependencies, tuned CI/CD caching, and established architecture and release-readiness practices}\itembackspace%
-      \item\subsubsectionstyle{Maintain and tune the EC2 instances running CI/CD for reliability and performance}
+      \item\subsubsectionstyle{Pinned dependencies, tuned CI/CD caching, and established architecture and release-readiness practices}
     \end{itemize}\itembackspace
 		\subsubsectionstyle{Technologies:}
 		\begin{itemize}\itembackspace
         \item\subsubsectionstyle{Android, Kotlin Multiplatform, Gradle Plugin}\itembackspace%
-        \item\subsubsectionstyle{iOS, Swift, XCode, XCodebuild}\itembackspace%
-        \item\subsubsectionstyle{CI/CD, Giltab's Configurations, Gitlab SAST, Podman, Nix, AWS EC2}\itembackspace%
+        \item\subsubsectionstyle{iOS, Swift, Xcode, xcodebuild}\itembackspace%
+        \item\subsubsectionstyle{CI/CD, GitLab CI, GitLab SAST, LLM coding agents, Podman, Nix, AWS EC2}\itembackspace%
 		\end{itemize}\itembackspace
 		%
 		\leftsubsectionline
@@ -332,7 +335,7 @@
 		\subsubsectionstyle{Technologies:}
 		\begin{itemize}\itembackspace
         \item\subsubsectionstyle{Kotlin Multiplatform/KMP, Compose Multiplatform/CMP, Gradle Plugin}\itembackspace%
-        \item\subsubsectionstyle{iOS, Swift, XCode}\itembackspace%
+        \item\subsubsectionstyle{iOS, Swift, Xcode}\itembackspace%
         \item\subsubsectionstyle{Rust binding, UniFFI}\itembackspace%
         \item\subsubsectionstyle{Ktor, Anvil, SqlDelight, Kotest}\itembackspace%
         \item\subsubsectionstyle{Github, Linear, Notion, BuildKite, etc.}\itembackspace%
@@ -353,7 +356,7 @@
 		\subsubsectionstyle{Technologies:}
 		\begin{itemize}\itembackspace
         \item\subsubsectionstyle{Kotlin Multiplatform/KMP, Android, Compose Multiplatform/CMP, Gradle Plugin, code generator}\itembackspace%
-        \item\subsubsectionstyle{iOS, Swift, XCode, SwiftUI}\itembackspace%
+        \item\subsubsectionstyle{iOS, Swift, Xcode, SwiftUI}\itembackspace%
         \item\subsubsectionstyle{Ktor, Koin, Compose Navigation, etc.}\itembackspace%
         \item\subsubsectionstyle{Atlassian Jira, Atlassian Confluence, Github, Jenkins, etc.}\itembackspace%
 		\end{itemize}\itembackspace
@@ -365,16 +368,16 @@
 		\subsubsectionstyle{Mission:}
 		\begin{itemize}\itembackspace%
       \item\subsubsectionstyle{Resolved VPN network proxy and self-signed certificate issues by developing an automated installation script and Compose Multiplatform app, resulting in a 164\% increase in build count on the Gradle Enterprise(Develocity) dashboard.}\itembackspace%
-			\item\subsubsectionstyle{Initiated and implemented Gradle Conventional Plugins to reduce code duplication and errors. Established Single Source of Truth (SSOT) for external library versions, significantly reducing runtime crashes caused by version conflicts.}\itembackspace%
+      \item\subsubsectionstyle{Served as the primary build and tooling resource for 50+ Android developers across teams, providing training, support, and mentoring.}\itembackspace%
+			\item\subsubsectionstyle{Initiated and implemented Gradle Convention Plugins shared across teams to reduce code duplication and errors. Established Single Source of Truth (SSOT) for external library versions, significantly reducing runtime crashes caused by version conflicts.}\itembackspace%
       \item\subsubsectionstyle{Spearheaded the adoption of Merge Trains and Merge Request Pipelines in GitLab, creating a Proof of Concept (POC) workflow that demonstrably improved code quality and streamlined the integration process.}\itembackspace%
       \item\subsubsectionstyle{Optimized test execution, reducing incremental runtime by 52\% and improving overall development efficiency.}\itembackspace%
-      \item\subsubsectionstyle{Served as the primary resource for build-related training and support across a team of 50+ Android developers, enhancing team productivity and knowledge sharing.}\itembackspace%
       \item\subsubsectionstyle{Implemented a custom No-Framework dependency injection solution across multiple app and library repositories, enhancing modularity, testability, and maintainability while minimizing build times by avoiding code generation.}\itembackspace%
       \item\subsubsectionstyle{Integrated Detekt to verify code quality in the merge request's pipelines.}
 		\end{itemize}\itembackspace
 		\subsubsectionstyle{Additional Technologies:}
 		\begin{itemize}\itembackspace
-        \item\subsubsectionstyle{Develocity(Gradle Enterprise), Gradle Conventional Plugin, Detekt}\itembackspace
+        \item\subsubsectionstyle{Develocity(Gradle Enterprise), Gradle Convention Plugins, Detekt}\itembackspace
         \item\subsubsectionstyle{Kotlin Multiplatform, Compose Multiplatform}\itembackspace
 		\end{itemize}\itembackspace
 		%
@@ -412,7 +415,7 @@
 		%
     \leftsubsectionline
   	\subsectionstyle{Senior Android Developer}\\
-		\at{\href{https://myket.ir}{\underline{Myket: Top-Tier App Store and Social Network}}}{ Sep. 2015 - Des. 2017}{Tehran, Iran}
+		\at{\href{https://myket.ir}{\underline{Myket: Top-Tier App Store and Social Network}}}{ Sep. 2015 - Dec. 2017}{Tehran, Iran}
 		%
 		\leftsubsectionline
 		\subsectionstyle{Java and C\# developer}\\
@@ -421,8 +424,10 @@
 		\leftsubsectionline
 		\sectionstyle{Public Contributions}\\
 		\leftsectionline
-		\githubtitle\space\subsubsectionstyle{2026 Tabular center: \href{https://tabular.center}{State machines whose declaration is the transition matrix}}\\
-		\githubtitle\space\subsubsectionstyle{2026 Type Neural Network: \href{https://github.com/hadilq/torch-type-nn}{A machine learning architecture based on the Type Mechanics}}\\
+		\githubtitle\space\subsubsectionstyle{2026 tabular-center (\href{https://tabula.center}{\underline{tabula.center}}): State machines declared as a transition matrix, in Rust, Kotlin, Swift}\\
+		\hspace*{4mm}\subsubsectionstyle{Incomplete machines fail to compile; one conformance suite runs in all three languages in CI}\\
+		\githubtitle\space\subsubsectionstyle{2026 torch-type-nn (\href{https://github.com/hadilq/torch-type-nn}{\underline{github}}): PyTorch neural network that grows and prunes its own structure}\\
+		\hspace*{4mm}\subsubsectionstyle{Matches the C reference to 1e-12; CPU and CUDA backends; reproducible tests via Nix flakes}\\
 		\githubtitle\space\subsubsectionstyle{2026 MFFT benchmark: \href{https://github.com/hadilq/mfft-bench}{A benchmark among matmul implementations with focus on MFFT}}\\
 		\mediumtitle\space\subsubsectionstyle{2025 Post: \href{https://hadilq.com/posts/type-mechanics/}{Type Mechanics }}\\
 		\mediumtitle\space\subsubsectionstyle{2025 Post: \href{https://hadilq.com/posts/geometrical-probability/}{Geometrical Probability}}\\
@@ -432,7 +437,7 @@
 		\githubtitle\space\subsubsectionstyle{2024 City of Toronto RAG GPT: \href{https://github.com/TMLS-2024-T1/city-of-TO-RAG-GPT}{The project received the second position award in the TMLS Hackathon.}}\\
 		\githubtitle\space\subsubsectionstyle{2024 dragon detector: \href{https://replicate.com/hadilq/dragon-notdragon}{A simple ML model to detect dragon in images}}\\
 		\githubtitle\space\subsubsectionstyle{2024 Nix Effect pod: \href{https://github.com/hadilq/nix-effect-pod}{Modularize effects of all kinds, and stay in-control, with NixOS and podman.}}\\
-		\githubtitle\space\subsubsectionstyle{2023 Contributing to nixpkgs/androidenv: \href{https://github.com/NixOS/nixpkgs/tree/master/pkgs/development/mobile/androidenv}{Nix is a language that is designed to have reproducibile output.}}\\
+		\githubtitle\space\subsubsectionstyle{2023 Contributing to nixpkgs/androidenv: \href{https://github.com/NixOS/nixpkgs/tree/master/pkgs/development/mobile/androidenv}{Nix is a language that is designed to have reproducible output.}}\\
 		%
 		\leftsubsectionline
 		\sectionstyle{Education}\\
